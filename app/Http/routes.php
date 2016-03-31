@@ -11,6 +11,7 @@
 |
 */
 
-Route::get('/', function () {
-    return view('index');
-});
+Route::get('/', 'ImmigrantController@getIndex');
+Route::get('/language/{country}', 'ImmigrantController@getLanguage');
+
+Route::post('/', 'ImmigrantController@postIndex');

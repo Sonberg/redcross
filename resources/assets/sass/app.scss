@@ -1,3 +1,38 @@
 // @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
 @import "node_modules/materialize-css/sass/ghpages-materialize.scss";
+html {
+    body {
+        table.rating {
+            thead,
+            tr,
+            td {
+                text-align: center;
+            }
+            td,
+            th {
+                padding: 0px 5px 18px;
+            }
+            td.title {
+                font-weight: bold;
+            }
+            td.interest {
+                padding: 2px;
+            }
+        }
+    }
+}
 
+.immigration {
+    .row,
+    .col {
+        float: none !important;
+    }
+    .btn-large {
+        margin: 0 auto;
+        display: table;
+    }
+}
+
+.center-text {
+    text-align: center;
+}

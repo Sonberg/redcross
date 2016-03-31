@@ -9244,4 +9244,30 @@ body.parallax-demo footer {
         background-color: #eee;
         outline: none; }
 
+html body table.rating thead,
+html body table.rating tr,
+html body table.rating td {
+  text-align: center; }
+
+html body table.rating td,
+html body table.rating th {
+  padding: 0px 5px 18px; }
+
+html body table.rating td.title {
+  font-weight: bold; }
+
+html body table.rating td.interest {
+  padding: 2px; }
+
+.immigration .row,
+.immigration .col {
+  float: none !important; }
+
+.immigration .btn-large {
+  margin: 0 auto;
+  display: table; }
+
+.center-text {
+  text-align: center; }
+
 /*# sourceMappingURL=app.css.map */
