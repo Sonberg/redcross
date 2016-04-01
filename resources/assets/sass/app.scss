@@ -1,8 +1,9 @@
-// @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
-@import "node_modules/materialize-css/sass/ghpages-materialize.scss";
+@import "semantic/semantic.min.css";
+p {}
+
 html {
     body {
-        table.rating {
+        table.rate {
             thead,
             tr,
             td {
@@ -23,13 +24,8 @@ html {
 }
 
 .immigration {
-    .row,
-    .col {
-        float: none !important;
-    }
-    .btn-large {
-        margin: 0 auto;
-        display: table;
+    .field {
+        margin: 30px 0 1em !important;
     }
 }
 
