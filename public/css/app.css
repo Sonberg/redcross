@@ -8,14 +8,30 @@ html body table.rate td,
 html body table.rate th {
   padding: 0px 5px 18px; }
 
+html body table.rate td.number {
+  max-width: 70px; }
+
 html body table.rate td.title {
   font-weight: bold; }
 
 html body table.rate td.interest {
   padding: 2px; }
 
+.immigration .preferences {
+  background-color: #F9F9F9;
+  padding: 20px;
+  text-align: center; }
+
 .immigration .field {
   margin: 30px 0 1em !important; }
+
+.immigration .button.huge {
+  margin-bottom: 30px; }
+
+.immigration .ui.green {
+  border-top: 2px solid #21BA45;
+  margin: 25px auto !important;
+  display: block !important; }
 
 .center-text {
   text-align: center; }

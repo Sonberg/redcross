@@ -2,14 +2,19 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
-
+use App\Profession;
 use App\Http\Requests;
+use Illuminate\Http\Request;
+use App\Http\Requests\newImmigrantRequest;
 
 class ImmigrantController extends Controller
 {
     public function getIndex() {
-        return view('immigrant', ['countries' => $this->countryList()]);
+        return view('immigrant', [
+            'countries' => $this->countryList(),
+            'languages' => $this->languagesList(),
+            'professions' => Profession::all(),
+        ]);
     }
     
     public function getLanguage($country) {
@@ -21,8 +26,20 @@ class ImmigrantController extends Controller
         return null;
     }
     
-    public function postIndex() {
+    public function postIndex(newImmigrantRequest $request) {
+        var_dump($request->all());
+    }
+    
+    private function languagesList() {
+        $json = file_get_contents('data/languages.json');
+        $obj = json_decode($json, true);
+        $list = array();
         
+        foreach($obj["lang"] as $j) {
+            array_push($list, ["eng" => $j[0], "native" => $j[1]]);
+        }
+        
+        return $list;
     }
     
     private function countryList() {
@@ -35,10 +52,7 @@ class ImmigrantController extends Controller
             $list[$c->altSpellings[0]] = [
                 "name" => $c->name,
                 "short" => $c->altSpellings[0],
-                "lang" => [
-                    $c->languages
-                ]
-              
+                "shortSmall" => strtolower($c->altSpellings[0])
           ];
         }
         return json_decode (json_encode ($list), FALSE);
