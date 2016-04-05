@@ -4,7 +4,7 @@ namespace App\Http\Requests;
 
 use App\Http\Requests\Request;
 
-class newImmigrantRequest extends Request
+class ImmigrantRequest extends Request
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -24,22 +24,20 @@ class newImmigrantRequest extends Request
     public function rules()
     {
         return [
-            'first_name' => 'required|max:255',
+            'first_name' => 'required',
             'last_name' => 'required',
             'gender' => 'required',
             'phone' => 'required',
             'email' => 'required|email',
             'country' => 'required',
             'language' => 'required',
-            'accommodation' => 'required|numeric',
-            'profession' => 'required|numeric',
-            'arrived' => 'required',
-            'number_members' => 'required|numeric',
-            'age_kids' => 'required|numeric',
-            'sport' => 'required|numeric',
-            'meet_family' => 'required|boolean',
-            'meet_gender' => 'required|boolean',
-            'meet_profession' => 'required|boolean',
+            'accommodation' => 'required',
+            'profession' => 'required',
+            'number_members' => 'required',
+            'age_kids' => 'required',
+            'meet_family' => 'required',
+            'meet_gender' => 'required',
+            'meet_profession' => 'required',
         ];
     }
 }

@@ -17,6 +17,7 @@ class CreateImmigrantTable extends Migration
             $table->timestamps();
             $table->string('first_name')->nullable();
             $table->string('last_name')->nullable();
+            $table->string('age')->nullable();
             $table->string('gender')->nullable();
             $table->string('phone')->nullable();
             $table->string('email')->nullable();
@@ -27,11 +28,11 @@ class CreateImmigrantTable extends Migration
             $table->integer('accommodation')->unsigned();
             
             $table->integer('family_members')->nullable();
-            $table->integer('kids_age')->nullable();
+            $table->string('kids_age')->nullable();
             $table->string('interests');
             
             $table->boolean('meet_family');
-            $table->boolean('meet_gender');
+            $table->string('meet_gender');
             $table->boolean('meet_profession');
         });
         

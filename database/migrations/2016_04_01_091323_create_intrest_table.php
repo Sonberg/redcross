@@ -12,7 +12,7 @@ class CreateInterestTable extends Migration
      */
     public function up()
     {
-        Schema::create('interests', function (Blueprint $table) {
+        Schema::create('intrests', function (Blueprint $table) {
             $table->increments('id');
             $table->string('category');
             $table->timestamps();
@@ -26,6 +26,6 @@ class CreateInterestTable extends Migration
      */
     public function down()
     {
-        Schema::drop('interests');
+        Schema::drop('intrests');
     }
 }

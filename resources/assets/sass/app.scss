@@ -1,6 +1,5 @@
 @import "semantic/semantic.min.css";
-p {}
-
+@import "daterangepicker.css";
 html {
     body {
         table.rate {
@@ -13,7 +12,6 @@ html {
             th {
                 padding: 0px 5px 18px;
             }
-            
             td.number {
                 max-width: 70px;
             }
@@ -32,9 +30,10 @@ html {
         background-color: #F9F9F9;
         padding: 20px;
         text-align: center;
-    }
-    .field {
-        margin: 30px 0 1em !important;
+        .field .table {
+            max-width: 900px;
+            margin: 0 auto;
+        }
     }
     .button.huge {
         margin-bottom: 30px;
@@ -48,4 +47,8 @@ html {
 
 .center-text {
     text-align: center;
+}
+
+.margin-field {
+    margin: 30px 0 1em !important;
 }

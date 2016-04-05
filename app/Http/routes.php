@@ -11,7 +11,12 @@
 |
 */
 
-Route::get('/', 'ImmigrantController@getIndex');
-Route::get('/language/{country}', 'ImmigrantController@getLanguage');
+Route::group(['prefix' => LaravelLocalization::setLocale()], function() { 
+    
+    // Index
+    Route::get('/', 'IndexController@getIndex');
 
-Route::post('/', 'ImmigrantController@postIndex');
+    // Immigrant Form
+    Route::get('/immigrant', 'ImmigrantController@getIndex');
+    Route::post('/', 'ImmigrantController@postIndex');
+});
