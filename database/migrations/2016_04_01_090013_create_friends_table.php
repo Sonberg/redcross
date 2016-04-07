@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateEstablishedTable extends Migration
+class CreateFriendsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -28,7 +28,7 @@ class CreateEstablishedTable extends Migration
             $table->integer('kids_age')->nullable();
             $table->string('intrests');
 
-            
+
             $table->string('adress')->nullable();
             $table->string('zipcode')->nullable();
             $table->string('city')->nullable();
@@ -37,7 +37,7 @@ class CreateEstablishedTable extends Migration
             $table->boolean('has_car');
             $table->text('notes');
         });
-        
+
         Schema::table('friends', function($table) {
             $table->foreign('profession')->references('id')->on('professions')->onDelete('cascade');
         });
