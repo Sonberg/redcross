@@ -1,11 +1,11 @@
 <!-- First Name -->
-<div class="field margin-field">
+<div class="field">
     <label for="first_name">First Name</label>
     <input type="text" name="first_name" id="first_name" value="{{ old('first_name') }}" class="validate">
 </div>
 
 <!-- Last Name -->
-<div class="field margin-field">
+<div class="field">
     <label for="last_name">Last Name</label>
     <input type="text" name="last_name" id="last_name" class="validate" value="{{ old('last_name') }}">
 </div>
@@ -20,7 +20,20 @@
     </select>
 </div>
 
-<div class="field margin-field">
+
+<!-- Phone -->
+<div class="field">
+    <label for="phone">Phone Number</label>
+    <input type="tel" name="phone" id="phone" class="validate" value="{{ old('phone') }}">
+</div>
+
+<!-- Email -->
+<div class="field">
+    <label for="last_name">Email</label>
+    <input type="email" name="email" id="email" class="validate" value="{{ old('email') }}">
+</div>
+
+<div class="field">
     <label for="age">Age</label>
     <select name="age" id="age">
         <option value="" disabled <?php if(old( 'age')=="" ) { echo 'selected="selected"'; } ?>>Select age</option>
@@ -32,18 +45,6 @@
     </select>
 </div>
 
-<!-- Phone -->
-<div class="field margin-field">
-    <label for="phone">Phone Number</label>
-    <input type="tel" name="phone" id="phone" class="validate" value="{{ old('phone') }}">
-</div>
-
-<!-- Email -->
-<div class="field margin-field">
-    <label for="last_name">Email</label>
-    <input type="email" name="email" id="email" class="validate" value="{{ old('email') }}">
-</div>
-
 
 <!-- Profession -->
 <div class="field margin-field">
@@ -51,7 +52,7 @@
     <div class="ui fluid selection dropdown search">
         <input type="hidden" name="profession" value="{{ old('profession') }}">
         <i class="dropdown icon"></i>
-        <span class="default text">Select your occupations/professions sector</span>
+        <span class="default text">Select your professions sector</span>
         <div class="menu">
 
             @foreach($professions as $p)

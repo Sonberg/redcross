@@ -1,29 +1,32 @@
 @extends('app') @section('content')
-<div class="ui container transition hidden">
-    <h1 class="center-text">Formulär för nyanlända</h1>
-    <div class="column">
-        <div class="language center-text">
-            <div class="ui floating dropdown labeled search icon button">
-                <i class="world icon"></i>
-                <span class="text">Select Language</span>
-                <div class="menu">
-                    <div class="item">Arabic</div>
-                    <div class="item">English</div>
-                    <div class="item">Swedish</div>
-                </div>
-            </div>
-        </div>
+<div class="ui container">
+    <div class="column hidden">
+        <img src="/img/logo.png" alt="" class="center logo"> @include('components.language-select')
         <div class="center-text margin-field">
-            <button type="submit" class="ui button basic huge">{{trans('basic.immigant-button')}}</button>
-            <button type="submit" class="ui button basic huge">{{trans('basic.established-button')}}</button>
+            <a href=" {{ LaravelLocalization::getCurrentLocale() }}/immigrant/" class="ui button basic huge">{{trans('basic.immigant-button')}}</a>
+            <a href=" {{ LaravelLocalization::getCurrentLocale() }}/friend/ " class="ui button basic huge">{{trans('basic.established-button')}}</a>
         </div>
     </div>
 </div>
-
+<script src="/js/fullBackground.js"></script>
 <script>
     $(document).ready(function () {
-        $('.transition').transition('fade down');
+        function centerOnPage() {
+            $('.column').css({
+                position: 'absolute',
+                left: ($(window).width() - $('.column').outerWidth()) / 2,
+                top: ($(window).height() - $('.column').outerHeight() - 200) / 2
+            });
+        };
+
         $('.dropdown').dropdown();
+
+        centerOnPage();
+        $(window).resize(function () {centerOnPage(); });
+        $(window).resize();
+        
+        $('.column').removeClass('hidden');
+
     });
 </script>
 @endsection

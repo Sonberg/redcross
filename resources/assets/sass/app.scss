@@ -1,7 +1,25 @@
 @import "semantic/semantic.min.css";
 @import "daterangepicker.css";
+@import "menu.css";
 html {
     body {
+        .logo {
+            width: 200px;
+            margin-bottom: 20px;
+        }
+        .language_bar_chooser {
+            background-color: #d0d0d0;
+            border-radius: 100px;
+            padding: 3px 8px 3px 15px;
+            display: inline-block;
+        }
+        
+        .field {
+            label {
+                    font-size: 1.1em !important;
+            }
+        }
+        
         table.rate {
             thead,
             tr,
@@ -27,8 +45,7 @@ html {
 
 .immigration {
     .preferences {
-        background-color: #F9F9F9;
-        padding: 20px;
+        padding: 0 20px;
         text-align: center;
         .field .table {
             max-width: 900px;
@@ -49,6 +66,27 @@ html {
     text-align: center;
 }
 
+.center {
+    text-align: center;
+    margin: 0 auto;
+    display: block;
+}
+
 .margin-field {
     margin: 30px 0 1em !important;
+}
+
+.full-width {
+    width: 100% !important;
+    border-bottom: 4px solid !important;
+    box-shadow: none !important;
+    border-radius: 0 !important;
+    .header,
+    .meta {
+        text-align: center;
+    }
+}
+
+.no-border {
+    border: none !important;
 }

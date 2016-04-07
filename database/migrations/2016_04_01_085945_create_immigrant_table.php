@@ -34,6 +34,8 @@ class CreateImmigrantTable extends Migration
             $table->boolean('meet_family');
             $table->string('meet_gender');
             $table->boolean('meet_profession');
+            
+            $table->text('notes');
         });
         
         Schema::table('immigrants', function($table) {

@@ -11,12 +11,25 @@
 |
 */
 
-Route::group(['prefix' => LaravelLocalization::setLocale()], function() { 
+Route::group(['prefix' => LaravelLocalization::setLocale(), 'middleware' => [ 'localize' ]], function() { 
     
     // Index
     Route::get('/', 'IndexController@getIndex');
 
     // Immigrant Form
     Route::get('/immigrant', 'ImmigrantController@getIndex');
-    Route::post('/', 'ImmigrantController@postIndex');
+    Route::post('/immigrant', 'ImmigrantController@postIndex');
+    
+    // Friend Form
+    Route::get('/friend', 'FriendController@getIndex');
+    Route::post('/friend', 'FriendController@postIndex');
+    
 });
+
+Route::auth();
+Route::group(['prefix' => LaravelLocalization::setLocale(), 'middleware' => [ 'auth', 'localize' ]], function() { 
+    
+    // Index
+    Route::get('/dashboard', 'DashboardController@getIndex');    
+});
+

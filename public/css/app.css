@@ -1,5 +1,19 @@
 @import url(semantic/semantic.min.css);
 @import url(daterangepicker.css);
+@import url(menu.css);
+html body .logo {
+  width: 200px;
+  margin-bottom: 20px; }
+
+html body .language_bar_chooser {
+  background-color: #d0d0d0;
+  border-radius: 100px;
+  padding: 3px 8px 3px 15px;
+  display: inline-block; }
+
+html body .field label {
+  font-size: 1.1em !important; }
+
 html body table.rate thead,
 html body table.rate tr,
 html body table.rate td {
@@ -19,8 +33,7 @@ html body table.rate td.interest {
   padding: 2px; }
 
 .immigration .preferences {
-  background-color: #F9F9F9;
-  padding: 20px;
+  padding: 0 20px;
   text-align: center; }
   .immigration .preferences .field .table {
     max-width: 900px;
@@ -37,7 +50,24 @@ html body table.rate td.interest {
 .center-text {
   text-align: center; }
 
+.center {
+  text-align: center;
+  margin: 0 auto;
+  display: block; }
+
 .margin-field {
   margin: 30px 0 1em !important; }
+
+.full-width {
+  width: 100% !important;
+  border-bottom: 4px solid !important;
+  box-shadow: none !important;
+  border-radius: 0 !important; }
+  .full-width .header,
+  .full-width .meta {
+    text-align: center; }
+
+.no-border {
+  border: none !important; }
 
 /*# sourceMappingURL=app.css.map */

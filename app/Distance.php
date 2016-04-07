@@ -40,28 +40,6 @@ class Distance {
         }
     }
 
-    /*
-        Return closest Event
-    
-    public static function calcClosestEvent($events, $latitude, $longitude) {
-
-        // Calc distance
-        for($i=0;$i<count($events); $i++) {
-            $events[$i]["distance"] = self::coordinates($latitude, $longitude, $events[$i]["latitude"], $events[$i]["longitude"], "k");
-        }
-        // Sort events after distance
-        usort($events, 'self::invenDescSort');
-        if($events[0]["distance"] < 0.3) {
-            return Watermark::where('owner_event', '=', $events[0]["id"])
-                ->where('isVisible', '=', '1')
-                ->orderBy('created_at', 'desc')
-                ->limit(2)
-                ->get();
-        } else {
-            return array();
-        }
-    }
-    */
 
     /*
         Get short name for current country

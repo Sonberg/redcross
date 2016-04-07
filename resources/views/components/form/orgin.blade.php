@@ -1,5 +1,5 @@
 <!-- Select Country -->
-<div class="field margin-field">
+<div class="field">
     <label>Country of orgin</label>
     <div class="ui fluid search selection dropdown">
         <input type="hidden" name="country" value="{{ old('country') }}">
@@ -14,7 +14,7 @@
 
 </div>
 
-<div class="field margin-field">
+<div class="field">
     <label>Language (Select muliple)</label>
     <div class="ui fluid selection dropdown multiple search">
         <input type="hidden" name="language" value="{{ old('language') }}">

@@ -1,11 +1,11 @@
 <!-- Family members -->
-<div class="field margin-field">
+<div class="field">
     <label for="number_members"> Number of family members</label>
     <input type="number" name="number_members" id="number_members" value="1" value="{{ old('number_members') }}">
 
 </div>
 <!-- Kids age -->
-<div class="field margin-field">
+<div class="field">
     <label>Age of the kids</label>
     <select name="age_kids">
         <option value="" disabled <?php if(old( 'age_kids')=="" ) { echo 'selected="selected"'; } ?>>Select age range</option>

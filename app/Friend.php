@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Established extends Model
+class Friend extends Model
 {
-    //
+     protected $table = 'friends';
 }

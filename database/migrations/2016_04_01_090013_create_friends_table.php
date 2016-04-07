@@ -12,11 +12,12 @@ class CreateEstablishedTable extends Migration
      */
     public function up()
     {
-        Schema::create('established', function (Blueprint $table) {
+        Schema::create('friends', function (Blueprint $table) {
             $table->increments('id');
             $table->timestamps();
             $table->string('first_name')->nullable();
             $table->string('last_name')->nullable();
+            $table->integer('age')->nullable();
             $table->string('gender')->nullable();
             $table->string('phone')->nullable();
             $table->string('email')->nullable();
@@ -25,7 +26,7 @@ class CreateEstablishedTable extends Migration
             $table->integer('profession')->unsigned();
             $table->integer('family_members')->nullable();
             $table->integer('kids_age')->nullable();
-            $table->string('interests');
+            $table->string('intrests');
 
             
             $table->string('adress')->nullable();
@@ -33,12 +34,11 @@ class CreateEstablishedTable extends Migration
             $table->string('city')->nullable();
             $table->decimal('latitude', 23, 20)->nullable();
             $table->decimal('longitude', 23, 20)->nullable();
-            
-            $table->boolean('meet_family');
-            $table->boolean('meet_gender');
+            $table->boolean('has_car');
+            $table->text('notes');
         });
         
-        Schema::table('established', function($table) {
+        Schema::table('friends', function($table) {
             $table->foreign('profession')->references('id')->on('professions')->onDelete('cascade');
         });
     }
@@ -50,6 +50,6 @@ class CreateEstablishedTable extends Migration
      */
     public function down()
     {
-        Schema::drop('established');
+        Schema::drop('friends');
     }
 }
