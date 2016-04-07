@@ -20,11 +20,11 @@ class FriendController extends Controller
             'intrests' => Intrest::all(),
         ]);
     }
-    
+
     public function postIndex(FriendRequest $request) {
         $input = $request->all();
         $intrests = Intrest::all();
-        
+
         $firstName = array_get($input, 'first_name');
         $lastName = array_get($input, 'last_name');
         $age = array_get($input, 'age');
@@ -39,16 +39,16 @@ class FriendController extends Controller
         $car = array_get($input, 'has_car');
         $profession = Profession::where('title', '=', array_get($input, 'profession'))->first();
         $number_members = array_get($input, "number_members");
-        $kids_age = array_get($input, 'kids_age');
-        
+        $kids_age = array_get($input, 'age_kids');
+
         $coordinates = parent::getCoordinates($adress . " " . $city . " " . $zip);
-        
+
         // Intrests
         $c = array();
         for($i=0;$i<count($intrests);$i++) {
             array_push($c, [$intrests[$i]->category => array_get($input, $intrests[$i]->category)]);
         }
-        
+
         $f = new Friend();
         $f->first_name = $firstName;
         $f->last_name = $lastName;
@@ -65,12 +65,12 @@ class FriendController extends Controller
         $f->has_car = $car;
         $f->latitude = $coordinates[0];
         $f->longitude = $coordinates[1];
-    
+
         $f->family_members = $number_members;
         $f->kids_age = $kids_age;
         $f->intrests = json_encode($c);
         $f->save();
-        
+
         return redirect("/");
     }
 }
