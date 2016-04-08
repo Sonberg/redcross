@@ -14,30 +14,39 @@ class Formatter {
     }
   }
 
+  public static function intrests($main, $second) {
+    
+  }
+
   public static function filter ($obj, $length, $procent) {
 
     $order = function ($obj) {
       $arr = array();
-      foreach ($obj as $o) {
-        array_push($arr, $o);
-      }
+      foreach ($obj as $o) { array_push($arr, $o); }
 
       $sort = usort($arr, function($a, $b) {
             return strcmp($a->match, $b->match);
         });
-
         return $arr;
     };
 
     $count = function ($obj, $length) {
         if (count($obj) > $length) {
           return array_slice($obj, 0, $length);
-        } else {
-          return $obj;
-      }
+        } else { return $obj; }
     };
 
-    return $count($order($obj), $length);
+    $filter = function ($obj) {
+        for($i=0;$i<count($obj);$i++) {
+          if ($obj[$i]["match"] == 0) {
+            unset($obj[$i]);
+            $i = 0;
+          }
+        }
+        return $obj;
+    };
+
+    return $filter($count($order($obj),$length));
   }
 
   // Sort functions

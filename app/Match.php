@@ -25,7 +25,7 @@ class Match {
               $s["match"] = floor($procent);
             }
         }
-        
+
         return Formatter::filter($second, $length, $procent);
     }
 
@@ -48,6 +48,13 @@ class Match {
 
             /* Intrest is not matching */
             if(key($main[$i]) != key($second[$i])) {
+              if ($second[key($main[$i])] != null) {
+                $m = get_object_vars($main[$i]);
+                $s = get_object_vars($second[key($main[$i])]);
+                $diff = (self::difference($m[key($main[$i])], $s[key($second[$i])]));
+
+                $match -= ($parts * ($diff/4)/$match)*100;
+              }
 
             /* Intrest is matching */
             } else {
