@@ -5,7 +5,8 @@ use App\Accommodation;
 
 class Formatter {
 
-  public static function coordinates($obj) {
+  // -> coordinates
+  public static function coordinates ($obj) {
     if ($obj->latitude == NULL) {
         $a = Accommodation::find($obj->accommodation);
         return array($a->latitude, $a->longitude);
@@ -14,12 +15,31 @@ class Formatter {
     }
   }
 
-  public static function intrests($main, $second) {
-    
+  // -> profession
+  public static function profession ($main) {
+    if ($main->meet_profession != null) {
+      if($main->meet_profession == true) {
+        return true;
+      } else {
+        return false;
+      }
+    } else { // Main == Friend
+      return null;
+    }
+  }
+  // -> Bool
+  public static function professionCheck ($main, $second) {
+    if($main == $second) {
+      return 100;
+    } else {
+      return 0;
+    }
   }
 
+  // Filter inactive & bad matches
   public static function filter ($obj, $length, $procent) {
 
+    // Order, highest score first
     $order = function ($obj) {
       $arr = array();
       foreach ($obj as $o) { array_push($arr, $o); }
@@ -30,12 +50,14 @@ class Formatter {
         return $arr;
     };
 
+    // Remove if its over max count
     $count = function ($obj, $length) {
         if (count($obj) > $length) {
           return array_slice($obj, 0, $length);
         } else { return $obj; }
     };
 
+    // Remove 0% from array
     $filter = function ($obj) {
         for($i=0;$i<count($obj);$i++) {
           if ($obj[$i]["match"] == 0) {

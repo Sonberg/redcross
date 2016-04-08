@@ -134,6 +134,35 @@ class Match {
         }
     }
 
+    public static function matchProfession($main, $second) {
+      $bool = Formatter::profession($main);
+
+      foreach ($second as $s) {
+        // Immigrant
+        if ($s->meet_profession != null) {
+          if ($s->meet_profession == true) {
+            return Formatter::professionCheck($main->profession, $s->profession);
+          } else { return 100; }
+        } else {
+          // Friend
+          if($bool == true) {
+            return Formatter::professionCheck($main->profession, $s->profession);
+          } else { return 100; }
+      }
+    }
+
+
+    }
+
+    public static function matchFamily() {
+
+    }
+
+    public static function matchAge() {
+
+    }
+
+
     public static function difference($n1, $n2) {
         if ($n1 <= $n2) {
             $result = $n2 - $n1;
