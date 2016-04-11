@@ -1,3 +1,4 @@
+@import url(grid.min.css);
 @import url(semantic/semantic.min.css);
 @import url(daterangepicker.css);
 @import url(menu.css);
@@ -82,8 +83,5 @@ html body table.rate td.interest {
 
 .ui.cards > .card > .content {
   padding: 0em; }
-
-.matchbtn {
-  background: #00A000; }
 
 /*# sourceMappingURL=app.css.map */

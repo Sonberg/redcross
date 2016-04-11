@@ -51,6 +51,5 @@
 
         $('.column').removeClass('hidden');
 */
-    });
 </script>
 @endsection

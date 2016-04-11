@@ -1,7 +1,9 @@
+@import "grid.min.css";
 @import "semantic/semantic.min.css";
 @import "daterangepicker.css";
 @import "menu.css";
 @import "variables.css";
+
 html {
     body {
         .logo {
@@ -114,5 +116,5 @@ html {
      }
 
 .matchbtn{
-    background:$soft-green;
+    //background: $soft-green;
 }
