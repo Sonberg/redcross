@@ -14,9 +14,18 @@ class Match {
             $intrest = Match::matchIntrest($main->intrests, $s->intrests);
             $language = Match::matchLanguage($main->language, $s->language);
             $dist = Match::matchDistance($main, $s);
+            $profession = Match::matchProfession($main, $s);
+            $age = Match::matchAge($main, $s);
+            $family = Match::matchFamily($main, $s);
+
 
             // Total procentage
-            $procent = 100 * ($gender * 0.01) * ($intrest * 0.01 * 1.5) * ($language * 0.01) * ($dist * 0.01);
+            $procent = 100 *
+              ($gender * 0.01) *
+              ($intrest * 0.01 * 1.5) *
+              ($language * 0.01) *
+              ($dist * 0.01) *
+              ($profession * 0.01);
 
             // Remove if its 0 or set max to 100
             if (floor($procent) >= 100) {
@@ -24,6 +33,14 @@ class Match {
             } else {
               $s["match"] = floor($procent);
             }
+
+            $s["result"] = json_encode(array(
+              "gender" => $gender,
+              "intrest" => $intrest,
+              "language" => $language,
+              "dist" => $dist,
+              "profession" => $profession,
+            ));
         }
 
         return Formatter::filter($second, $length, $procent);
@@ -90,7 +107,7 @@ class Match {
                 return 100;
                 break;
             default:
-                if($main == $second) { return 100; } else { return 0; }
+                if($main == $second) { return 140; } else { return 0; }
                 break;
 
         }
@@ -136,30 +153,42 @@ class Match {
 
     public static function matchProfession($main, $second) {
       $bool = Formatter::profession($main);
+      $attribute = "meet_profession";
+      $obj = Formatter::masterPreference($main, $second, $attribute);
 
-      foreach ($second as $s) {
-        // Immigrant
-        if ($s->meet_profession != null) {
-          if ($s->meet_profession == true) {
-            return Formatter::professionCheck($main->profession, $s->profession);
-          } else { return 100; }
-        } else {
-          // Friend
-          if($bool == true) {
-            return Formatter::professionCheck($main->profession, $s->profession);
-          } else { return 100; }
+      if($obj[0][$attribute] == true) {
+        return Match::compereValue($obj[0]->profession, $obj[1]->profession);
+      } else {
+        return 100;
       }
     }
 
+    public static function matchFamily($main, $second) {
+      $attribute = "meet_family";
+      $obj = Formatter::masterPreference($main, $second, $attribute);
 
+      // No preference
+      if ($obj[0][$attribute] == 0) {
+        return 100;
+      }
+
+      if ($obj[0][$attribute] == 1) {
+        $diff = self::difference(Formatter::avarageAge($main->kids_age), Formatter::avarageAge($second->kids_age));
+        if ($diff < 3) { return 120; }
+        if ($diff < 8) { return 50; }
+        return 30;
+      }
+
+      return 100;
     }
 
-    public static function matchFamily() {
+    public static function matchAge($main, $second) {
+      if($main->age == $second->age) { return 100; }
+      $diff = self::difference(Formatter::avarageAge($main->age), Formatter::avarageAge($second->age));
 
-    }
-
-    public static function matchAge() {
-
+      if ($diff < 5) { return 150; }
+      if ($diff < 10) { return 50; }
+      return 30;
     }
 
 
@@ -170,5 +199,14 @@ class Match {
             $result = $n1 - $n2;
         }
         return $result;
+    }
+
+    // Compere if the value is the same -> Bool
+    public static function compereValue ($main, $second) {
+      if($main == $second) {
+        return 150;
+      } else {
+        return 60;
+      }
     }
 }

@@ -17,7 +17,7 @@ class CreateFriendsTable extends Migration
             $table->timestamps();
             $table->string('first_name')->nullable();
             $table->string('last_name')->nullable();
-            $table->integer('age')->nullable();
+            $table->string('age')->nullable();
             $table->string('gender')->nullable();
             $table->string('phone')->nullable();
             $table->string('email')->nullable();
@@ -25,7 +25,7 @@ class CreateFriendsTable extends Migration
             $table->string('language')->nullable();
             $table->integer('profession')->unsigned();
             $table->integer('family_members')->nullable();
-            $table->integer('kids_age')->nullable();
+            $table->string('kids_age')->nullable();
             $table->string('intrests');
 
 

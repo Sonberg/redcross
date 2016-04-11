@@ -15,6 +15,13 @@ class Formatter {
     }
   }
 
+  // Determinate master
+  public static function masterPreference($main, $second, $attribute) {
+    if ($main->$attribute != null) { return array($main, $second); }
+    if ($second->$attribute != null) { return array($second, $main); }
+    return false;
+  }
+
   // -> profession
   public static function profession ($main) {
     if ($main->meet_profession != null) {
@@ -27,12 +34,15 @@ class Formatter {
       return null;
     }
   }
-  // -> Bool
-  public static function professionCheck ($main, $second) {
-    if($main == $second) {
-      return 100;
+
+
+  // Age splitter
+  public static function avarageAge($age) {
+    $age =  explode("-", $age);
+    if(count($age) == 2) {
+      return ($age[0] + $age[1]) / 2;
     } else {
-      return 0;
+      return $age[0];
     }
   }
 
@@ -47,6 +57,7 @@ class Formatter {
       $sort = usort($arr, function($a, $b) {
             return strcmp($a->match, $b->match);
         });
+        var_dump(count($arr));
         return $arr;
     };
 
