@@ -1,6 +1,7 @@
 @import "semantic/semantic.min.css";
 @import "daterangepicker.css";
 @import "menu.css";
+@import "variables.css";
 html {
     body {
         .logo {
@@ -13,13 +14,13 @@ html {
             padding: 3px 8px 3px 15px;
             display: inline-block;
         }
-        
+
         .field {
             label {
                     font-size: 1.1em !important;
             }
         }
-        
+
         table.rate {
             thead,
             tr,
@@ -89,4 +90,29 @@ html {
 
 .no-border {
     border: none !important;
+}
+
+ //Special formatting for admin_landing cards
+.ui.cards>.card{
+
+
+               width:500px;
+
+
+}
+
+.ui.horizontal.segments  {
+        margin: 0rem 0;
+
+}
+
+.ui.horizontal.segments>.segment{
+     border-left: 0px solid rgba(34,36,38,.15);
+}
+     .ui.cards>.card>.content {
+     padding: 0em;
+     }
+
+.matchbtn{
+    background:$soft-green;
 }
