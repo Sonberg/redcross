@@ -16,7 +16,7 @@ class DashboardController extends Controller {
 
     public function getIndex() {
         $i = Immigrant::all();
-        $f = Friend::find(2);
+        $f = Friend::find(11);
         $i = Match::procent($f, $i, $this->maxMatches, $this->lowestProcentage);
 
         return view("dashboard.index", [

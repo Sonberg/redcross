@@ -9,14 +9,15 @@ class Match {
 
     public static function procent($main, $second, $length, $procent) {
 
-        foreach ($second as $s) {
-            $gender = Match::matchGender($main->gender, $s->meet_gender);
-            $intrest = Match::matchIntrest($main->intrests, $s->intrests);
-            $language = Match::matchLanguage($main->language, $s->language);
-            $dist = Match::matchDistance($main, $s);
-            $profession = Match::matchProfession($main, $s);
-            $age = Match::matchAge($main, $s);
-            $family = Match::matchFamily($main, $s);
+        var_dump($main);
+        for($i=0;$i<count($second);$i++) {
+            $gender = Match::matchGender($main->gender, $second[$i]->meet_gender);
+            $intrest = Match::matchIntrest($main->intrests, $second[$i]->intrests);
+            $language = Match::matchLanguage($main->language, $second[$i]->language);
+            $dist = Match::matchDistance($main, $second[$i]);
+            $profession = Match::matchProfession($main, $second[$i]);
+            $age = Match::matchAge($main, $second[$i]);
+            $family = Match::matchFamily($main, $second[$i]);
 
 
             // Total procentage
