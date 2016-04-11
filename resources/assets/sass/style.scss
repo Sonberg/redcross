@@ -102,41 +102,41 @@ html {
 }
 
 //Special formatting for admin_landing cards
+#dashboard{
 
-
-#dashboard .card{
+.card{
   min-width: 25%;
 
 }
 
-#dashboard .ui.horizontal.segments  {
+.ui.horizontal.segments  {
   margin: 0rem 0;
   border-radius: 0.2em 0.2em 0em 0em;
 }
 
-#dashboard .ui.horizontal.segments>.segment{
+.ui.horizontal.segments>.segment{
   border-left: 0px solid rgba(34,36,38,.15);
 }
-#dashboard .ui.cards>.card>.content {
+.ui.cards>.card>.content {
   padding: 0em;
 }
 
-#dashboard .matchbtn{
+.matchbtn{
   background: $soft-green!important;
   color: $white!important;
 }
 
-#dashboard .paddingcols{
+.paddingcols{
   padding: 1em 1em 1em 1em;
 }
 
-#dashboard .ui.attached.buttons{
+.ui.attached.buttons{
   margin-left: 1px;
   margin-right: 1px;
   box-shadow: 0 0 0 1px $silver!important;
 }
 
-#dashboard .ui.segments{
+.ui.segments{
 
   border: 1px solid $silver!important;
-}
+}}
