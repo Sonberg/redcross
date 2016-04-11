@@ -1,15 +1,39 @@
-@extends('app') @section('content')
-<div class="ui container">
-    <div class="column hidden">
-        <img src="/img/logo.png" alt="" class="center logo"> @include('components.language-select')
-        <div class="center-text margin-field">
-            <a href=" {{ LaravelLocalization::getCurrentLocale() }}/immigrant/" class="ui button basic huge">{{trans('basic.immigant-button')}}</a>
-            <a href=" {{ LaravelLocalization::getCurrentLocale() }}/friend/ " class="ui button basic huge">{{trans('basic.established-button')}}</a>
+@extends('app') @section('content') @include('components.navbar')
+<div style="padding-top: 60px;" class="ui container">
+    <div class="ui two cards stackable">
+
+        <!-- New in Sweden -->
+        <div class="card">
+          <div class="content">
+            <div class="header">{{trans('basic.immigant-title')}}</div>
+            <div class="description">
+              Elliot Fu is a film-maker from New York.
+            </div>
+          </div>
+          <a href="{{ LaravelLocalization::getCurrentLocale() }}/immigrant/" class="ui bottom attached button positive">
+            <i class="add icon"></i>
+            {{trans('basic.immigant-button')}}
+          </a>
+        </div>
+
+        <!-- Language Friend -->
+        <div class="card">
+          <div class="content">
+            <div class="header">{{trans('basic.established-title')}}</div>
+            <div class="description">
+              Elliot Fu is a film-maker from New York.
+            </div>
+          </div>
+          <a href=" {{ LaravelLocalization::getCurrentLocale() }}/friend/ " class="ui bottom attached button positive">
+            <i class="add icon"></i>
+            {{trans('basic.established-button')}}
+          </a>
         </div>
     </div>
 </div>
 <script src="/js/fullBackground.js"></script>
 <script>
+/*
     $(document).ready(function () {
         function centerOnPage() {
             $('.column').css({
@@ -24,9 +48,9 @@
         centerOnPage();
         $(window).resize(function () {centerOnPage(); });
         $(window).resize();
-        
-        $('.column').removeClass('hidden');
 
+        $('.column').removeClass('hidden');
+*/
     });
 </script>
 @endsection
