@@ -9,7 +9,7 @@ class Match {
 
     public static function procent($main, $second, $length, $procent) {
 
-        var_dump($main);
+        
         for($i=0;$i<count($second);$i++) {
             $gender = Match::matchGender($main->gender, $second[$i]->meet_gender);
             $intrest = Match::matchIntrest($main->intrests, $second[$i]->intrests);
