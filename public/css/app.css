@@ -2,7 +2,53 @@
 @import url(semantic/semantic.min.css);
 @import url(daterangepicker.css);
 @import url(menu.css);
-@import url(variables.css);
+/* Color palette */
+/* Text styles */
+.breadcr {
+  font-family: FuturaPT-Book;
+  font-size: 14px;
+  color: #838a98; }
+
+.cta-button {
+  font-family: FuturaPT-Book;
+  font-size: 14px;
+  color: #555555; }
+
+.lg-detailed {
+  font-family: FuturaPT-Book;
+  font-size: 14px;
+  color: #9a9a9a; }
+
+.profile-text {
+  font-family: FuturaPT-Book;
+  font-size: 14px;
+  color: #838a98; }
+
+.h1 {
+  font-family: FuturaPT-Heavy;
+  font-size: 12px;
+  color: #555555; }
+
+.name {
+  font-family: Futura-Medium;
+  font-size: 12px;
+  color: #555555; }
+
+.label-statistics {
+  font-family: FuturaPT-Book;
+  font-size: 10px;
+  color: #5e90f2; }
+
+.breadcr {
+  font-family: FuturaPT-Book;
+  font-size: 10px;
+  color: #7d7d7d; }
+
+.profile-label {
+  font-family: FuturaPT-Book;
+  font-size: 9.9px;
+  color: #ffffff; }
+
 html body .logo {
   width: 200px;
   margin-bottom: 20px; }
@@ -72,16 +118,32 @@ html body table.rate td.interest {
 .no-border {
   border: none !important; }
 
-.ui.cards > .card {
-  width: 500px; }
+#dashboard .card {
+  min-width: 25%; }
 
-.ui.horizontal.segments {
-  margin: 0rem 0; }
+#dashboard .ui.horizontal.segments {
+  margin: 0rem 0;
+  border-radius: 0.2em 0.2em 0em 0em; }
 
-.ui.horizontal.segments > .segment {
+#dashboard .ui.horizontal.segments > .segment {
   border-left: 0px solid rgba(34, 36, 38, 0.15); }
 
-.ui.cards > .card > .content {
+#dashboard .ui.cards > .card > .content {
   padding: 0em; }
+
+#dashboard .matchbtn {
+  background: #75c980 !important;
+  color: #ffffff !important; }
+
+#dashboard .paddingcols {
+  padding: 1em 1em 1em 1em; }
+
+#dashboard .ui.attached.buttons {
+  margin-left: 1px;
+  margin-right: 1px;
+  box-shadow: 0 0 0 1px #d4d4d5 !important; }
+
+#dashboard .ui.segments {
+  border: 1px solid #d4d4d5 !important; }
 
 /*# sourceMappingURL=app.css.map */
