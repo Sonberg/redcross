@@ -69,10 +69,14 @@ html {
     text-align: center;
 }
 
+.center-text {
+  text-align: center;
+}
+
 .center {
-    text-align: center;
-    margin: 0 auto;
-    display: block;
+    text-align: center !important;
+    margin: 20px auto !important;
+    display: block !important;
 }
 
 .margin-field {
@@ -94,6 +98,15 @@ html {
     border: none !important;
 }
 
+.no-margin {
+    margin: 0 !important;
+}
+
+.big-header {
+  font-weight: 400 !important;
+  font-size: 2.0571429em !important;
+}
+/*
  //Special formatting for admin_landing cards
 .ui.cards>.card{
 
@@ -118,3 +131,4 @@ html {
 .matchbtn{
     //background: $soft-green;
 }
+*/

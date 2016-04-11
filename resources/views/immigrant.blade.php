@@ -1,8 +1,7 @@
-@extends('app') @section('content')
+@extends('app') @section('content') @include('components.navbar')
 <div class="ui container immigration transition hidden">
     <h1 class="center-text">Formulär för nyanlända</h1>
     <div class="column">
-        @include("components.language-select")
         <div class="">
             <form action="/immigrant" method="post" class="ui form">
                 {!! csrf_field() !!}

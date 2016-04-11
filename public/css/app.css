@@ -52,10 +52,13 @@ html body table.rate td.interest {
 .center-text {
   text-align: center; }
 
+.center-text {
+  text-align: center; }
+
 .center {
-  text-align: center;
-  margin: 0 auto;
-  display: block; }
+  text-align: center !important;
+  margin: 20px auto !important;
+  display: block !important; }
 
 .margin-field {
   margin: 30px 0 1em !important; }
@@ -72,16 +75,38 @@ html body table.rate td.interest {
 .no-border {
   border: none !important; }
 
-.ui.cards > .card {
-  width: 500px; }
+.no-margin {
+  margin: 0 !important; }
 
-.ui.horizontal.segments {
-  margin: 0rem 0; }
+.big-header {
+  font-weight: 400 !important;
+  font-size: 2.0571429em !important; }
 
-.ui.horizontal.segments > .segment {
-  border-left: 0px solid rgba(34, 36, 38, 0.15); }
+/*
+ //Special formatting for admin_landing cards
+.ui.cards>.card{
 
-.ui.cards > .card > .content {
-  padding: 0em; }
+
+               width:500px;
+
+
+}
+
+.ui.horizontal.segments  {
+        margin: 0rem 0;
+
+}
+
+.ui.horizontal.segments>.segment{
+     border-left: 0px solid rgba(34,36,38,.15);
+}
+     .ui.cards>.card>.content {
+     padding: 0em;
+     }
+
+.matchbtn{
+    //background: $soft-green;
+}
+*/
 
 /*# sourceMappingURL=app.css.map */
