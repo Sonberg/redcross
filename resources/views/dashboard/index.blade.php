@@ -28,7 +28,7 @@
                     </div>
                 </div>
                 <!-- @endforeach -->
-                    @endforeach @foreach($friend as $f)
+
 
                         <div class="ui cards">
                             <div class="card">
@@ -44,7 +44,7 @@
                                 </div>
                             </div>
                                 </div>
-                        <!-- @endforeach -->
+
 
             </div>
         </div>
