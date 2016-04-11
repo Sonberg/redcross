@@ -1,18 +1,16 @@
-<div class="language center-text">
-    <ul class="language_bar_chooser">
-        @foreach(LaravelLocalization::getSupportedLocales() as $localeCode => $properties)
-        <a rel="alternate" class="popup-flag" hreflang="{{$localeCode}}" href="{{LaravelLocalization::getLocalizedURL($localeCode) }}" data-content="{{{ $properties['native'] }}}" data-variation="inverted" data-position="bottom center">
-            <i class="@if($localeCode == 'sv') se @elseif($localeCode == 'en') us @elseif($localeCode == 'ar') iq  @endif flag"></i>
-        </a>
-        @endforeach
-    </ul>
-</div>
+<div class="ui fluid selection dropdown language">
+  <input type="hidden" name="site-lang" class="site-lang">
+  <i class="dropdown icon"></i>
+  <div class="default text">Select Language</div>
+    <div class="menu">
+      @foreach(LaravelLocalization::getSupportedLocales() as $localeCode => $properties)
+      <div class="item" data-value="{{LaravelLocalization::getLocalizedURL($localeCode) }}"  hreflang="{{$localeCode}}"><i class="@if($localeCode == 'sv') se @elseif($localeCode == 'en') us @elseif($localeCode == 'ar') iq  @endif flag"></i>{{{ $properties['native'] }}}</div>
+      @endforeach
+    </div>
+  </div>
 
-<script>
-    $(document).ready(function () {
-        $('.popup-flag')
-            .popup({
-                inline: true
-            });
+  <script>
+    $(document).on('change', '.site-lang', function() {
+      window.location.replace($('.site-lang').val());
     });
-</script>
+  </script>
