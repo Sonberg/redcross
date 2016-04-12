@@ -64,9 +64,9 @@ html {
 }
 
 .center {
-    text-align: center !important;
-    margin: 20px auto !important;
-    display: block !important;
+  text-align: center !important;
+  margin: 20px auto !important;
+  display: block !important;
 }
 
 .margin-field {
@@ -89,7 +89,7 @@ html {
 }
 
 .no-margin {
-    margin: 0 !important;
+  margin: 0 !important;
 }
 
 .big-header {
@@ -104,39 +104,62 @@ html {
 //Special formatting for admin_landing cards
 #dashboard{
 
-.card{
-  min-width: 25%;
+  .card{
+    min-width: 25%;
+
+  }
+
+  .ui.horizontal.segments  {
+    margin: 0rem 0;
+    border-radius: 0.2em 0.2em 0em 0em;
+  }
+
+  .ui.horizontal.segments>.segment{
+    border-left: 0px solid rgba(34,36,38,.15);
+  }
+  .ui.cards>.card>.content {
+    padding: 0em;
+  }
+
+  .matchbtn{
+    background: $soft-green!important;
+    color: $white!important;
+  }
+
+  .paddingcols{
+    padding: 1em 1em 1em 1em;
+  }
+
+  .ui.attached.buttons{
+    margin-left: 1px;
+    margin-right: 1px;
+    box-shadow: 0 0 0 1px $silver!important;
+  }
+
+  .ui.segments{
+
+    border: 1px solid $silver!important;
+  }
+  .ui.statistics>.statistic:nth-of-type(2),
+  .ui.statistics>.statistic:nth-of-type(3),
+  .ui.statistics>.statistic:nth-of-type(4){
+    border-left: 1px solid $lightsteel;
+    padding-left: 4em;
+    padding-right: 1em;
+  }
+
+
+  .ui.statistics .statistic>.value~.label{
+    color:$soft-blue;
+  }
+  .ui.statistics .statistic>.value {
+    font-size: 3rem;
+    color:$steel;
+  }
+
+
+
+
+
 
 }
-
-.ui.horizontal.segments  {
-  margin: 0rem 0;
-  border-radius: 0.2em 0.2em 0em 0em;
-}
-
-.ui.horizontal.segments>.segment{
-  border-left: 0px solid rgba(34,36,38,.15);
-}
-.ui.cards>.card>.content {
-  padding: 0em;
-}
-
-.matchbtn{
-  background: $soft-green!important;
-  color: $white!important;
-}
-
-.paddingcols{
-  padding: 1em 1em 1em 1em;
-}
-
-.ui.attached.buttons{
-  margin-left: 1px;
-  margin-right: 1px;
-  box-shadow: 0 0 0 1px $silver!important;
-}
-
-.ui.segments{
-
-  border: 1px solid $silver!important;
-}}
