@@ -144,8 +144,8 @@ html {
   .ui.statistics>.statistic:nth-of-type(3),
   .ui.statistics>.statistic:nth-of-type(4){
     border-left: 1px solid $lightsteel;
-    padding-left: 4em;
-    padding-right: 1em;
+    padding-left: 4%;
+    padding-right: 1%;
   }
 
 
@@ -153,10 +153,12 @@ html {
     color:$soft-blue;
   }
   .ui.statistics .statistic>.value {
-    font-size: 3rem;
+    font-size: 3vw;
     color:$steel;
   }
-
+  .ui.statistics{
+    display:flex!important;
+  }
 
 
 

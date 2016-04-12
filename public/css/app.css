@@ -160,14 +160,19 @@ html body table.rate td.interest {
 #dashboard .ui.statistics > .statistic:nth-of-type(3),
 #dashboard .ui.statistics > .statistic:nth-of-type(4) {
   border-left: 1px solid #dedede;
-  padding-left: 4em;
-  padding-right: 1em; }
+  padding-left: 4%;
+  padding-right: 1%; }
 
 #dashboard .ui.statistics .statistic > .value ~ .label {
   color: #5e90f2; }
 
 #dashboard .ui.statistics .statistic > .value {
-  font-size: 3rem;
+  font-size: 3vw;
   color: #838a98; }
+
+#dashboard .ui.statistics {
+  display: -webkit-flex !important;
+  display: -ms-flexbox !important;
+  display: flex !important; }
 
 /*# sourceMappingURL=app.css.map */
