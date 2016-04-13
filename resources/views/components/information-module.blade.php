@@ -3,10 +3,10 @@
 </button>
 
 <div class="ui basic modal">
-  <button class="ui basic button inverted center">
+  <div class="center hide-module basic button inverted">
     <i class="close icon"></i>
     {{trans('basic.close')}}
-  </button>
+  </div>
   <div class="header center-text">
     @if($type == "immigrant")
       {{trans('form.immigrant-popup-title')}}
@@ -29,8 +29,16 @@
 
 <script type="text/javascript">
   $(document).ready(function() {
+
+    // Show
     $(document).on('click', '.circular.ui.icon.center.matchbtn.button', function() {
       $('.ui.basic.modal').modal('show');
     });
+
+    // Hide
+    $(document).on('click', '.hide-module', function() {
+      $('.ui.basic.modal').modal('hide');
+    });
+
   });
 </script>

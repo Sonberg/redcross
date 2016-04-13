@@ -12,7 +12,14 @@ use App\Http\Controllers\Controller;
 
 class DetailedviewController extends Controller
 {
+
     public function getindex(){
-    return ("kallebanan");
+      $i = Immigrant::all();
+      $f = Friend::find(1);
+      $match = Match::procent($f, $i, $this->maxMatches, $this->lowestProcentage);
+      return view('dashboard.pages.detailedview', [
+        'immigrants' => $match["matches"],
+        'friends' => $f,
+      ]);
     }
 }

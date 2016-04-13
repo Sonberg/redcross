@@ -9,7 +9,7 @@ class Match {
 
     public static function procent($main, $second, $length, $procent) {
 
-        
+
         for($i=0;$i<count($second);$i++) {
             $gender = Match::matchGender($main->gender, $second[$i]->meet_gender);
             $intrest = Match::matchIntrest($main->intrests, $second[$i]->intrests);
@@ -23,19 +23,19 @@ class Match {
             // Total procentage
             $procent = 100 *
               ($gender * 0.01) *
-              ($intrest * 0.01 * 1.5) *
+              ($intrest["procent"] * 0.01 * 1.5) *
               ($language * 0.01) *
               ($dist * 0.01) *
               ($profession * 0.01);
 
             // Remove if its 0 or set max to 100
             if (floor($procent) >= 100) {
-              $s["match"] = 100;
+              $second[$i]["match"] = 100;
             } else {
-              $s["match"] = floor($procent);
+              $second[$i]["match"] = floor($procent);
             }
 
-            $s["result"] = json_encode(array(
+            $second[$i]["result"] = json_encode(array(
               "gender" => $gender,
               "intrest" => $intrest,
               "language" => $language,
@@ -44,7 +44,11 @@ class Match {
             ));
         }
 
-        return Formatter::filter($second, $length, $procent);
+        $return["matches"] = Formatter::filter($second, $length, $procent);
+        $return["count"] = count($return["matches"]);
+        $return["good"] = $intrest["good"];
+
+        return $return;
     }
 
     /* Match intrest -> % */
@@ -52,6 +56,7 @@ class Match {
         $main = json_decode($main);
         $second = json_decode($second);
         $match = 100;
+        $good = array();
 
         /* Different length of arrays | Determent highest count */
 
@@ -79,12 +84,13 @@ class Match {
                 $m = get_object_vars($main[$i]);
                 $s = get_object_vars($second[$i]);
                 $diff = (self::difference($m[key($main[$i])], $s[key($second[$i])]));
-
+                if ($diff < 1) {
+                  array_push($good, $s);
+                }
                 $match -= ($parts * ($diff/4)/$match)*100;
             }
         }
-
-        return $match;
+        return array("procent" => $match, "good" => $good);
     }
 
     /* Match known languages -> % */

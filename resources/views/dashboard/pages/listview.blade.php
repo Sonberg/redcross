@@ -7,7 +7,6 @@
 
 
                  @foreach($immigrant as $i)
-
         <div class="col-xs-12 col-sm-12 col-md-6 paddingcols">
             <div class="column padding-reset">
                 <div class="card">

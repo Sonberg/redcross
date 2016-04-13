@@ -110,7 +110,8 @@ html body table.rate td.interest {
   width: 100% !important;
   border-bottom: 4px solid !important;
   box-shadow: none !important;
-  border-radius: 0 !important; }
+  border-radius: 0 !important;
+  margin-top: 3em !important; }
   .full-width .header,
   .full-width .meta {
     text-align: center; }
