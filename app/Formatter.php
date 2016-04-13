@@ -48,7 +48,6 @@ class Formatter {
 
   // Filter inactive & bad matches
   public static function filter ($obj, $length, $procent) {
-
     // Order, highest score first
     $order = function ($obj) {
       $arr = array();

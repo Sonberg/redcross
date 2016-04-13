@@ -2,7 +2,9 @@
 
 <div class="ui page grid main" id="listview">
 
-    asdasdasd
+    @foreach($immigrants as $i)
+      {{$i}}
+    @endforeach
 
 </div>
 

@@ -30,7 +30,7 @@
 
                 <div class="ui card full-width">
                     <div class="content">
-                        <div class="header">Family</div>
+                        <div class="header">{{trans('form.family-title')}}</div>
                         <div class="meta"></div>
                         <div class="description">
 

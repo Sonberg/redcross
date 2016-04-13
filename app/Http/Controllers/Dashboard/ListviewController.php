@@ -31,4 +31,3 @@ class ListviewController extends Controller {
 
     }
 }
-

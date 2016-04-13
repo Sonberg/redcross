@@ -12,9 +12,6 @@ use App\Http\Controllers\Controller;
 
 class DashboardController extends Controller {
 
-    private $maxMatches = 5;
-    private $lowestProcentage = 60;
-
     public function getIndex() {
         $i = Immigrant::all();
         $f = Friend::find(11);

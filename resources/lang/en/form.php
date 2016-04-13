@@ -28,11 +28,17 @@ return [
     'age' => 'Age',
     'age-placeholder' => 'Select age',
 
+    'have-car' => 'Do you have a car?',
+
     /* Profession & Accommodation */
     'profession' => 'Profession',
     'profession-placeholder' => 'Select your professions sector',
     'accommodation' => 'Current accommodation',
     'accommodation-placeholder' => 'Select your current accommodation',
+
+    'adress' => 'Street Adress',
+    'city' => 'City',
+    'zip' => 'Zip code',
 
     /* Family */
     'family-title' => 'Your family',

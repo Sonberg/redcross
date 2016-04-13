@@ -10,27 +10,29 @@ use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 class Controller extends BaseController
 {
     use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
-    
+    public $maxMatches = 5;
+    public $lowestProcentage = 10;
+
     // Return list of languages
     public function languagesList() {
         $json = file_get_contents('data/languages.json');
         $obj = json_decode($json, true);
         $list = array();
-        
+
         foreach($obj["lang"] as $j) {
             array_push($list, ["eng" => $j[0], "native" => $j[1]]);
         }
-        
+
         return $list;
     }
-    
+
     // Return list of countries
     public function countryList() {
         //https://restcountries.eu/rest/v1/all
         $json = file_get_contents('data/countries.json');
         $obj = json_decode($json);
         $list = array();
-        
+
         foreach($obj as $c) {
             $list[$c->altSpellings[0]] = [
                 "name" => $c->name,
@@ -40,7 +42,7 @@ class Controller extends BaseController
         }
         return json_decode (json_encode ($list), FALSE);
     }
-    
+
     // GPS Coord from Adress
     public function getCoordinates($address){
         $address = urlencode($address);
