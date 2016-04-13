@@ -1,5 +1,6 @@
 @extends('app') @section('content') @include('components.navbar')
 <div class="ui container immigration transition hidden">
+      @include('components.information-module', array('type' => 'friend'))
     <h1 class="center-text">Bli språkvän</h1>
     <div class="column">
         <div class="">
