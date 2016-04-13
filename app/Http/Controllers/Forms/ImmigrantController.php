@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Forms;
 
 use Input;
 use App\Intrest;
@@ -9,7 +9,9 @@ use App\Profession;
 use App\Accommodation;
 use App\Http\Requests;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 use App\Http\Requests\ImmigrantRequest;
+
 
 class ImmigrantController extends Controller
 {

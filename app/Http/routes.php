@@ -17,12 +17,12 @@ Route::group(['prefix' => LaravelLocalization::setLocale(), 'middleware' => [ 'l
     Route::get('/', 'IndexController@getIndex');
 
     // Immigrant Form
-    Route::get('/immigrant', 'ImmigrantController@getIndex');
-    Route::post('/immigrant', 'ImmigrantController@postIndex');
+    Route::get('/immigrant', 'Forms\ImmigrantController@getIndex');
+    Route::post('/immigrant', 'Forms\ImmigrantController@postIndex');
     
     // Friend Form
-    Route::get('/friend', 'FriendController@getIndex');
-    Route::post('/friend', 'FriendController@postIndex');
+    Route::get('/friend', 'Forms\FriendController@getIndex');
+    Route::post('/friend', 'Forms\FriendController@postIndex');
     
 });
 
@@ -30,8 +30,10 @@ Route::auth();
 Route::group(['prefix' => LaravelLocalization::setLocale(), 'middleware' => [ 'auth', 'localize' ]], function() { 
     
     // Index
-    Route::get('/dashboard', 'DashboardController@getIndex');
+    Route::get('/dashboard', 'Dashboard\DashboardController@getIndex');
     //List view
-    Route::get('/listview', 'ListviewController@getIndex');
+    Route::get('/dashboard/{type}/listview', 'Dashboard\ListviewController@getIndex');
+    //Detailed view
+    Route::get('/dashboard/detailedview', 'Dashboard\DetailedviewController@getIndex');
 });
 

@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Forms;
 
 use Input;
 use App\Friend;
@@ -8,6 +8,7 @@ use App\Intrest;
 use App\Profession;
 use App\Http\Requests;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 use App\Http\Requests\FriendRequest;
 
 class FriendController extends Controller
