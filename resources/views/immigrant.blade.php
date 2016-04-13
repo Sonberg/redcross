@@ -1,9 +1,9 @@
-@extends('app') @section('content') @include('components.navbar')
+@extends('app') @section('content') @include('components.navbar') @include('components.information-module', array('type' => 'immigrant'))
 <div class="ui container immigration transition hidden">
-    <h1 class="center-text"> Formulär för nyanlända </h1>
-          <div class="col-lg-12 sub header">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce vulputate tristique consectetur. Proin id lobortis enim. Nulla et augue congue, efficitur ex non, lobortis ligula. Quisque facilisis vehicula arcu ut pharetra. Nulla tellus dolor, rhoncus eu congue non, faucibus sed ipsum. Aliquam tempor rhoncus velit sit amet tincidunt. Donec faucibus consectetur ullamcorper. In imperdiet urna id pretium ullamcorper. Quisque eget feugiat magna.
-          </div>
+    <h1 class="center-text" style="margin-top: 24px; margin-bottom: 0"> {{trans('form.immigrant-title')}} </h1>
+    <button class="circular ui icon center matchbtn button" style="margin-top: 10px !important">
+      <i class="icon help"></i>
+    </button>
     <div class="column">
         <div class="">
             <form action="/immigrant" method="post" class="ui form">
@@ -13,15 +13,16 @@
 
                 <div class="ui card full-width">
                     <div class="content">
-                        <div class="header">Cute Dog</div>
-                        <div class="meta">2 days ago</div>
+                        <div class="header">{{trans('form.basic-title')}}</div>
+                        <div class="meta">{{trans('form.basic-meta')}}</div>
                         <div class="description">
                             @include("components.form.basic")
 
                             <!-- Accommodation -->
                             <div class="field margin-field">
-                                <label for="accommodation">Current Accommodation</label>
+                                <label for="accommodation">{{trans('form.accommodation')}}</label>
                                 <select name="accommodation" id="accommodation" value="{{ old('accommodation') }}">
+                                  <option value="" disabled selected>{{trans('form.accommodation-placeholder')}}</option>
                                     @foreach($accommodations as $a)
                                     <option value="{{$a->id}}">{{$a->title}}</option>
                                     @endforeach
@@ -34,8 +35,8 @@
 
                 <div class="ui card full-width">
                     <div class="content">
-                        <div class="header">Cute Dog</div>
-                        <div class="meta">2 days ago</div>
+                        <div class="header">Family</div>
+                        <div class="meta"></div>
                         <div class="description">
 
                             @include("components.form.family")
@@ -45,8 +46,8 @@
 
                 <div class="ui card full-width">
                     <div class="content">
-                        <div class="header">Cute Dog</div>
-                        <div class="meta">2 days ago</div>
+                        <div class="header">Country</div>
+                        <div class="meta"></div>
                         <div class="description">
 
                             @include("components.form.orgin")
@@ -57,8 +58,8 @@
 
                 <div class="ui card full-width">
                     <div class="content">
-                        <div class="header">Cute Dog</div>
-                        <div class="meta">2 days ago</div>
+                        <div class="header">{{trans('form.preferences-title')}}</div>
+                        <div class="meta">{{trans('form.preferences-meta')}}</div>
                         <div class="description preferences">
 
                             @include("components.form.intrest")
@@ -69,67 +70,67 @@
 
                 <div class="ui card full-width no-border">
                     <div class="content">
-                        <div class="header">Cute Dog</div>
-                        <div class="meta">2 days ago</div>
+                        <div class="header">{{trans('form.preferences-title')}}</div>
+                        <div class="meta">{{trans('form.preferences-meta')}}</div>
                         <div class="description preferences">
 
                             <div class="grouped fields margin-field">
                                 <div class="field">
-                                    <label>I want to meet someone with a family:</label>
+                                    <label>{{trans('form.meet-family-title')}}</label>
                                 </div>
                                 <div class="field">
                                     <div class="ui radio checkbox">
                                         <input type="radio" value="1" name="meet_family" id="meet_family" class="hidden" tabindex="0">
-                                        <label>Yes</label>
+                                        <label>{{trans('form.meet-yes')}}</label>
                                     </div>
                                 </div>
                                 <div class="field">
                                     <div class="ui radio checkbox">
                                         <input type="radio" name="meet_family" value="0" class="hidden" checked="checked" tabindex="0">
-                                        <label>Do not matter</label>
+                                        <label>{{trans('form.meet-no')}}</label>
                                     </div>
                                 </div>
                             </div>
 
                             <div class="grouped fields margin-field">
                                 <div class="field">
-                                    <label>I want to meet a:</label>
+                                    <label>{{trans('form.meet-gender-title')}}</label>
                                 </div>
                                 <div class="field">
                                     <div class="ui radio checkbox">
                                         <input type="radio" value="man" name="meet_gender" id="meet_gender" class="hidden" tabindex="0">
-                                        <label>Man</label>
+                                        <label>{{trans('form.meet-gender-man')}}</label>
                                     </div>
                                 </div>
                                 <div class="field">
                                     <div class="ui radio checkbox">
                                         <input type="radio" name="meet_gender" value="woman" class="hidden" tabindex="0">
-                                        <label>Women</label>
+                                        <label>{{trans('form.meet-gender-woman')}}</label>
                                     </div>
                                 </div>
 
                                 <div class="field">
                                     <div class="ui radio checkbox">
                                         <input type="radio" name="meet_gender" value="0" class="hidden" checked="checked" tabindex="0">
-                                        <label>Do not matter</label>
+                                        <label>{{trans('form.meet-no')}}</label>
                                     </div>
                                 </div>
                             </div>
 
                             <div class="grouped fields margin-field">
                                 <div class="field">
-                                    <label>I want to someone connected to my profession:</label>
+                                    <label>{{trans('form.meet-profession-title')}}</label>
                                 </div>
                                 <div class="field">
                                     <div class="ui radio checkbox">
                                         <input type="radio" value="1" name="meet_profession" id="meet_profession" class="hidden" tabindex="0">
-                                        <label>Yes</label>
+                                        <label>{{trans('form.meet-yes')}}</label>
                                     </div>
                                 </div>
                                 <div class="field">
                                     <div class="ui radio checkbox">
                                         <input type="radio" name="meet_profession" value="0" class="hidden" checked="checked" tabindex="0">
-                                        <label>Do not matter</label>
+                                        <label>{{trans('form.meet-no')}}</label>
                                     </div>
                                 </div>
                             </div>
@@ -141,7 +142,7 @@
 
 
 
-                <button type="submit" class="ui matchbtn center button huge">Register</button>
+                <button type="submit" class="ui matchbtn center button huge">Send application</button>
             </form>
         </div>
     </div>
@@ -154,6 +155,10 @@
         $('select').dropdown();
         $('.dropdown').dropdown();
         $(".radio").checkbox();
+
+        $(document).on('click', '.circular.ui.icon.center.matchbtn.button', function() {
+          $('.ui.basic.modal').modal('show');
+        });
     });
 </script>
 @endsection

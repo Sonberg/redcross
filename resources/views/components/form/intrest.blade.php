@@ -2,13 +2,13 @@
     <table class="rate ui very basic unstackable celled table">
         <thead class="">
             <tr>
-                <td class="title">No interest</td>
+                <td class="title">{{trans('form.intrests-min')}}</td>
                 <td class="number">1</td>
                 <td class="number">2</td>
                 <td class="number">3</td>
                 <td class="number">4</td>
                 <td class="number">5</td>
-                <td class="title">Interested</td>
+                <td class="title">{{trans('form.intrests-max')}}</td>
             </tr>
         </thead>
         <tbody class="">

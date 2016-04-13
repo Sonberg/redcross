@@ -17,8 +17,8 @@ return [
     'established-body' => 'I want to be your best language friend forever',
     'established-button' => 'I want to be a language friend',
 
-    /* IMMIGRANTS FORM */
+    /* NAVBAR */
+    'language-drop' => 'Language',
 
-    /* FRIENDS FORM */
-    
+
 ];

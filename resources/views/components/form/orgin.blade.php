@@ -1,10 +1,10 @@
 <!-- Select Country -->
 <div class="field">
-    <label>Country of orgin</label>
+    <label>{{trans('form.country-title')}}</label>
     <div class="ui fluid search selection dropdown">
         <input type="hidden" name="country" value="{{ old('country') }}">
         <i class="dropdown icon"></i>
-        <div class="default text">Select Country</div>
+        <div class="default text">{{trans('form.country-placeholder')}}</div>
         <div class="menu">
             @foreach($countries as $country)
             <div class="item" data-value="{{$country->short}}"><i class="{{$country->shortSmall}} flag"></i>{{$country->name}}</div>
@@ -15,11 +15,11 @@
 </div>
 
 <div class="field">
-    <label>Language (Select muliple)</label>
+    <label>{{trans('form.language-title')}}</label>
     <div class="ui fluid selection dropdown multiple search">
         <input type="hidden" name="language" value="{{ old('language') }}">
         <i class="dropdown icon"></i>
-        <span class="default text">Select known languages</span>
+        <span class="default text">{{trans('form.language-placeholder')}}</span>
         <div class="menu">
             @foreach($languages as $l)
             <div class="item" data-text="{{$l['eng']}}">
