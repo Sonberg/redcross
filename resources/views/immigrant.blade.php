@@ -1,16 +1,11 @@
-@extends('app') @section('content') @include('components.navbar') @include('components.information-module', array('type' => 'immigrant'))
+@extends('app') @section('content') @include('components.navbar')
 <div class="ui container immigration transition hidden">
+      @include('components.information-module', array('type' => 'immigrant'))
     <h1 class="center-text" style="margin-top: 24px; margin-bottom: 0"> {{trans('form.immigrant-title')}} </h1>
-    <button class="circular ui icon center matchbtn button" style="margin-top: 10px !important">
-      <i class="icon help"></i>
-    </button>
     <div class="column">
         <div class="">
             <form action="/immigrant" method="post" class="ui form">
                 {!! csrf_field() !!}
-
-
-
                 <div class="ui card full-width">
                     <div class="content">
                         <div class="header">{{trans('form.basic-title')}}</div>
@@ -155,10 +150,6 @@
         $('select').dropdown();
         $('.dropdown').dropdown();
         $(".radio").checkbox();
-
-        $(document).on('click', '.circular.ui.icon.center.matchbtn.button', function() {
-          $('.ui.basic.modal').modal('show');
-        });
     });
 </script>
 @endsection

@@ -8,6 +8,9 @@ return [
     |--------------------------------------------------------------------------
     */
 
+    /* GLOBAL TRANSLATE */
+    'close' => 'Close',
+
     /* LANDING PAGE */
     'immigant-title' => "I'm new in Sweden",
     'immigant-body' => "I'm new in Sweden and i fucking love it",

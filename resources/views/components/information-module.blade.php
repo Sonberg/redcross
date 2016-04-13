@@ -1,5 +1,12 @@
+<button class="circular ui icon center matchbtn button" style="margin-top: 10px !important">
+  <i class="icon help"></i>
+</button>
+
 <div class="ui basic modal">
-  <i class="close icon"></i>
+  <button class="ui basic button inverted center">
+    <i class="close icon"></i>
+    {{trans('basic.close')}}
+  </button>
   <div class="header center-text">
     @if($type == "immigrant")
       {{trans('form.immigrant-popup-title')}}
@@ -19,3 +26,11 @@
     </div>
   </div>
 </div>
+
+<script type="text/javascript">
+  $(document).ready(function() {
+    $(document).on('click', '.circular.ui.icon.center.matchbtn.button', function() {
+      $('.ui.basic.modal').modal('show');
+    });
+  });
+</script>
