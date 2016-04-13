@@ -10,10 +10,10 @@ use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
 
-class DetailedviewController extends Controller
+class MatchviewController extends Controller
 {
     public function getindex(){
-    return view("dashboard.pages.detailedview");
+        return view("dashboard.pages.matchview");
     }
 }
 

@@ -199,4 +199,43 @@ html body table.rate td.interest {
   background: #5fc06c !important;
   color: #ffffff !important; }
 
+#matchview .ui.fluid.input {
+  padding-top: 0.5em !important; }
+
+#matchview .ui.card {
+  width: 40em; }
+
+#matchview .ui.feed {
+  margin: 0; }
+
+#matchview .age {
+  width: 48%;
+  float: left; }
+
+#matchview .work {
+  width: 48%;
+  float: right; }
+
+#matchview .interest:nth-child(2) {
+  float: left;
+  width: 30%;
+  margin-right: 5%; }
+
+#matchview .interest:first-child {
+  float: left;
+  width: 30%;
+  margin-right: 5%; }
+
+#matchview .interest:last-child {
+  float: left;
+  width: 30%; }
+
+#matchview .interest > input {
+  text-align: center;
+  background-color: #75c980 !important;
+  color: #ffffff; }
+
+.interest > .ui.label {
+  background-color: #5fc06c !important; }
+
 /*# sourceMappingURL=app.css.map */
