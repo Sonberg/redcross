@@ -30,6 +30,8 @@ Route::auth();
 Route::group(['prefix' => LaravelLocalization::setLocale(), 'middleware' => [ 'auth', 'localize' ]], function() { 
     
     // Index
-    Route::get('/dashboard', 'DashboardController@getIndex');    
+    Route::get('/dashboard', 'DashboardController@getIndex');
+    //List view
+    Route::get('/listview', 'ListviewController@getIndex');
 });
 

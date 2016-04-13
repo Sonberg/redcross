@@ -145,6 +145,28 @@ html body table.rate td.interest {
   background: #75c980 !important;
   color: #ffffff !important; }
 
+#dashboard .matchbtn:hover {
+  background: #5fc06c !important;
+  color: #ffffff !important; }
+
+#dashboard .matchbtn:focus {
+  background: #5fc06c !important;
+  color: #ffffff !important; }
+
+#dashboard .circle-base {
+  border-radius: 50%;
+  behavior: url(PIE.htc); }
+
+#dashboard .circle-front {
+  width: 23px;
+  height: 23px;
+  background-color: #2e5033;
+  opacity: 0.19;
+  border: 0px solid rgba(0, 0, 0, 0.6);
+  line-height: 23px;
+  text-align: center;
+  float: right; }
+
 #dashboard .paddingcols {
   padding: 1em 1em 1em 1em; }
 
@@ -155,5 +177,24 @@ html body table.rate td.interest {
 
 #dashboard .ui.segments {
   border: 1px solid #d4d4d5 !important; }
+
+#dashboard .ui.statistics > .statistic:nth-of-type(2),
+#dashboard .ui.statistics > .statistic:nth-of-type(3),
+#dashboard .ui.statistics > .statistic:nth-of-type(4) {
+  border-left: 1px solid #dedede;
+  padding-left: 4%;
+  padding-right: 1%; }
+
+#dashboard .ui.statistics .statistic > .value ~ .label {
+  color: #5e90f2; }
+
+#dashboard .ui.statistics .statistic > .value {
+  font-size: 3vw;
+  color: #838a98; }
+
+#dashboard .ui.statistics {
+  display: -webkit-flex !important;
+  display: -ms-flexbox !important;
+  display: flex !important; }
 
 /*# sourceMappingURL=app.css.map */
