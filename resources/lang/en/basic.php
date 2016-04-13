@@ -8,6 +8,7 @@ return [
     |--------------------------------------------------------------------------
     */
 
+    /* LANDING PAGE */
     'immigant-title' => "I'm new in Sweden",
     'immigant-body' => "I'm new in Sweden and i fucking love it",
     'immigant-button' => "I'm new in Sweden",
@@ -16,4 +17,8 @@ return [
     'established-body' => 'I want to be your best language friend forever',
     'established-button' => 'I want to be a language friend',
 
+    /* IMMIGRANTS FORM */
+
+    /* FRIENDS FORM */
+    
 ];
