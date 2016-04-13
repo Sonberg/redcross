@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Dashboard;
 use Auth;
 use App\Match;
 use App\Friend;
+use Carbon\Carbon;
 use App\Immigrant;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
@@ -12,18 +13,22 @@ use Illuminate\Http\Request;
 
 class ListviewController extends Controller {
 
-    private $maxMatches = 5;
-    private $lowestProcentage = 60;
-
-    public function getIndex($type) {
+    public function getIndex() {
         $i = Immigrant::all();
-        $f = Friend::find(11);
-        $i = Match::procent($f, $i, $this->maxMatches, $this->lowestProcentage);
+        $f = Friend::all();
+      /* $t = Carbon::now()->'created_at'->diffForHumans(); */
+
+
 
         return view("dashboard.pages.listview", [
             'user' => Auth::user(),
             'immigrant' => $i,
-            'friend' => $f,
+            'friend' => $f
+            /* 'timesince' =>$t, */
         ]);
+
+
+
     }
 }
+

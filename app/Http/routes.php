@@ -32,7 +32,7 @@ Route::group(['prefix' => LaravelLocalization::setLocale(), 'middleware' => [ 'a
     // Index
     Route::get('/dashboard', 'Dashboard\DashboardController@getIndex');
     //List view
-    Route::get('/dashboard/{type}/listview', 'Dashboard\ListviewController@getIndex');
+    Route::get('/dashboard/listview', 'Dashboard\ListviewController@getIndex');
     //Detailed view
     Route::get('/dashboard/detailedview', 'Dashboard\DetailedviewController@getIndex');
 });

@@ -128,24 +128,24 @@ html body table.rate td.interest {
 .container {
   margin-top: 60px; }
 
-#dashboard .card {
+#dashboard .card, #listview .card {
   min-width: 25%; }
 
-#dashboard .ui.horizontal.segments {
+#dashboard .ui.horizontal.segments, #listview .ui.horizontal.segments {
   margin: 0rem 0;
   border-radius: 0.2em 0.2em 0em 0em; }
 
-#dashboard .ui.horizontal.segments > .segment {
+#dashboard .ui.horizontal.segments > .segment, #listview .ui.horizontal.segments > .segment {
   border-left: 0px solid rgba(34, 36, 38, 0.15); }
 
-#dashboard .ui.cards > .card > .content {
+#dashboard .ui.cards > .card > .content, #listview .ui.cards > .card > .content {
   padding: 0em; }
 
-#dashboard .circle-base {
+#dashboard .circle-base, #listview .circle-base {
   border-radius: 50%;
   behavior: url(PIE.htc); }
 
-#dashboard .circle-front {
+#dashboard .circle-front, #listview .circle-front {
   width: 23px;
   height: 23px;
   background-color: #2e5033;
@@ -155,32 +155,34 @@ html body table.rate td.interest {
   text-align: center;
   float: right; }
 
-#dashboard .paddingcols {
+#dashboard .paddingcols, #listview .paddingcols {
   padding: 1em 1em 1em 1em; }
 
-#dashboard .ui.attached.buttons {
+#dashboard .ui.attached.buttons, #listview .ui.attached.buttons {
   margin-left: 1px;
   margin-right: 1px;
   box-shadow: 0 0 0 1px #d4d4d5 !important; }
 
-#dashboard .ui.segments {
+#dashboard .ui.segments, #listview .ui.segments {
   border: 1px solid #d4d4d5 !important; }
 
 #dashboard .ui.statistics > .statistic:nth-of-type(2),
 #dashboard .ui.statistics > .statistic:nth-of-type(3),
-#dashboard .ui.statistics > .statistic:nth-of-type(4) {
+#dashboard .ui.statistics > .statistic:nth-of-type(4), #listview .ui.statistics > .statistic:nth-of-type(2),
+#listview .ui.statistics > .statistic:nth-of-type(3),
+#listview .ui.statistics > .statistic:nth-of-type(4) {
   border-left: 1px solid #dedede;
   padding-left: 4%;
   padding-right: 1%; }
 
-#dashboard .ui.statistics .statistic > .value ~ .label {
+#dashboard .ui.statistics .statistic > .value ~ .label, #listview .ui.statistics .statistic > .value ~ .label {
   color: #5e90f2; }
 
-#dashboard .ui.statistics .statistic > .value {
+#dashboard .ui.statistics .statistic > .value, #listview .ui.statistics .statistic > .value {
   font-size: 3vw;
   color: #838a98; }
 
-#dashboard .ui.statistics {
+#dashboard .ui.statistics, #listview .ui.statistics {
   display: -webkit-flex !important;
   display: -ms-flexbox !important;
   display: flex !important; }
