@@ -80,7 +80,7 @@
                     </div>
                 </div>
 
-                <button type="submit" class="ui green button huge">Register</button>
+                <button type="submit" class="ui matchbtn center button huge">Register</button>
             </form>
         </div>
     </div>

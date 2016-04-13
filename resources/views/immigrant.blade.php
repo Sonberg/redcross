@@ -1,6 +1,9 @@
 @extends('app') @section('content') @include('components.navbar')
 <div class="ui container immigration transition hidden">
-    <h1 class="center-text">Formulär för nyanlända</h1>
+    <h1 class="center-text"> Formulär för nyanlända </h1>
+          <div class="col-lg-12 sub header">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce vulputate tristique consectetur. Proin id lobortis enim. Nulla et augue congue, efficitur ex non, lobortis ligula. Quisque facilisis vehicula arcu ut pharetra. Nulla tellus dolor, rhoncus eu congue non, faucibus sed ipsum. Aliquam tempor rhoncus velit sit amet tincidunt. Donec faucibus consectetur ullamcorper. In imperdiet urna id pretium ullamcorper. Quisque eget feugiat magna.
+          </div>
     <div class="column">
         <div class="">
             <form action="/immigrant" method="post" class="ui form">
@@ -138,7 +141,7 @@
 
 
 
-                <button type="submit" class="ui green button huge">Register</button>
+                <button type="submit" class="ui matchbtn center button huge">Register</button>
             </form>
         </div>
     </div>

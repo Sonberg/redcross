@@ -121,19 +121,6 @@ html {
     padding: 0em;
   }
 
-  .matchbtn{
-     background: $soft-green!important;
-     color: $white!important;
-   }
-
-  .matchbtn:hover{
-    background: darken($soft-green,6)!important;
-    color: $white!important;
-  }
-  .matchbtn:focus{
-    background: darken($soft-green,6)!important;
-    color: $white!important;
-  }
 
   .circle-base {
     border-radius: 50%;
@@ -188,9 +175,19 @@ html {
   .ui.statistics{
     display:flex!important;
   }
+}
 
+// # buttons
+.matchbtn{
+   background: $soft-green!important;
+   color: $white!important;
+ }
 
-
-
-
+.matchbtn:hover{
+  background: darken($soft-green,6)!important;
+  color: $white!important;
+}
+.matchbtn:focus{
+  background: darken($soft-green,6)!important;
+  color: $white!important;
 }
