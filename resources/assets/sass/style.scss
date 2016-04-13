@@ -122,9 +122,38 @@ html {
   }
 
   .matchbtn{
-    background: $soft-green!important;
+     background: $soft-green!important;
+     color: $white!important;
+   }
+
+  .matchbtn:hover{
+    background: darken($soft-green,6)!important;
     color: $white!important;
   }
+  .matchbtn:focus{
+    background: darken($soft-green,6)!important;
+    color: $white!important;
+  }
+
+  .circle-base {
+    border-radius: 50%;
+    behavior: url(PIE.htc);
+  }
+
+  .circle-front {
+    width: 23px;
+    height: 23px;
+    background-color: $pine;
+    opacity: 0.19;
+    border: 0px solid $black-60;
+    line-height:23px;
+    text-align:center;
+    //Must fix float/margins for circle
+    float:right;
+
+  }
+
+
 
   .paddingcols{
     padding: 1em 1em 1em 1em;

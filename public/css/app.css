@@ -145,6 +145,28 @@ html body table.rate td.interest {
   background: #75c980 !important;
   color: #ffffff !important; }
 
+#dashboard .matchbtn:hover {
+  background: #5fc06c !important;
+  color: #ffffff !important; }
+
+#dashboard .matchbtn:focus {
+  background: #5fc06c !important;
+  color: #ffffff !important; }
+
+#dashboard .circle-base {
+  border-radius: 50%;
+  behavior: url(PIE.htc); }
+
+#dashboard .circle-front {
+  width: 23px;
+  height: 23px;
+  background-color: #2e5033;
+  opacity: 0.19;
+  border: 0px solid rgba(0, 0, 0, 0.6);
+  line-height: 23px;
+  text-align: center;
+  float: right; }
+
 #dashboard .paddingcols {
   padding: 1em 1em 1em 1em; }
 

@@ -92,7 +92,7 @@
                 </div>
 
                 <div class="ui buttons bottom attached button">
-                    <button class="ui button matchbtn">Matcha nu(xx)</button>
+                    <button class="ui button matchbtn"><div>Matcha nu<div class="circle-base circle-front">7</div></div></button>
                     <button class="ui button">Mer info</button>
                 </div>
             </div>
