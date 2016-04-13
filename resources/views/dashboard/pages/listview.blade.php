@@ -19,13 +19,13 @@
                                     <p>{{$i->first_name}} {{$i->last_name}}</p>
                                 </div>
                                 <div class="ui segment">
-                                    <p>{{$i->gender}}</p>
+                                    <p>{{ucfirst($i->gender)}}</p>
                                 </div>
                                 <div class="ui segment">
                                     <p>{{$i->orgin}}</p>
                                 </div>
                                 <div class="ui segment">
-                                    <p>{{ date('F d, Y', strtotime($i->created_at)) }}</p>
+                                    <p>{{ date('d F, Y', strtotime($i->created_at)) }}</p>
                                 </div>
                             </div>
                         </div>
