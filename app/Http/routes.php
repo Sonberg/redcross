@@ -35,4 +35,6 @@ Route::group(['prefix' => LaravelLocalization::setLocale(), 'middleware' => [ 'a
     Route::get('/dashboard/listview', 'Dashboard\ListviewController@getIndex');
     //Detailed view
     Route::get('/dashboard/detailedview', 'Dashboard\DetailedviewController@getIndex');
+    //Match view
+    Route::get('/dashboard/matchview', 'Dashboard\MatchviewController@getIndex');
 });

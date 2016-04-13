@@ -192,3 +192,50 @@ html {
   background: darken($soft-green,6)!important;
   color: $white!important;
 }
+
+#matchview {
+
+  .ui.fluid.input {
+    padding-top: 0.5em !important;
+  }
+  .ui.card {
+    width: 40em;
+  }
+  .ui.feed {
+    margin: 0;
+  }
+  .age {
+    width: 48%;
+    float: left;
+  }
+  .work {
+    width: 48%;
+    float: right;
+  }
+  .interest:nth-child(2) {
+    float: left;
+    width: 30%;
+    margin-right: 5%;
+
+  }
+  .interest:first-child {
+    float: left;
+    width: 30%;
+    margin-right: 5%;
+  }
+
+  .interest:last-child {
+    float: left;
+    width: 30%;
+  }
+  .interest > input {
+    text-align: center;
+    background-color:$soft-green!important;
+    color:$white;
+
+  }
+
+}
+.interest>.ui.label{
+    background-color:darken($soft-green,6)!important;
+  }
