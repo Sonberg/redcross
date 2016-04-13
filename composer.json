@@ -9,7 +9,8 @@
         "laravel/framework": "5.2.*",
         "mcamara/laravel-localization": "1.1.*",
          "laravelcollective/html": "5.2.*",
-        "themsaid/laravel-langman": "^1.1"
+        "themsaid/laravel-langman": "^1.1",
+        "nesbot/carbon": "~1.14"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",
