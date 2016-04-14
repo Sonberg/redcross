@@ -1,18 +1,12 @@
 <?php
 
 namespace App;
-use App\Accommodation;
 
 class Formatter {
 
   // -> coordinates
   public static function coordinates ($obj) {
-    if ($obj->latitude == NULL) {
-        $a = Accommodation::find($obj->accommodation);
-        return array($a->latitude, $a->longitude);
-    } else {
       return array($obj->latitude, $obj->longitude);
-    }
   }
 
   // Determinate master

@@ -3,15 +3,12 @@
 namespace App;
 use App\Distance;
 use App\Formatter;
-use App\Accommodation;
 
 class Match {
 
     public static function procent($main, $second, $length, $procent) {
-
-
         for($i=0;$i<count($second);$i++) {
-            $gender = Match::matchGender($main->gender, $second[$i]->meet_gender);
+            $gender = Match::matchGender($main, $second[$i]);
             $intrest = Match::matchIntrest($main->intrests, $second[$i]->intrests);
             $language = Match::matchLanguage($main->language, $second[$i]->language);
             $dist = Match::matchDistance($main, $second[$i]);
@@ -19,12 +16,11 @@ class Match {
             $age = Match::matchAge($main, $second[$i]);
             $family = Match::matchFamily($main, $second[$i]);
 
-
             // Total procentage
             $procent = 100 *
               ($gender * 0.01) *
-              ($intrest["procent"] * 0.01 * 1.5) *
-              ($language * 0.01) *
+              ($intrest["procent"] * 0.01) *
+              ($language["procent"] * 0.01) *
               ($dist * 0.01) *
               ($profession * 0.01);
 
@@ -41,80 +37,81 @@ class Match {
               "language" => $language,
               "dist" => $dist,
               "profession" => $profession,
+              "matches" => array_merge($intrest["matches"], $language["matches"])
             ));
-        }
+          }
 
-        $return["matches"] = Formatter::filter($second, $length, $procent);
-        $return["count"] = count($return["matches"]);
-        $return["good"] = $intrest["good"];
-
+        $return["result"] = Formatter::filter($second, $length, $procent);
+        $return["count"] = count($return["result"]);
         return $return;
     }
 
     /* Match intrest -> % */
     public static function matchIntrest($main, $second) {
-        $main = json_decode($main);
-        $second = json_decode($second);
-        $match = 100;
-        $good = array();
+        $main = explode(",", $main);
+        $second = explode(",", $second);
+        $items = count($main);
+        $matches = array();
 
-        /* Different length of arrays | Determent highest count */
-
-        if (count($main) >= count($second)) {
-            $count = count($main);
-        } else if (count($main) < count($second)) {
-            $count = count($second);
-        }
-
-        $parts = 100/$count;
-        for($i=0;$i<$count;$i++) {
-
-            /* Intrest is not matching */
-            if(key($main[$i]) != key($second[$i])) {
-              if ($second[key($main[$i])] != null) {
-                $m = get_object_vars($main[$i]);
-                $s = get_object_vars($second[key($main[$i])]);
-                $diff = (self::difference($m[key($main[$i])], $s[key($second[$i])]));
-
-                $match -= ($parts * ($diff/4)/$match)*100;
-              }
-
-            /* Intrest is matching */
-            } else {
-                $m = get_object_vars($main[$i]);
-                $s = get_object_vars($second[$i]);
-                $diff = (self::difference($m[key($main[$i])], $s[key($second[$i])]));
-                if ($diff < 1) {
-                  array_push($good, $s);
-                }
-                $match -= ($parts * ($diff/4)/$match)*100;
+        foreach($main as $m) {
+            if (in_array($m, $second)) {
+                array_push($matches, $m);
             }
         }
-        return array("procent" => $match, "good" => $good);
+
+        switch (count($matches)) {
+          case 1:
+            return array("procent" => 80, "matches" => $matches);
+            break;
+          case 2:
+            return array("procent" => 90, "matches" => $matches);
+            break;
+
+          case 3:
+            return array("procent" => 100, "matches" => $matches);
+            break;
+
+          case 4:
+            return array("procent" => 100, "matches" => $matches);
+            break;
+
+          case 5:
+              return array("procent" => 100, "matches" => $matches);
+            break;
+
+          default:
+              return array("procent" => 20, "matches" => $matches);
+            break;
+        }
     }
 
     /* Match known languages -> % */
     public static function matchLanguage($main, $second) {
         $main = explode(",", $main);
         $second = explode(",", $second);
+        $matches = array();
 
         foreach($main as $lang) {
             if (in_array($lang, $second)) {
-                return 100;
+                array_push($matches, $lang);
             }
         }
 
-        return 0;
+        if(count($matches) > 0) {
+          return array("procent" => 100, "matches" => $matches);
+        } else {
+          return array("procent" => 80, "matches" => $matches);
+        }
     }
 
     /* Match gender -> % */
     public static function matchGender($main, $second) {
-        switch ($second) {
+        switch ($main->meet_gender) {
             case "0" :
                 return 100;
                 break;
             default:
-                if($main == $second) { return 140; } else { return 0; }
+                if($main == $second) { return 140; } else { return 80; }
                 break;
 
         }
@@ -127,34 +124,16 @@ class Match {
         $s = Formatter::coordinates($second);
         $d = Distance::coordinates($m[0], $m[1], $s[0], $s[1], "K");
 
-        if($main->has_car == 1 || $second->has_car == 1) {
-
-            // $d = distance in KM
-            if($d > 50) {
-              return 0;
-            } elseif ($d < 50 && $d > 20) {
-              return 80;
-            } elseif ($d < 20 && $d > 10) {
-              return 90;
-            } elseif ($d < 10) {
-              return 100;
-            } else {
-              return 0;
-            }
+        if($main->radius != null) {
+          $radius = $main->radius;
         } else {
+          $radius = $second->radius;
+        }
 
-          // $d = distance in KM
-          if($d > 5 && $d < 10) {
-            return 0;
-          } elseif ($d < 5 && $d > 5) {
-            return 80;
-          } elseif ($d < 3 && $d > 1) {
-            return 90;
-          } elseif ($d < 1) {
-            return 100;
-          } else {
-            return 0;
-          }
+        if($d <= $radius) {
+          return 100;
+        } else {
+          return 60;
         }
     }
 

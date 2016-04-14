@@ -46,11 +46,11 @@
                             <div class="field">
                                 <label>{{trans('form.radie-title')}}</label>
                                 <select name="radius" class="dropdown">
-                                    <option value="" disabled <?php if(old( 'radie')=="" ) { echo 'selected="selected"'; } ?>>{{trans('form.radie-placeholder')}}</option>
-                                    <option value="5" <?php if(old( 'radie')=="0" ) { echo 'selected="selected"'; } ?>>{{trans('form.radie-under')}} 5 km</option>
-                                    <option value="0-4" <?php if(old( 'radie')=="0-4" ) { echo 'selected="selected"'; } ?>>{{trans('form.radie-under')}} 10 km</option>
-                                    <option value="5-8" <?php if(old( 'radie')=="5-8" ) { echo 'selected="selected"'; } ?>>{{trans('form.radie-under')}} 20 km</option>
-                                    <option value="8-12" <?php if(old( 'radie')=="else" ) { echo 'selected="selected"'; } ?>>{{trans('form.radie-over')}} 20 km</option>
+                                    <option value="else" disabled <?php if(old( 'radius')=="" ) { echo 'selected="selected"'; } ?>>{{trans('form.radie-placeholder')}}</option>
+                                    <option value="5" <?php if(old( 'radius')=="0" ) { echo 'selected="selected"'; } ?>>{{trans('form.radie-under')}} 5 km</option>
+                                    <option value="10" <?php if(old( 'radius')=="0-4" ) { echo 'selected="selected"'; } ?>>{{trans('form.radie-under')}} 10 km</option>
+                                    <option value="20" <?php if(old( 'radius')=="5-8" ) { echo 'selected="selected"'; } ?>>{{trans('form.radie-under')}} 20 km</option>
+                                    <option value="else" <?php if(old( 'radius')=="else" ) { echo 'selected="selected"'; } ?>>{{trans('form.radie-over')}} 20 km</option>
                                 </select>
 
                             </div>

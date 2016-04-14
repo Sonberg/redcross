@@ -42,5 +42,5 @@ Route::group(['prefix' => LaravelLocalization::setLocale(), 'middleware' => [ 'a
     Route::get('/dashboard/matchview', 'Dashboard\MatchviewController@getIndex');
 
     // Pers playground
-    Route::get('/dashboard/playgrund', 'Dashboard\MatchController@getIndex');
+    Route::get('/dashboard/playground', 'PlaygroundController@getIndex');
 });

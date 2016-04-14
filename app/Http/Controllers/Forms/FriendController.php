@@ -80,6 +80,7 @@ class FriendController extends Controller
         $f->city = $city;
         $f->zipcode = $zip;
         $f->has_car = $car;
+        $f->radius = $radius;
         $f->latitude = $coordinates[0];
         $f->longitude = $coordinates[1];
         $f->meet_family = $meet_family;
