@@ -239,4 +239,11 @@ html body table.rate td.interest {
 .interest > .ui.label {
   background-color: #5fc06c !important; }
 
+.ui.form {
+  position: relative;
+  max-width: 564px; }
+
+.labelleft {
+  text-align: left; }
+
 /*# sourceMappingURL=app.css.map */

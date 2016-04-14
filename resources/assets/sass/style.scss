@@ -239,3 +239,13 @@ html {
 .interest>.ui.label{
     background-color:darken($soft-green,6)!important;
   }
+
+
+.ui.form {
+  position: relative;
+  max-width: 564px;
+}
+
+.labelleft{
+  text-align: left;
+}
