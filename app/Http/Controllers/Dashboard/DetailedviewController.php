@@ -14,12 +14,6 @@ class DetailedviewController extends Controller
 {
 
     public function getindex(){
-      $i = Immigrant::all();
-      $f = Friend::find(1);
-      $match = Match::procent($f, $i, $this->maxMatches, $this->lowestProcentage);
-      return view('dashboard.pages.detailedview', [
-        'immigrants' => $match["matches"],
-        'friends' => $f,
-      ]);
+        return view("dashboard.pages.detailedview");
     }
 }
