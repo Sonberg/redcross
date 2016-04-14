@@ -5,6 +5,7 @@
     <div class="ui card">
     <div class="content">
         <img class="right floated mini ui image" src="GenderIcon">
+        <i class="fa fa-mars fa-5x" aria-hidden="true"></i>
         <div class="header">Namn Namnsson</div>
 
         <div class="country">Irak</div>
