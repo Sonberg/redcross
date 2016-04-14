@@ -15,14 +15,22 @@
 
                             <!-- Accommodation -->
                             <div class="field margin-field">
-                                <label for="accommodation">{{trans('form.accommodation')}}</label>
-                                <select name="accommodation" id="accommodation" value="{{ old('accommodation') }}">
-                                  <option value="" disabled selected>{{trans('form.accommodation-placeholder')}}</option>
-                                    @foreach($accommodations as $a)
-                                    <option value="{{$a->id}}">{{$a->title}}</option>
-                                    @endforeach
-                                </select>
+                              <label for="area">{{trans('form.area')}}</label>
+                              <div class="ui fluid selection dropdown search">
+                                  <input type="hidden" name="area" value="{{ old('area') }}">
+                                  <i class="dropdown icon"></i>
+                                  <span class="default text">{{trans('form.area-placeholder')}}</span>
+                                  <div class="menu">
 
+                                      @foreach($areas as $a)
+                                      <div class="item" data-text="{{$a->title}}">
+                                          <i class="right floated">{{$a->desc}}</i> {{$a->title}}
+                                      </div>
+                                      @endforeach
+
+
+                                  </div>
+                              </div>
                             </div>
                         </div>
                     </div>

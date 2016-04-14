@@ -48,7 +48,7 @@
 
 <!-- Profession -->
 <div class="field margin-field">
-    <label for="profession">{{trans('form.professions')}}</label>
+    <label for="profession">{{trans('form.profession')}}</label>
     <div class="ui fluid selection dropdown search">
         <input type="hidden" name="profession" value="{{ old('profession') }}">
         <i class="dropdown icon"></i>

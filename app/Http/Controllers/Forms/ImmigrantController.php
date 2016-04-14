@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Forms;
 
 use Input;
+use App\Area;
 use App\Intrest;
 use App\Immigrant;
 use App\Profession;
@@ -19,8 +20,8 @@ class ImmigrantController extends Controller
         return view('immigrant', [
             'countries' => parent::countryList(),
             'languages' => parent::languagesList(),
-            'professions' => Profession::all(),
-            'accommodations' => Accommodation::all(),
+            'professions' => Profession::orderBy('title')->get(),
+            'areas' => Area::all(),
             'intrests' => Intrest::all(),
         ]);
     }

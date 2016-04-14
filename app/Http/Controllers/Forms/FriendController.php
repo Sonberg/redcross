@@ -17,7 +17,7 @@ class FriendController extends Controller
         return view('friend', [
             'countries' => parent::countryList(),
             'languages' => parent::languagesList(),
-            'professions' => Profession::all(),
+            'professions' => Profession::orderBy('title')->get(),
             'intrests' => Intrest::all(),
         ]);
     }

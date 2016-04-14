@@ -33,8 +33,8 @@ return [
     /* Profession & Accommodation */
     'profession' => 'Profession',
     'profession-placeholder' => 'Select your professions sector',
-    'accommodation' => 'Current accommodation',
-    'accommodation-placeholder' => 'Select your current accommodation',
+    'area' => 'In which area of Halmstad are you living',
+    'area-placeholder' => 'Select your region',
 
     'adress' => 'Street Adress',
     'city' => 'City',
