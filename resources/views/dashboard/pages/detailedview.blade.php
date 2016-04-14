@@ -18,8 +18,8 @@
                 <div class="content">
                     <img class="right floated mini ui image" src="GenderIcon">
                     <i class="fa fa-mars fa-5x" aria-hidden="true"></i>
-                    <div class="header labelleft">Namn Namnsson</div>
-                    <div class="country labelleft">Irak</div>
+                    <div class="header labelleft"id="matchview" style="text-align: left!important;">Namn Namnsson</div>
+                    <div class="country labelleft" id="matchview" style="text-align: left!important;">Irak</div>
                 </div>
                 <div class="content">
                     <h4 class="ui sub header"></h4>
@@ -114,7 +114,7 @@
     </div>
 </div>
 
-<div class="row">
+<div class="row" id="view">
     <div class="col-xs-12 col-sm-12 col-md-12">
         <div class="page"></div>
         <div class="ui form center">
