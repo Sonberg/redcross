@@ -121,6 +121,7 @@
             <div class="field">
                 <label class="labelleft">Kommentar från kordinator</label>
                 <textarea class="btn-max-width"></textarea>
+                <div class="ui bottom attached button btn-max-width" tabindex="0">Spara</div>
             </div>
         </div>
     </div>
