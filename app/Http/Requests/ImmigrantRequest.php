@@ -31,13 +31,10 @@ class ImmigrantRequest extends Request
             'email' => 'required|email',
             'country' => 'required',
             'language' => 'required',
-            'accommodation' => 'required',
+            'area' => 'required',
             'profession' => 'required',
             'number_members' => 'required',
             'age_kids' => 'required',
-            'meet_family' => 'required',
-            'meet_gender' => 'required',
-            'meet_profession' => 'required',
         ];
     }
 }

@@ -25,22 +25,25 @@ class CreateImmigrantTable extends Migration
             $table->string('language')->nullable();
             $table->integer('profession')->unsigned();
             $table->date('arrived')->nullable();
-            $table->integer('accommodation')->unsigned();
-            
+            $table->integer('area')->unsigned();
+
             $table->integer('family_members')->nullable();
             $table->string('kids_age')->nullable();
             $table->string('interests');
-            
+
             $table->boolean('meet_family');
             $table->string('meet_gender');
             $table->boolean('meet_profession');
-            
+
+            $table->decimal('latitude', 23, 20)->nullable();
+            $table->decimal('longitude', 23, 20)->nullable();
+
             $table->text('notes');
         });
-        
+
         Schema::table('immigrants', function($table) {
             $table->foreign('profession')->references('id')->on('professions')->onDelete('cascade');
-            $table->foreign('accommodation')->references('id')->on('accommodations')->onDelete('cascade');
+            $table->foreign('area')->references('id')->on('areas')->onDelete('cascade');
         });
     }
 

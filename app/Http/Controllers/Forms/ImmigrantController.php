@@ -38,22 +38,19 @@ class ImmigrantController extends Controller
         $email = array_get($input, 'email');
         $country = array_get($input, 'country');
         $language = array_get($input, 'language');
-        $accommodation =  array_get($input, 'accommodation');
+        $area =  Area::where('title', '=', array_get($input, 'area'))->get()->first();
         $profession = Profession::where('title', '=', array_get($input, 'profession'))->first();
         $number_members = array_get($input, "number_members");
         $kids_age = array_get($input, 'age_kids');
 
         // Intrests
-        $c = array();
-        for($i=0;$i<count($intrests);$i++) {
-            array_push($c, [$intrests[$i]->category => array_get($input, $intrests[$i]->category)]);
-        }
+        $intrest = array_get($input, 'intrest');
 
         $meet_family = array_get($input, 'meet_family');
         $meet_gender = array_get($input, 'meet_gender');
         $meet_profession = array_get($input, 'meet_profession');
 
-        //var_dump($input);
+        $coordinates = parent::getCoordinates($area->title. " " . $area->city);
 
         $i = new Immigrant();
         $i->first_name = $firstName;
@@ -65,10 +62,12 @@ class ImmigrantController extends Controller
         $i->orgin = $country;
         $i->language = $language;
         $i->profession = $profession->id;
-        $i->accommodation = $accommodation;
+        $i->area = $area->id;
+        $i->latitude = $coordinates[0];
+        $i->longitude = $coordinates[1];
         $i->family_members = $number_members;
         $i->kids_age = $kids_age;
-        $i->intrests = json_encode($c);
+        $i->intrests = $intrest;
         $i->meet_family = $meet_family;
         $i->meet_gender = $meet_gender;
         $i->meet_profession = $meet_profession;

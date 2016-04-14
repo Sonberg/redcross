@@ -28,13 +28,21 @@ class CreateFriendsTable extends Migration
             $table->string('kids_age')->nullable();
             $table->string('intrests');
 
+            $table->boolean('meet_family');
+            $table->string('meet_gender');
+            $table->boolean('meet_profession');
+
 
             $table->string('adress')->nullable();
             $table->string('zipcode')->nullable();
             $table->string('city')->nullable();
+
             $table->decimal('latitude', 23, 20)->nullable();
             $table->decimal('longitude', 23, 20)->nullable();
+
             $table->boolean('has_car');
+            $table->string('radiues');
+
             $table->text('notes');
         });
 

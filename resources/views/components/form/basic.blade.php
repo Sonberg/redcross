@@ -12,12 +12,37 @@
 
 <div class="field margin-field">
     <label for="gender">{{trans('form.gender')}}</label>
-    <select name="gender" id="gender">
+    <select name="gender" class="gender dropdown" id="gender">
         <option value="" disabled <?php if(old( 'gender')=="" ) { echo 'selected="selected"'; } ?>>{{trans('form.gender-placeholder')}}</option>
         <option value="man" <?php if(old( 'gender')=="man" ) { echo 'selected="selected"'; } ?>>{{trans('form.man')}}</option>
         <option value="woman" <?php if(old( 'gender')=="woman" ) { echo 'selected="selected"'; } ?>>{{trans('form.woman')}}</option>
         <option value="no" <?php if(old( 'gender')=="no" ) { echo 'selected="selected"'; } ?>>{{trans('form.unknown')}}</option>
     </select>
+</div>
+
+<div class="grouped fields margin-field preferences">
+    <div class="field">
+        <label>{{trans('form.meet-gender-title')}}</label>
+    </div>
+    <div class="field">
+        <div class="ui radio checkbox">
+            <input type="radio" value="man" name="meet_gender" id="meet_gender" class="hidden" tabindex="0">
+            <label>{{trans('form.meet-gender-man')}}</label>
+        </div>
+    </div>
+    <div class="field">
+        <div class="ui radio checkbox">
+            <input type="radio" name="meet_gender" value="woman" class="hidden" tabindex="0">
+            <label>{{trans('form.meet-gender-woman')}}</label>
+        </div>
+    </div>
+
+    <div class="field">
+        <div class="ui radio checkbox">
+            <input type="radio" name="meet_gender" value="0" class="hidden" checked="checked" tabindex="0">
+            <label>{{trans('form.meet-no')}}</label>
+        </div>
+    </div>
 </div>
 
 
@@ -35,12 +60,10 @@
 
 <div class="field">
     <label for="age">{{trans('form.age')}}</label>
-    <select name="age" id="age">
+    <select name="age" id="age" class="age dropdown">
         <option value="" disabled <?php if(old( 'age')=="" ) { echo 'selected="selected"'; } ?>>{{trans('form.age-placeholder')}}</option>
-        <option value="10-15" <?php if(old( 'age')=="10-15" ) { echo 'selected="selected"'; } ?>>10-15</option>
-        <option value="16-20" <?php if(old( 'age')=="16-20" ) { echo 'selected="selected"'; } ?>>16-20</option>
-        <option value="21-25" <?php if(old( 'age')=="21-25" ) { echo 'selected="selected"'; } ?>>21-25</option>
-        <option value="26-35" <?php if(old( 'age')=="26-35" ) { echo 'selected="selected"'; } ?>>26-35</option>
+        <option value="16-20" <?php if(old( 'age')=="18-24" ) { echo 'selected="selected"'; } ?>>18-24</option>
+        <option value="26-35" <?php if(old( 'age')=="25-35" ) { echo 'selected="selected"'; } ?>>25-35</option>
         <option value="36-" <?php if(old( 'age')=="36-" ) { echo 'selected="selected"'; } ?>>36-</option>
     </select>
 </div>
@@ -62,6 +85,24 @@
             @endforeach
 
 
+        </div>
+    </div>
+</div>
+
+<div class="grouped fields margin-field preferences">
+    <div class="field">
+        <label>{{trans('form.meet-profession-title')}}</label>
+    </div>
+    <div class="field">
+        <div class="ui radio checkbox">
+            <input type="radio" value="1" name="meet_profession" id="meet_profession" class="hidden" tabindex="0">
+            <label>{{trans('form.meet-yes')}}</label>
+        </div>
+    </div>
+    <div class="field">
+        <div class="ui radio checkbox">
+            <input type="radio" name="meet_profession" value="0" class="hidden" checked="checked" tabindex="0">
+            <label>{{trans('form.meet-no')}}</label>
         </div>
     </div>
 </div>

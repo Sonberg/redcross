@@ -14,11 +14,11 @@
                       <div class="header">{{trans('form.basic-title')}}</div>
                       <div class="meta">{{trans('form.basic-meta')}}</div>
                         <div class="description">
-                            @include("components.form.basic")
+                            @include("components.form.basic", ['page' => 'immigrant'])
 
                             <!-- Accommodation -->
                             <div class="field margin-field">
-                                <label for="adress">{{trans('form.address')}}</label>
+                                <label for="adress">{{trans('form.adress')}}</label>
                                 <input type="text" name="adress" id="adress" class="validate" value="{{ old('adress') }}">
                             </div>
 
@@ -37,9 +37,22 @@
                             </div>
 
                             <!-- Has Car -->
-                            <div class="field margin-field">
+                            <div class="field margin-field preferences">
                                 <label for="has_car">{{trans('form.have-car')}}</label>
                                 <input type="checkbox" name="has_car" id="has_car" class="validate" value="{{ old('has_car') }}">
+                            </div>
+
+                            <!-- Match radius -->
+                            <div class="field">
+                                <label>{{trans('form.radie-title')}}</label>
+                                <select name="radius" class="dropdown">
+                                    <option value="" disabled <?php if(old( 'radie')=="" ) { echo 'selected="selected"'; } ?>>{{trans('form.radie-placeholder')}}</option>
+                                    <option value="5" <?php if(old( 'radie')=="0" ) { echo 'selected="selected"'; } ?>>{{trans('form.radie-under')}} 5 km</option>
+                                    <option value="0-4" <?php if(old( 'radie')=="0-4" ) { echo 'selected="selected"'; } ?>>{{trans('form.radie-under')}} 10 km</option>
+                                    <option value="5-8" <?php if(old( 'radie')=="5-8" ) { echo 'selected="selected"'; } ?>>{{trans('form.radie-under')}} 20 km</option>
+                                    <option value="8-12" <?php if(old( 'radie')=="else" ) { echo 'selected="selected"'; } ?>>{{trans('form.radie-over')}} 20 km</option>
+                                </select>
+
                             </div>
 
                         </div>
@@ -88,12 +101,5 @@
 </div>
 <script src="/js/moment.min.js"></script>
 <script src="/js/daterangepicker.js"></script>
-<script>
-    $(document).ready(function () {
-        $('.immigration').transition('fade left');
-        $('select').dropdown();
-        $('.dropdown').dropdown();
-        $(".radio").checkbox();
-    });
-</script>
+@include("components.form.script")
 @endsection

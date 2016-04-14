@@ -16,7 +16,7 @@
 
 <div class="field">
     <label>{{trans('form.language-title')}}</label>
-    <div class="ui fluid selection dropdown multiple search">
+    <div class="ui fluid selection dropdown multiple search language">
         <input type="hidden" name="language" value="{{ old('language') }}">
         <i class="dropdown icon"></i>
         <span class="default text">{{trans('form.language-placeholder')}}</span>

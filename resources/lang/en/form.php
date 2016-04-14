@@ -29,6 +29,10 @@ return [
     'age-placeholder' => 'Select age',
 
     'have-car' => 'Do you have a car?',
+    'radie-title' => 'I want to meet someone within:',
+    'radie-placeholder' => 'Select radius',
+    'radie-over' => 'Over',
+    'radie-under' => 'Under',
 
     /* Profession & Accommodation */
     'profession' => 'Profession',
@@ -41,6 +45,11 @@ return [
     'zip' => 'Zip code',
 
     /* Family */
+    'have-family-title' => 'Do you have a family?',
+    'have-family-no' => 'No',
+    'have-family-yes-in' =>'Yes, in Sweden',
+    'have-family-yes-out' => 'Yes but in other country',
+
     'family-title' => 'Your family',
     'family-meta' => '',
     'family-number' => 'Family members',
@@ -55,10 +64,12 @@ return [
     'language-placeholder' => 'Select the lanugaes you know',
 
     /* Personal Intrests */
-    'intrests-title' => 'Personal Intrests',
-    'intrests-meta' => 'Used for matching preferences',
-    'intrests-max' => 'Intrested',
-    'intrests-min' => 'No intrest',
+    'intrests-title' => 'Select intrests',
+    'intrests-meta' =>  'min 1, max 5',
+
+    'intrest-title' => 'Intrests (max 5)',
+    'intrest-meta' => 'Used for matching preferences',
+    'intrest-placeholder' => 'Choose multiple',
 
     /* Match Preferences */
     'preferences-title' => 'Personal preferences',

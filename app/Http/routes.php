@@ -31,10 +31,16 @@ Route::group(['prefix' => LaravelLocalization::setLocale(), 'middleware' => [ 'a
 
     // Index
     Route::get('/dashboard', 'Dashboard\DashboardController@getIndex');
+
     //List view
     Route::get('/dashboard/listview', 'Dashboard\ListviewController@getIndex');
+
     //Detailed view
     Route::get('/dashboard/detailedview', 'Dashboard\DetailedviewController@getIndex');
+
     //Match view
     Route::get('/dashboard/matchview', 'Dashboard\MatchviewController@getIndex');
+
+    // Pers playground
+    Route::get('/dashboard/playgrund', 'Dashboard\MatchController@getIndex');
 });
