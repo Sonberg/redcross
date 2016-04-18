@@ -20,7 +20,7 @@
         <option value="woman" <?php if(old( 'gender')=="woman" ) { echo 'selected="selected"'; } ?>>{{trans('form.woman')}}</option>
         <option value="no" <?php if(old( 'gender')=="no" ) { echo 'selected="selected"'; } ?>>{{trans('form.unknown')}}</option>
     </select>
-    @if ($errors->has('gender'))<span class="help-block"><strong>{{ $errors->first('gender) }}</strong></span> @endif
+    @if ($errors->has('gender'))<span class="help-block"><strong>{{ $errors->first('gender') }}</strong></span> @endif
 </div>
 
 <div class="grouped fields margin-field preferences">
