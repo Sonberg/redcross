@@ -20,7 +20,7 @@ html {
       }
     }
 
-    table.rate { 
+    table.rate {
       thead,
       tr,
       td {
@@ -214,39 +214,35 @@ html {
   .age {
     width: 48%;
     float: left;
-  }
+  } 
   .work {
     width: 48%;
     float: right;
   }
-  .interest:nth-child(2) {
-    float: left;
-    width: 30%;
-    margin-right: 5%;
 
-  }
-  .interest:first-child {
-    float: left;
-    width: 30%;
-    margin-right: 5%;
+  input[disabled] {
+    color: black;
+    opacity: 1;
   }
 
-  .interest:last-child {
+  .interest {
     float: left;
-    width: 30%;
+    margin-right: 1%;
+    text-transform: capitalize;
+    color: white;
   }
+
   .interest > input {
     text-align: center;
     background-color: $soft-green !important;
     color: $white;
-
   }
 
 }
 
 //Interest's view style
 .interest {
-  background-color: darken($soft-green, 6) !important;
+  background-color: $soft-green !important;
 }
 
 //detail veiw specific
@@ -280,4 +276,8 @@ html {
 }
 .float-right {
   float:right;;
+}
+
+.margin-right {
+  margin-right: 10px !important;
 }

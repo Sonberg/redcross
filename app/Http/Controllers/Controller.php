@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\profession;
 use Illuminate\Foundation\Bus\DispatchesJobs;
 use Illuminate\Routing\Controller as BaseController;
 use Illuminate\Foundation\Validation\ValidatesRequests;
@@ -50,6 +51,14 @@ class Controller extends BaseController
           return $l->name;
         }
       }
+    }
+
+    public function printable($master) {
+      $master->country = $this->nameFromCode($master->orgin);
+      $master->profession = Profession::find($master->profession)->title;
+      $master->intrests = explode(",", $master->intrests);
+      $master->language =  explode(",", $master->language);
+      return $master;
     }
 
     // GPS Coord from Adress
