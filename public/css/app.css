@@ -270,4 +270,12 @@ html body table.rate td.interest {
 .margin-right {
   margin-right: 10px !important; }
 
+.chart-range {
+  background: #dedede;
+  cursor: pointer;
+  padding: 5px 10px;
+  border: 1px solid #ccc;
+  width: 100%;
+  max-width: 20em; }
+
 /*# sourceMappingURL=app.css.map */

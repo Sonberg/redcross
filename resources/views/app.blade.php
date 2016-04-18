@@ -14,9 +14,14 @@
 <body>
    <script type="text/javascript" src="//code.jquery.com/jquery-2.1.1.min.js"></script>
    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.min.js"></script>
-    <script src="//oss.maxcdn.com/semantic-ui/2.1.8/semantic.min.js"></script>
+   <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha/js/bootstrap.min.js"></script>
+   <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.12.0/moment.min.js"></script>
+   <script type="text/javascript" src="//cdn.jsdelivr.net/bootstrap.daterangepicker/2/daterangepicker.js"></script>
+   <script src="//oss.maxcdn.com/semantic-ui/2.1.8/semantic.min.js"></script>
 
     @yield('content')
 </body>
 
 </html>
+
+
