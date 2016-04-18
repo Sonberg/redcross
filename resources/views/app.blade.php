@@ -13,6 +13,7 @@
 
 <body>
    <script type="text/javascript" src="//code.jquery.com/jquery-2.1.1.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.min.js"></script>
     <script src="//oss.maxcdn.com/semantic-ui/2.1.8/semantic.min.js"></script>
 
     @yield('content')
