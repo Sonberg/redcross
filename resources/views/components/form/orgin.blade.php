@@ -1,5 +1,5 @@
 <!-- Select Country -->
-<div class="field">
+<div class="field {{ $errors->has('country') ? ' has-error' : '' }}">
     <label>{{trans('form.country-title')}}</label>
     <div class="ui fluid search selection dropdown">
         <input type="hidden" name="country" value="{{ old('country') }}">
@@ -11,10 +11,10 @@
             @endforeach
         </div>
     </div>
-
+    @if ($errors->has('country'))<span class="help-block"><strong>{{ $errors->first('country') }}</strong></span> @endif
 </div>
 
-<div class="field">
+<div class="field {{ $errors->has('language') ? ' has-error' : '' }}">
     <label>{{trans('form.language-title')}}</label>
     <div class="ui fluid selection dropdown multiple search language">
         <input type="hidden" name="language" value="{{ old('language') }}">
@@ -28,4 +28,5 @@
             @endforeach
         </div>
     </div>
+    @if ($errors->has('language'))<span class="help-block"><strong>{{ $errors->first('language') }}</strong></span> @endif
 </div>

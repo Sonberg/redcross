@@ -5,14 +5,14 @@
 
     <div class="field">
         <div class="ui radio checkbox">
-            <input type="radio" value="1" name="have_family" id="have_family" class="hidden" tabindex="0">
+            <input type="radio" value="1" name="have_family" id="have_family" class="hidden" checked="checked" tabindex="0">
             <label>{{trans('form.have-family-no')}}</label>
         </div>
     </div>
 
     <div class="field">
         <div class="ui radio checkbox">
-            <input type="radio" value="1" name="have_family" id="have_family" class="hidden" checked="checked" tabindex="0">
+            <input type="radio" value="1" name="have_family" id="have_family" class="hidden" tabindex="0">
             <label>{{trans('form.have-family-yes-in')}}</label>
         </div>
     </div>
@@ -31,7 +31,7 @@
 
 </div>
 <!-- Kids age -->
-<div class="field">
+<div class="field {{ $errors->has('age_kids') ? ' has-error' : '' }}">
     <label>{{trans('form.family-kids')}}</label>
     <select name="age_kids" class="dropdown">
         <option value="" disabled <?php if(old( 'age_kids')=="" ) { echo 'selected="selected"'; } ?>>{{trans('form.kids-placeholder')}}</option>
@@ -42,7 +42,7 @@
         <option value="13-20" <?php if(old( 'age_kids')=="13-20" ) { echo 'selected="selected"'; } ?>>13-20</option>
         <option value="20" <?php if(old( 'age_kids')=="20" ) { echo 'selected="selected"'; } ?>>20+</option>
     </select>
-
+    @if ($errors->has('age_kids'))<span class="help-block"><strong>{{ $errors->first('age_kids') }}</strong></span> @endif
 </div>
 
 <div class="grouped fields margin-field preferences">

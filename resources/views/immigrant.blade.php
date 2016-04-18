@@ -14,7 +14,7 @@
                             @include("components.form.basic", ['page' => 'immigrant'])
 
                             <!-- Accommodation -->
-                            <div class="field margin-field">
+                            <div class="field margin-field {{ $errors->has('area') ? ' has-error' : '' }}">
                               <label for="area">{{trans('form.area')}}</label>
                               <div class="ui fluid selection dropdown search">
                                   <input type="hidden" name="area" value="{{ old('area') }}">
@@ -29,6 +29,7 @@
                                       @endforeach
                                   </div>
                               </div>
+                              @if ($errors->has('area'))<span class="help-block"><strong>{{ $errors->first('area') }}</strong></span> @endif
                             </div>
                         </div>
                     </div>
