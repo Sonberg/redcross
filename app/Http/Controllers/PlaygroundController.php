@@ -13,7 +13,7 @@ class PlaygroundController extends Controller {
       $i = immigrant::all()->first();
       $f = Friend::all();
       $match = Match::procent($i, $f, $this->maxMatches, $this->lowestProcentage);
-
+      return $match;
       return view('playground', [
         'immigrants' => $i,
         'friends' => $match["result"]

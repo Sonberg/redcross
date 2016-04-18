@@ -50,7 +50,6 @@ class Formatter {
       $sort = usort($arr, function($a, $b) {
             return strcmp($a->match, $b->match);
         });
-        var_dump(count($arr));
         return $arr;
     };
 
