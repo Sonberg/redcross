@@ -42,7 +42,7 @@
         <option value="13-20" <?php if(old( 'age_kids')=="13-20" ) { echo 'selected="selected"'; } ?>>13-20</option>
         <option value="20" <?php if(old( 'age_kids')=="20" ) { echo 'selected="selected"'; } ?>>20+</option>
     </select>
-    @if ($errors->has('age_kids'))<span class="help-block"><strong>{{ $errors->first('age_kids') }}</strong></span> @endif
+    @if ($errors->has('age_kids'))<span class="help-block ui pointing red basic label"><strong>{{ $errors->first('age_kids') }}</strong></span> @endif
 </div>
 
 <div class="grouped fields margin-field preferences">

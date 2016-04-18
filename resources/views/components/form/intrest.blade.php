@@ -11,5 +11,5 @@
           @endforeach
       </div>
   </div>
-  @if ($errors->has('intrest'))<span class="help-block"><strong>{{ $errors->first('intrest') }}</strong></span> @endif
+  @if ($errors->has('intrest'))<span class="help-block ui pointing red basic label"><strong>{{ $errors->first('intrest') }}</strong></span> @endif
 </div>

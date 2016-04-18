@@ -11,7 +11,7 @@
             @endforeach
         </div>
     </div>
-    @if ($errors->has('country'))<span class="help-block"><strong>{{ $errors->first('country') }}</strong></span> @endif
+    @if ($errors->has('country'))<span class="help-block ui pointing red basic label"><strong>{{ $errors->first('country') }}</strong></span> @endif
 </div>
 
 <div class="field {{ $errors->has('language') ? ' has-error' : '' }}">
@@ -28,5 +28,5 @@
             @endforeach
         </div>
     </div>
-    @if ($errors->has('language'))<span class="help-block"><strong>{{ $errors->first('language') }}</strong></span> @endif
+    @if ($errors->has('language'))<span class="help-block ui pointing red basic label"><strong>{{ $errors->first('language') }}</strong></span> @endif
 </div>

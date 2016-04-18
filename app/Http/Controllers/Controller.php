@@ -43,6 +43,15 @@ class Controller extends BaseController
         return json_decode (json_encode ($list), FALSE);
     }
 
+    public function nameFromCode($code) {
+      $list = $this->countryList();
+      foreach($list as $l) {
+        if ($l->short == $code) {
+          return $l->name;
+        }
+      }
+    }
+
     // GPS Coord from Adress
     public function getCoordinates($address){
         $address = urlencode($address);

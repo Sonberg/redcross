@@ -59,6 +59,9 @@ html body .language_bar_chooser {
   padding: 3px 8px 3px 15px;
   display: inline-block; }
 
+html body .field .has_error {
+  color: red; }
+
 html body .field label {
   font-size: 1.1em !important; }
 
@@ -252,5 +255,11 @@ html body table.rate td.interest {
 
 #view .ui.form textarea:not([rows]) {
   max-width: 560px; }
+
+.float-left {
+  float: left; }
+
+.float-right {
+  float: right; }
 
 /*# sourceMappingURL=app.css.map */

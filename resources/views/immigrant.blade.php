@@ -29,7 +29,7 @@
                                       @endforeach
                                   </div>
                               </div>
-                              @if ($errors->has('area'))<span class="help-block"><strong>{{ $errors->first('area') }}</strong></span> @endif
+                              @if ($errors->has('area'))<span class="help-block ui pointing red basic label"><strong>{{ $errors->first('area') }}</strong></span> @endif
                             </div>
                         </div>
                     </div>

@@ -12,6 +12,9 @@ html {
     }
 
     .field {
+      .has_error {
+        color: red;
+      }
       label {
         font-size: 1.1em !important;
       }
@@ -261,3 +264,9 @@ html {
     max-width: 560px;}
 }
 
+.float-left {
+    float:left;
+}
+.float-right {
+  float:right;;
+}

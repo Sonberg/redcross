@@ -13,7 +13,9 @@ use App\Http\Controllers\Controller;
 class DetailedviewController extends Controller
 {
 
-    public function getindex(){
-        return view("dashboard.pages.detailedview");
+    public function getindex() {
+        $f = Friend::all()->first();
+        $f->country = Parent::nameFromCode($f->orgin);
+        return view("dashboard.pages.detailedview", ['master' => $f]);
     }
 }

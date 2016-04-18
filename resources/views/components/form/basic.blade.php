@@ -2,14 +2,14 @@
 <div class="field {{ $errors->has('first_name') ? ' has-error' : '' }}">
     <label for="first_name">{{trans('form.first-name')}}</label>
     <input type="text" name="first_name" id="first_name" value="{{ old('first_name') }}" class="validate">
-    @if ($errors->has('first_name'))<span class="help-block"><strong>{{ $errors->first('first_name') }}</strong></span> @endif
+    @if ($errors->has('first_name'))<span class="help-block ui pointing red basic label"><strong>{{ $errors->first('first_name') }}</strong></span> @endif
 </div>
 
 <!-- Last Name -->
 <div class="field {{ $errors->has('last_name') ? ' has-error' : '' }}">
     <label for="last_name">{{trans('form.last-name')}}</label>
     <input type="text" name="last_name" id="last_name" class="validate" value="{{ old('last_name') }}">
-    @if ($errors->has('last_name'))<span class="help-block"><strong>{{ $errors->first('last_name') }}</strong></span> @endif
+    @if ($errors->has('last_name'))<span class="help-block ui pointing red basic label"><strong>{{ $errors->first('last_name') }}</strong></span> @endif
 </div>
 
 <div class="field margin-field {{ $errors->has('gender') ? ' has-error' : '' }}">
@@ -20,7 +20,7 @@
         <option value="woman" <?php if(old( 'gender')=="woman" ) { echo 'selected="selected"'; } ?>>{{trans('form.woman')}}</option>
         <option value="no" <?php if(old( 'gender')=="no" ) { echo 'selected="selected"'; } ?>>{{trans('form.unknown')}}</option>
     </select>
-    @if ($errors->has('gender'))<span class="help-block"><strong>{{ $errors->first('gender') }}</strong></span> @endif
+    @if ($errors->has('gender'))<span class="help-block ui pointing red basic label"><strong>{{ $errors->first('gender') }}</strong></span> @endif
 </div>
 
 <div class="grouped fields margin-field preferences">
@@ -53,14 +53,14 @@
 <div class="field {{ $errors->has('phone-number') ? ' has-error' : '' }}">
     <label for="phone">{{trans('form.phone-number')}}</label>
     <input type="tel" name="phone" id="phone" class="validate" value="{{ old('phone') }}">
-    @if ($errors->has('phone-number'))<span class="help-block"><strong>{{ $errors->first('phone-number') }}</strong></span> @endif
+    @if ($errors->has('phone-number'))<span class="help-block ui pointing red basic label"><strong>{{ $errors->first('phone-number') }}</strong></span> @endif
 </div>
 
 <!-- Email -->
 <div class="field {{ $errors->has('email') ? ' has-error' : '' }}">
     <label for="last_name">{{trans('form.email')}}</label>
     <input type="email" name="email" id="email" class="validate" value="{{ old('email') }}">
-    @if ($errors->has('email'))<span class="help-block"><strong>{{ $errors->first('email') }}</strong></span> @endif
+    @if ($errors->has('email'))<span class="help-block ui pointing red basic label"><strong>{{ $errors->first('email') }}</strong></span> @endif
 </div>
 
 <div class="field {{ $errors->has('age') ? ' has-error' : '' }}">
@@ -71,7 +71,7 @@
         <option value="26-35" <?php if(old( 'age')=="25-35" ) { echo 'selected="selected"'; } ?>>25-35</option>
         <option value="36-" <?php if(old( 'age')=="36-" ) { echo 'selected="selected"'; } ?>>36-</option>
     </select>
-    @if ($errors->has('age'))<span class="help-block"><strong>{{ $errors->first('age') }}</strong></span> @endif
+    @if ($errors->has('age'))<span class="help-block ui pointing red basic label"><strong>{{ $errors->first('age') }}</strong></span> @endif
 </div>
 
 
@@ -93,7 +93,7 @@
 
         </div>
     </div>
-    @if ($errors->has('profession'))<span class="help-block"><strong>{{ $errors->first('profession') }}</strong></span> @endif
+    @if ($errors->has('profession'))<span class="help-block ui pointing red basic label"><strong>{{ $errors->first('profession') }}</strong></span> @endif
 </div>
 
 <div class="grouped fields margin-field preferences">
