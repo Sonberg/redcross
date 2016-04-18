@@ -11,7 +11,7 @@
 |
 */
 
-Route::group(['prefix' => LaravelLocalization::setLocale(), 'middleware' => [ 'localize' ]], function() {
+Route::group(['prefix' => LaravelLocalization::setLocale(), 'middleware' => [ 'localize', 'web' ]], function() {
 
     // Index
     Route::get('/', 'IndexController@getIndex');
@@ -27,7 +27,7 @@ Route::group(['prefix' => LaravelLocalization::setLocale(), 'middleware' => [ 'l
 });
 
 Route::auth();
-Route::group(['prefix' => LaravelLocalization::setLocale(), 'middleware' => [ 'auth', 'localize' ]], function() {
+Route::group(['prefix' => LaravelLocalization::setLocale(), 'middleware' => [ 'auth', 'localize', 'web' ]], function() {
 
     // Index
     Route::get('/dashboard', 'Dashboard\DashboardController@getIndex');
@@ -37,6 +37,7 @@ Route::group(['prefix' => LaravelLocalization::setLocale(), 'middleware' => [ 'a
 
     //Detailed view
     Route::get('/dashboard/detailedview', 'Dashboard\DetailedviewController@getIndex');
+    Route::post('/dashboard/detailedview', 'Dashboard\DetailedviewController@postNote');
 
     //Match view
     Route::get('/dashboard/matchview', 'Dashboard\MatchviewController@getIndex');

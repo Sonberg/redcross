@@ -16,7 +16,8 @@
         <div class="page" id="matchview">
             <div class="ui card center">
                 <div class="content">
-                    <i class="fa fa-mars fa-2x float-right" aria-hidden="true"></i>
+                  <i class="fa fa-mars fa-2x float-right" aria-hidden="true"></i>
+                    <div class="ui label large float-right margin-right"> Potentiella matchningar <div class="detail">{{$count}}</div></div>
                     <div class="header labelleft"id="matchview" style="text-align: left!important; padding-top:5px;">{{$master->first_name}} {{$master->last_name}}</div>
                     <div class="country labelleft" id="matchview" style="text-align: left!important;">{{$master->country}}</div>
                 </div>
@@ -30,7 +31,7 @@
                                     <div class="ui label">
                                         Adress
                                     </div>
-                                    <input type="text" placeholder="Adress" value="{{$master->adress}}">
+                                    <input type="text" placeholder="Adress" value="{{$master->adress}}" disabled="">
                                 </div>
 
                             </div>
@@ -42,7 +43,7 @@
                                     <div class="ui label">
                                         E-mail
                                     </div>
-                                    <input type="text" placeholder="E-Mail" value="{{$master->email}}">
+                                    <input type="text" placeholder="E-Mail" value="{{$master->email}}" disabled="">
                                 </div>
 
                             </div>
@@ -53,7 +54,7 @@
                                     <div class="ui label">
                                         Telefon
                                     </div>
-                                    <input type="text" placeholder="Phone Number" value="{{$master->phone}}">
+                                    <input type="text" placeholder="Phone Number" value="{{$master->phone}}" disabled="">
                                 </div>
                             </div>
                         </div>
@@ -63,13 +64,13 @@
                                     <div class="ui label">
                                         Ålder
                                     </div>
-                                    <input type="text" placeholder="Age" value="{{$master->age}}">
+                                    <input type="text" placeholder="Age" value="{{$master->age}}" disabled="">
                                 </div>
                                 <div class="ui fluid labeled input work">
                                     <div class="ui label">
                                         Yrke
                                     </div>
-                                    <input type="text" placeholder="Profession" value="{{$master->profession}}">
+                                    <input type="text" placeholder="Profession" value="{{$master->profession}}" disabled="">
                                 </div>
                             </div>
                         </div>
@@ -79,17 +80,50 @@
                                     <div class="ui label">
                                         Familj
                                     </div>
-                                    <input type="text" placeholder="mysite.com">
+                                    <input type="text" placeholder="{{$master->family_members}} members/member, age of kids/kid: {{$master->kids_age}}" disabled="">
                                 </div>
+                            </div>
+                        </div>
+                        <div class="ui divider"></div>
+                        <div class="event">
+                            <div class="content">
+                              <div class="ui right pointing large label float-left" style="">
+                                Intrests
+                              </div>
+
+                              @foreach($master->intrests as $i)
+                                <div class="ui large label interest center-text">
+                                  {{$i}}
+                                </div>
+                                @endforeach
                             </div>
                         </div>
                         <div class="event">
                             <div class="content">
+                              <div class="ui right pointing large label float-left" style="">
+                                Languages
+                              </div>
+
+                              @foreach($master->language as $l)
                                 <div class="ui large label interest center-text">
-                                  Fika
+                                  {{$l}}
                                 </div>
+                                @endforeach
                             </div>
                         </div>
+                        <div class="ui divider"></div>
+
+                        @if($master->meet_gender)
+                        <div class="ui label">Jag vill möte en {{$master->meet_gender}}</div>
+                        @endif
+
+                        @if($master->meet_family != 0)
+                        <div class="ui label">  Jag vill möte en familj </div>
+                        @endif
+
+                        @if($master->meet_profession)
+                        <div class="ui label">Jag vill möte någon i samma branch</div>
+                        @endif
                     </div>
                 </div>
             </div>
@@ -101,10 +135,13 @@
     <div class="col-xs-12 col-sm-12 col-md-12">
         <div class="page"></div>
         <div class="ui form center">
-            <div class="field">
+            <form method="POST" class="field">
+                {!! csrf_field() !!}
                 <label class="labelleft">Kommentar</label>
-                <textarea class="btn-max-width"></textarea>
-                <div class="ui bottom attached button btn-max-width" tabindex="0">Spara</div>
+                <input type="hidden" name="person" value="{{$master->id}}">
+                <input type="hidden" name="type" value="{{ $master->adress ? 'friend' : 'immigrant' }}">
+                <textarea class="btn-max-width" name="notes">{{$master->notes}}</textarea>
+                <button type="submit" class="ui bottom attached button btn-max-width col-lg-12 col-sm-12" tabindex="0">Spara</button>
             </div>
         </div>
     </div>
