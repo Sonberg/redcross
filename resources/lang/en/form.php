@@ -66,10 +66,9 @@ return [
     /* Personal Intrests */
     'intrests-title' => 'Select intrests',
     'intrests-meta' =>  'min 1, max 5',
-
-    'intrest-title' => 'Intrests (max 5)',
+    
     'intrest-meta' => 'Used for matching preferences',
-    'intrest-placeholder' => 'Choose multiple',
+    'intrest-placeholder' => 'Choose multiple (max 5)',
 
     /* Match Preferences */
     'preferences-title' => 'Personal preferences',
