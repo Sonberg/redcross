@@ -48,7 +48,7 @@ return [
     'have-family-title' => 'Do you have a family?',
     'have-family-no' => 'No',
     'have-family-yes-in' =>'Yes, in Sweden',
-    'have-family-yes-out' => 'Yes but in other country',
+    'have-family-yes-out' => 'Yes but not in Sweden',
 
     'family-title' => 'Your family',
     'family-meta' => '',
