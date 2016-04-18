@@ -1,4 +1,4 @@
-@extends('app') @section('content') @include('components.navbar')
+@extends('app') @section('content') @include('dashboard.navbar')
 
 <div class="ui page grid main" id="listview">
 

@@ -1,4 +1,4 @@
-@extends('app') @section('content') @include('components.navbar')
+@extends('app') @section('content') @include('dashboard.navbar')
 <div class="col-xs-12 col-sm-12 col-md-6 paddingcols">
 <div class="ui page grid main" id="matchview">
 

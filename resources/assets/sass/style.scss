@@ -239,7 +239,7 @@ html {
 }
 
 //Interest's view style
-.interest > .ui.label {
+.interest {
   background-color: darken($soft-green, 6) !important;
 }
 
@@ -262,6 +262,11 @@ html {
 
   .ui.form textarea:not([rows]) {
     max-width: 560px;}
+  div.col-xs-12.col-sm-12.col-md-12{
+    padding-right:0px!important;
+  }
+
+
 }
 
 .float-left {
