@@ -59,9 +59,9 @@
 
 
 </div>
-
-<script src="/js/matches_charts.js"></script>
 <script src="/js/selection_button.js"></script>
+<script src="/js/matches_charts.js"></script>
+
 
 
 
