@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="8d5c84db-da9f-4caa-9779-d4a500c3a504" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/components/navbar.blade.php" afterPath="$PROJECT_DIR$/resources/views/components/navbar.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/dashboard/navbar.blade.php" afterPath="$PROJECT_DIR$/resources/views/dashboard/navbar.blade.php" />
     </list>
     <ignored path="redcross-ddi.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -75,8 +75,8 @@
       <file leaf-file-name="navbar.blade.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/dashboard/navbar.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="16" column="12" selection-start-line="0" selection-start-column="0" selection-end-line="67" selection-end-column="0" />
+            <state relative-caret-position="0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -603,12 +603,12 @@
       <workItem from="1460631438051" duration="1670000" />
       <workItem from="1460639108113" duration="683000" />
       <workItem from="1460644820597" duration="2814000" />
-      <workItem from="1460964717569" duration="1248000" />
+      <workItem from="1460964717569" duration="1584000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="43201000" />
+    <option name="totallyTimeSpent" value="43537000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1022,8 +1022,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/dashboard/navbar.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="12" selection-start-line="0" selection-start-column="0" selection-end-line="67" selection-end-column="0" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
