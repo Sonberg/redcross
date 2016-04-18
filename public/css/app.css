@@ -253,4 +253,7 @@ html body table.rate td.interest {
 #view .ui.form textarea:not([rows]) {
   max-width: 560px; }
 
+#view .col-lg-1, #view .col-lg-10, #view .col-lg-11, #view .col-lg-12, #view .col-lg-2, #view .col-lg-3, #view .col-lg-4, #view .col-lg-5, #view .col-lg-6, #view .col-lg-7, #view .col-lg-8, #view .col-lg-9, #view .col-md-1, #view .col-md-10, #view .col-md-11, #view .col-md-12, #view .col-md-2, #view .col-md-3, #view .col-md-4, #view .col-md-5, #view .col-md-6, #view .col-md-7, #view .col-md-8, #view .col-md-9, #view .col-sm-1, #view .col-sm-10, #view .col-sm-11, #view .col-sm-12, #view .col-sm-2, #view .col-sm-3, #view .col-sm-4, #view .col-sm-5, #view .col-sm-6, #view .col-sm-7, #view .col-sm-8, #view .col-sm-9, #view .col-xs-1, #view .col-xs-10, #view .col-xs-11, #view .col-xs-12, #view .col-xs-2, #view .col-xs-3, #view .col-xs-4, #view .col-xs-5, #view .col-xs-6, #view .col-xs-7, #view .col-xs-8, #view .col-xs-9 {
+  padding-right: 0px !important; }
+
 /*# sourceMappingURL=app.css.map */
