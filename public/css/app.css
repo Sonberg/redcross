@@ -236,7 +236,7 @@ html body table.rate td.interest {
   background-color: #75c980 !important;
   color: #ffffff; }
 
-.interest > .ui.label {
+.interest {
   background-color: #5fc06c !important; }
 
 #view .ui.form {
