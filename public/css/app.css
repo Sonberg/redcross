@@ -165,6 +165,12 @@ html body table.rate td.interest {
   padding-left: 4%;
   padding-right: 1%; }
 
+#dashboard .ui.statistics > .statistic, #listview .ui.statistics > .statistic {
+  margin: 0 0.5em 1em; }
+
+#dashboard div.ui.statistics.center, #listview div.ui.statistics.center {
+  padding-top: 3em; }
+
 #dashboard .ui.statistics .statistic > .value ~ .label, #listview .ui.statistics .statistic > .value ~ .label {
   color: #5e90f2; }
 

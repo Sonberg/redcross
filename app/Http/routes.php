@@ -41,6 +41,9 @@ Route::group(['prefix' => LaravelLocalization::setLocale(), 'middleware' => [ 'a
     //Match view
     Route::get('/dashboard/matchview', 'Dashboard\MatchviewController@getIndex');
 
+    // Statistics View
+    Route::get('/dashboard/statistics', 'Dashboard\StatisticsController@getIndex');
+
     // Pers playground
     Route::get('/dashboard/playground', 'PlaygroundController@getIndex');
 });
