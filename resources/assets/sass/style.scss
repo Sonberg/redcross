@@ -307,23 +307,27 @@ input[disabled] {
   //statistic numbers
 
 
-@media (max-width: 414px){
+@media (max-width: 999px){
   .ui > .statistics > .statistic{
     margin-left: 2px!important;
     margin-right: 2px!important;
+    display: block;
   }
 }
 
 
-@media (max-width: 414px){
+@media (max-width: 999px){
   h2:first-child, .reportrange, .chart-range, #c{
     text-align: center;
+    display: block;
+
   }
 }
 
-@media (max-width: 414px){
+@media (max-width: 999px){
   h2:first-child{
    margin-bottom: 10px;
+    display: block;
   }
 }
 
