@@ -286,6 +286,19 @@ input[disabled] {
   width: 100%;
   max-width: 20em; }
 
+@media (max-width: 414px) {
+  .ui > .statistics > .statistic {
+    margin-left: 2px !important;
+    margin-right: 2px !important; } }
+
+@media (max-width: 414px) {
+  h2:first-child, .reportrange, .chart-range, #c {
+    text-align: center; } }
+
+@media (max-width: 414px) {
+  h2:first-child {
+    margin-bottom: 10px; } }
+
 .dropdown-menu {
   display: none;
   border: 1px solid #dedede;
@@ -308,6 +321,40 @@ input[disabled] {
 
 .ranges > ul > li {
   color: rgba(0, 0, 0, 0.6) !important;
+  border: 0; }
+
+@media (min-width: 564px) {
+  .daterangepicker {
+    width: 20em; } }
+
+@media (min-width: 730px) {
+  .daterangepicker .ranges {
+    width: 100%; } }
+
+@media (min-width: 564px) {
+  .daterangepicker .ranges ul {
+    width: 95%; } }
+
+.ranges {
+  padding-right: 6px; }
+
+.applyBtn {
+  width: 49%;
+  background: #dedede;
+  color: rgba(0, 0, 0, 0.6) !important;
+  border: 0;
+  border-radius: 2px 2px 2px 2px; }
+
+.cancelBtn {
+  width: 49%;
+  background: #dedede;
+  color: rgba(0, 0, 0, 0.6) !important;
+  border: 0;
+  border-radius: 2px 2px 2px 2px; }
+
+.applyBtn:active, .cancelBtn:active .applyBtn:hover, .cancelBtn:hover {
+  background: rgba(0, 0, 0, 0.6);
+  color: #ffffff !important;
   border: 0; }
 
 .ui.labeled.input:not([class*="corner labeled"]) .label:first-child {

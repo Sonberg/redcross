@@ -37,7 +37,7 @@
         </div>
     </div>
 
-    <div class="row center">
+    <div class="row">
 
 
 
