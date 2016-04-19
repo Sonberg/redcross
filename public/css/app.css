@@ -372,7 +372,8 @@ input[disabled] {
 .slider {
   margin-top: 0px;
   outline: none !important;
-  padding-bottom: 50px; }
+  padding-bottom: 0px;
+  margin-bottom: 0; }
   .slider .slider-card {
     outline: none !important;
     opacity: 0.6;

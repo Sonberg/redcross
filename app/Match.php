@@ -75,11 +75,11 @@ class Match {
             break;
 
           case 4:
-            return array("procent" => 100, "matches" => $matches);
+            return array("procent" => 120, "matches" => $matches);
             break;
 
           case 5:
-              return array("procent" => 100, "matches" => $matches);
+              return array("procent" => 150, "matches" => $matches);
             break;
 
           default:
@@ -103,7 +103,7 @@ class Match {
         if(count($matches) > 0) {
           return array("procent" => 100, "matches" => $matches);
         } else {
-          return array("procent" => 80, "matches" => $matches);
+          return array("procent" => 40, "matches" => $matches);
         }
     }
 

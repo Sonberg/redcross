@@ -1,8 +1,8 @@
 @extends('app') @section('content') @include('dashboard.navbar')
-@include('components.match.large', ['master' => $master, 'class' => 'paddingcols center container' ])
-
+<div class="container">
+@include('components.match.large', ['master' => $master, 'class' => 'paddingcols center' ])
 <div class="ui horizontal divider">
-    OCH
+    <button class="ui button matchbtn">Matcha</button>
   </div>
 
 <div class="slider col-lg-10 col-lg-offset-1">
@@ -10,12 +10,11 @@
     <div class="slider-card">@include('components.match.large', ['master' => $s, 'second' => $master, 'class' => 'slider-card'])</div>
   @endforeach
 </div>
-<button class="ui button matchbtn huge fixed-bottom">Matcha</button>
 
 <script type="text/javascript">
   $('.slider').slick({
     centerMode: true,
-    centerPadding: '260px',
+    centerPadding: '150px',
     focusOnSelect: true,
     infinite: false,
     slidesToShow: 1,
@@ -41,4 +40,5 @@
     ]
   });
 </script>
+</div>
 @endsection
