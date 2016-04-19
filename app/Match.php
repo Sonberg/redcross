@@ -17,12 +17,15 @@ class Match {
             $family = Match::matchFamily($main, $second[$i]);
 
             // Total procentage
+            $procent = ($gender + $intrest["procent"] + $language["procent"] + $dist + $profession) / 5;
+            /*
             $procent = 100 *
               ($gender * 0.01) *
               ($intrest["procent"] * 0.01) *
               ($language["procent"] * 0.01) *
               ($dist * 0.01) *
               ($profession * 0.01);
+            */
 
             // Remove if its 0 or set max to 100
             if (floor($procent) >= 100) {
@@ -31,14 +34,14 @@ class Match {
               $second[$i]["match"] = floor($procent);
             }
 
-            $second[$i]["result"] = json_encode(array(
+            $second[$i]["result"] = array(
               "gender" => $gender,
               "intrest" => $intrest,
               "language" => $language,
               "dist" => $dist,
               "profession" => $profession,
               "matches" => array_merge($intrest["matches"], $language["matches"])
-            ));
+            );
           }
 
         $return["result"] = Formatter::filter($second, $length, $procent);

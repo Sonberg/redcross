@@ -199,6 +199,7 @@ html {
 
 }
 
+
 //Match view
 #matchview {
 
@@ -214,15 +215,10 @@ html {
   .age {
     width: 48%;
     float: left;
-  } 
+  }
   .work {
     width: 48%;
     float: right;
-  }
-
-  input[disabled] {
-    color: black;
-    opacity: 1;
   }
 
   .interest {
@@ -278,6 +274,23 @@ html {
   float:right;;
 }
 
+.margin-top {
+  margin-top: 1px !important;
+}
+
 .margin-right {
   margin-right: 10px !important;
+}
+
+input[disabled] {
+  color: black !important;
+  opacity: 1 !important;
+}
+
+
+.grid.card-full {
+  padding: 0 !important;
+  .ui.card {
+    width: 100% !important;
+  }
 }

@@ -226,10 +226,6 @@ html body table.rate td.interest {
   width: 48%;
   float: right; }
 
-#matchview input[disabled] {
-  color: black;
-  opacity: 1; }
-
 #matchview .interest {
   float: left;
   margin-right: 1%;
@@ -267,7 +263,19 @@ html body table.rate td.interest {
 .float-right {
   float: right; }
 
+.margin-top {
+  margin-top: 1px !important; }
+
 .margin-right {
   margin-right: 10px !important; }
+
+input[disabled] {
+  color: black !important;
+  opacity: 1 !important; }
+
+.grid.card-full {
+  padding: 0 !important; }
+  .grid.card-full .ui.card {
+    width: 100% !important; }
 
 /*# sourceMappingURL=app.css.map */

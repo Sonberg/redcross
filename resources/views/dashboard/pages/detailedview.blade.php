@@ -80,7 +80,7 @@
                                     <div class="ui label">
                                         Familj
                                     </div>
-                                    <input type="text" placeholder="{{$master->family_members}} members/member, age of kids/kid: {{$master->kids_age}}" disabled="">
+                                    <input type="text" value="{{$master->family_members}} members/member, age of kids/kid: {{$master->kids_age}}" disabled="">
                                 </div>
                             </div>
                         </div>
