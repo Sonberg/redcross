@@ -369,6 +369,10 @@ input[disabled] {
   width: 100%;
   border-radius: 0; }
 
+.label-margin {
+  margin: 3px 6px !important;
+  margin-left: 0 !important; }
+
 .slider {
   margin-top: 0px;
   outline: none !important;
@@ -394,7 +398,10 @@ input[disabled] {
       opacity: 1 !important; }
   .slider .slick-arrow:before {
     color: grey !important;
-    font-size: 40px; }
+    font-size: 40px;
+    height: 40px;
+    width: 40px;
+    z-index: 100000; }
   .slider .slick-prev {
     left: -35px; }
   .slider .slick-next {
