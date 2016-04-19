@@ -16,10 +16,14 @@ class MatchviewController extends Controller
       $m = Friend::all()->first();
       $s = Immigrant::all();
       $s = Match::procent($m, $s, $this->maxMatches, $this->lowestProcentage);
-      $sm = reset($s["result"]);
+      $sm = $s["result"];
+
+      for($i=0; $i<count($sm);$i++) {
+        $sm[$i] = Parent::printable($sm[$i]);
+      }
       return view("dashboard.pages.matchview", [
         'master' => Parent::printable($m),
-        'secondMaster' => Parent::printable($sm),
+        'second' => $sm,
         'count' => $s["count"]]);
     }
 }

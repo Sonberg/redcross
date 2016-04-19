@@ -1,7 +1,7 @@
-<div class="col-xs-12 col-sm-12 col-md-6 paddingcols">
-<div class="ui page grid main card-full" id="matchview">
+<div class="{{$class}}">
+<div class="ui page grid main" id="matchview">
 
-    <div class="ui card">
+    <div class="ui card center">
     <div class="content">
       <i class="fa {{$master->gender == 'man' ? 'fa-mars' : 'fa-venus'}} fa-2x float-right" aria-hidden="true"></i>
       <div class="float-left">
@@ -48,20 +48,6 @@
 
         <div class="ui divider"></div>
 
-       @if($master->result)
-
-        <!-- Loop out matches parameters -->
-        <div class="event">
-            <div class="content">
-        @foreach ($master['result']['matches'] as $m)
-              <div class="ui large label interest center-text">
-                {{$m}}
-              </div>
-        @endforeach
-      </div>
-    </div>
-
-       @else
         <div class="event">
             <div class="content">
               <div class="ui right pointing large label float-left" style="">
@@ -69,7 +55,7 @@
               </div>
 
               @foreach($master->intrests as $i)
-                <div class="ui large label interest center-text">
+                <div class="ui large label <?php if($master["result"] != null) {if(in_array($i, $master['result']['matches'])) {echo 'interest';}} else {echo 'interest';} ?> center-text">
                   {{$i}}
                 </div>
                 @endforeach
@@ -82,13 +68,12 @@
               </div>
 
               @foreach($master->language as $l)
-                <div class="ui large label interest center-text">
+                <div class="ui large label <?php if($master["result"] != null) { if(in_array($l, $master['result']['matches'])) {echo 'interest';}} else {echo 'interest';} ?> center-text">
                   {{$l}}
                 </div>
                 @endforeach
             </div>
         </div>
-        @endif
 
         <div class="ui divider"></div>
         @if($master->result)

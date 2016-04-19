@@ -1,0 +1,40 @@
+.slider {
+  margin-top: 0px;
+  outline: none !important;
+  padding-bottom: 50px;
+  .slider-card {
+    outline: none !important;
+    opacity: 0.6;
+    transition: all 300ms ease;
+    background-color: white;
+    margin-top: 0;
+    margin: 2px;
+    padding: 0.5%;
+    .ui.grid.main {
+      margin-top: 0;
+      width: 100%;
+      padding: 0;
+    }
+  }
+
+  .slick-center {
+    opacity: 1 !important;
+    transform: scale(1.08);
+    .slider-card {
+      opacity: 1 !important;
+    }
+  }
+
+  .slick-arrow:before {
+    color: grey !important;
+    font-size: 40px;
+  }
+
+  .slick-prev {
+    left: -35px;
+  }
+
+  .slick-next {
+    right: -35px;
+  }
+}

@@ -314,4 +314,42 @@ input[disabled] {
   min-width: 6em;
   text-align: center; }
 
+.fixed-bottom {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  border-radius: 0; }
+
+.slider {
+  margin-top: 0px;
+  outline: none !important;
+  padding-bottom: 50px; }
+  .slider .slider-card {
+    outline: none !important;
+    opacity: 0.6;
+    transition: all 300ms ease;
+    background-color: white;
+    margin-top: 0;
+    margin: 2px;
+    padding: 0.5%; }
+    .slider .slider-card .ui.grid.main {
+      margin-top: 0;
+      width: 100%;
+      padding: 0; }
+  .slider .slick-center {
+    opacity: 1 !important;
+    -webkit-transform: scale(1.08);
+    transform: scale(1.08); }
+    .slider .slick-center .slider-card {
+      opacity: 1 !important; }
+  .slider .slick-arrow:before {
+    color: grey !important;
+    font-size: 40px; }
+  .slider .slick-prev {
+    left: -35px; }
+  .slider .slick-next {
+    right: -35px; }
+
 /*# sourceMappingURL=app.css.map */
