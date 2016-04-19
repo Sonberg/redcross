@@ -301,29 +301,32 @@ input[disabled] {
   cursor: pointer;
   padding: 5px 10px;
   border: 1px solid #ccc;
-  width: 100%;
   max-width: 20em;
 }
   //statistic numbers
 
 
-@media (max-width: 414px){
+@media (max-width: 999px){
   .ui > .statistics > .statistic{
     margin-left: 2px!important;
     margin-right: 2px!important;
+    display: block;
   }
 }
 
 
-@media (max-width: 414px){
+@media (max-width: 999px){
   h2:first-child, .reportrange, .chart-range, #c{
     text-align: center;
+    display: block;
+
   }
 }
 
-@media (max-width: 414px){
+@media (max-width: 999px){
   h2:first-child{
    margin-bottom: 10px;
+    display: block;
   }
 }
 
@@ -392,8 +395,6 @@ input[disabled] {
   background: $black-60;
   color: $white!important;
   border:0;
-
-
 }
 
 
