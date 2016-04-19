@@ -278,4 +278,40 @@ input[disabled] {
   .grid.card-full .ui.card {
     width: 100% !important; }
 
+.chart-range {
+  background: #dedede;
+  cursor: pointer;
+  padding: 5px 10px;
+  border: 1px solid #ccc;
+  width: 100%;
+  max-width: 20em; }
+
+.dropdown-menu {
+  display: none;
+  border: 1px solid #dedede;
+  box-shadow: 10px #dedede; }
+
+.ranges > ul > li:hover {
+  background: #dedede;
+  color: #ffffff;
+  border: 0; }
+
+.ranges > ul > li:active {
+  background: #dedede;
+  color: rgba(0, 0, 0, 0.6) !important;
+  border: 0; }
+
+.ranges li.active {
+  background: #75c980;
+  color: rgba(0, 0, 0, 0.6) !important;
+  border: 0; }
+
+.ranges > ul > li {
+  color: rgba(0, 0, 0, 0.6) !important;
+  border: 0; }
+
+.ui.labeled.input:not([class*="corner labeled"]) .label:first-child {
+  min-width: 6em;
+  text-align: center; }
+
 /*# sourceMappingURL=app.css.map */

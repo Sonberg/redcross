@@ -199,7 +199,6 @@ html {
 
 }
 
-
 //Match view
 #matchview {
 
@@ -293,4 +292,47 @@ input[disabled] {
   .ui.card {
     width: 100% !important;
   }
+}
+
+
+//Statistics
+.chart-range{
+  background: $lightsteel;
+  cursor: pointer;
+  padding: 5px 10px;
+  border: 1px solid #ccc;
+  width: 100%;
+  max-width:20em;
+}
+
+.dropdown-menu{
+  display:none;
+  border: 1px solid $lightsteel;
+  box-shadow: 10px $lightsteel;
+}
+.ranges>ul>li:hover {
+  background: $lightsteel;
+  color: $white;
+  border:0;
+}
+.ranges>ul>li:active{
+  background: $lightsteel;
+  color: $black-60!important;
+  border:0;
+}
+.ranges li.active{
+  background: $soft-green;
+  color: $black-60!important;
+  border:0;
+}
+.ranges>ul>li{
+  color: $black-60!important;
+  border:0;
+}
+
+
+//center text & min width on detailed view
+.ui.labeled.input:not([class*="corner labeled"]) .label:first-child {
+  min-width: 6em;
+  text-align: center;
 }
