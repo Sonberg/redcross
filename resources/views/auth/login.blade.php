@@ -2,8 +2,8 @@
 <form class="form ui margin-field" role="form" method="POST" action="{{ url('/login') }}">
     <div class="ui one column center aligned grid">
         <div class="column six wide form-holder">
-            <h2 class="center aligned header form-head">Sign in</h2> 
-            
+            <h2 class="center aligned header form-head">Sign in</h2>
+
             {!! csrf_field() !!}
             <div class="field {{ $errors->has('email') ? ' has-error' : '' }}">
                 <input type="text" placeholder="E-Mail" name="email" value="{{ old('email') }}"> @if ($errors->has('email'))
@@ -20,16 +20,16 @@
             <div class="field">
                 <input type="submit" value="sign in" class="ui button large fluid green">
             </div>
-            
+
             <div class="inline field">
                 <div class="ui checkbox">
                     <input type="checkbox" name="remember">
                     <label>Remember me</label>
                 </div>
             </div>
-            
+
             <a class="ui button" href="{{ url('/password/reset') }}">Forgot Your Password?</a>
-        
+
         </div>
     </div>
 </form>

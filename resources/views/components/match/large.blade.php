@@ -16,7 +16,7 @@
     <div class="content">
         <h4 class="ui sub header">   </h4>
         <div class="ui small feed">
-            <div class="event">
+            <div class="event visible-lg-*">
                 <div class="content">
                     <div class="ui fluid labeled input age">
                         <div class="ui label">
@@ -35,7 +35,7 @@
                 </div>
             </div>
 
-        <div class="event">
+        <div class="event visible-lg-*">
             <div class="content">
                 <div class="ui fluid labeled input">
                     <div class="ui label">
@@ -50,7 +50,7 @@
 
         <div class="event">
             <div class="content">
-              <div class="ui right pointing large label float-left" style="">
+              <div class="ui right pointing large label float-left visible-lg-*" style="">
                 Intressen
               </div>
 
@@ -63,7 +63,7 @@
         </div>
         <div class="event">
             <div class="content">
-              <div class="ui right pointing large label float-left" style="">
+              <div class="ui right pointing large label float-left visible-lg-*" style="">
                 Språk
               </div>
 
