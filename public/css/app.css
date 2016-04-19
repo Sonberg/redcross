@@ -302,4 +302,8 @@ html body table.rate td.interest {
   color: rgba(0, 0, 0, 0.6) !important;
   border: 0; }
 
+.ui.labeled.input:not([class*="corner labeled"]) .label:first-child {
+  min-width: 6em;
+  text-align: center; }
+
 /*# sourceMappingURL=app.css.map */

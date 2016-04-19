@@ -281,7 +281,7 @@ html {
 .margin-right {
   margin-right: 10px !important;
 }
-
+//Statistics
 .chart-range{
   background: $lightsteel;
   cursor: pointer;
@@ -314,4 +314,11 @@ html {
 .ranges>ul>li{
   color: $black-60!important;
   border:0;
+}
+
+
+//center text & min width on detailed view
+.ui.labeled.input:not([class*="corner labeled"]) .label:first-child {
+  min-width: 6em;
+  text-align: center;
 }
