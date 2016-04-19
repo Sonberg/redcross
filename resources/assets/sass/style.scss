@@ -282,15 +282,39 @@ html {
   margin-right: 10px !important;
 }
 //Statistics
-.chart-range{
+.chart-range {
   background: $lightsteel;
   cursor: pointer;
   padding: 5px 10px;
   border: 1px solid #ccc;
   width: 100%;
-  max-width:20em;
+  max-width: 20em;
+}
+  //statistic numbers
+
+
+@media (max-width: 414px){
+  .ui > .statistics > .statistic{
+    margin-left: 2px!important;
+    margin-right: 2px!important;
+  }
 }
 
+
+@media (max-width: 414px){
+  h2:first-child, .reportrange, .chart-range, #c{
+    text-align: center;
+  }
+}
+
+@media (max-width: 414px){
+  h2:first-child{
+   margin-bottom: 10px;
+  }
+}
+
+
+//date picker
 .dropdown-menu{
   display:none;
   border: 1px solid $lightsteel;
@@ -314,6 +338,48 @@ html {
 .ranges>ul>li{
   color: $black-60!important;
   border:0;
+}
+@media (min-width: 564px) {
+  .daterangepicker {
+    width: 20em;
+  }
+}
+@media (min-width: 730px){
+  .daterangepicker .ranges {
+    width: 100%;
+  }
+}
+
+@media (min-width: 564px){
+  .daterangepicker .ranges ul {
+    width: 95%;
+  }
+}
+.ranges{
+  padding-right: 6px;
+}
+      //buttons
+.applyBtn{
+  width:49%;
+  background: $lightsteel;
+  color: $black-60!important;
+  border:0;
+  border-radius: 2px 2px 2px 2px;
+}
+.cancelBtn{
+  width:49%;
+  background: $lightsteel;
+  color: $black-60!important;
+  border:0;
+  border-radius: 2px 2px 2px 2px;
+}
+
+.applyBtn:active, .cancelBtn:active .applyBtn:hover, .cancelBtn:hover{
+  background: $black-60;
+  color: $white!important;
+  border:0;
+
+
 }
 
 
