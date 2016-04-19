@@ -1,5 +1,4 @@
 .ui.grid.main{
-	margin-top: 70px;
     background: white;
 }
 
@@ -30,7 +29,7 @@
 
 @media (max-width: 767px) {
   	.ui.grid.main{
-  		margin-top: 70px;
+
 	}
 
         .ui.grid { margin: 0 !important; }
