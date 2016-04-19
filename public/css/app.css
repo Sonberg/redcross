@@ -283,7 +283,6 @@ input[disabled] {
   cursor: pointer;
   padding: 5px 10px;
   border: 1px solid #ccc;
-  width: 100%;
   max-width: 20em; }
 
 @media (max-width: 999px) {
