@@ -27,6 +27,7 @@ class FriendRequest extends Request
             'first_name' => 'required',
             'last_name' => 'required',
             'gender' => 'required',
+            'age' => 'required',
             'phone' => 'required',
             'email' => 'required|email',
             'country' => 'required',
@@ -35,8 +36,6 @@ class FriendRequest extends Request
             'city' => 'required',
             'zip' => 'required',
             'profession' => 'required',
-            'number_members' => 'required',
-            'age_kids' => 'required',
         ];
     }
 }

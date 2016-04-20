@@ -1,4 +1,4 @@
-<div class="field margin-field {{ $errors->has('intrest') ? ' has-error' : '' }}">
+<div class="field margin-field {{ $errors->has('intrest') ? ' has-error error' : '' }}">
   <div class="ui fluid selection dropdown multiple search intrest">
       <input type="hidden" name="intrest" value="{{ old('intrest') }}">
       <i class="dropdown icon"></i>
@@ -11,5 +11,5 @@
           @endforeach
       </div>
   </div>
-  @if ($errors->has('intrest'))<span class="help-block ui pointing red basic label"><strong>{{ $errors->first('intrest') }}</strong></span> @endif
+  @if ($errors->has('intrest'))<span class="help-block ui pointing red basic label center"><strong>{{ $errors->first('intrest') }}</strong></span> @endif
 </div>
