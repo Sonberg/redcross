@@ -42,7 +42,7 @@ html {
     }
   }
 }
-
+//Immigration form
 .immigration {
   .preferences {
     padding: 0 20px;
@@ -61,7 +61,7 @@ html {
     display: block !important;
   }
 }
-
+  //Global center classes
 .center-text {
   text-align: center;
 }
@@ -71,11 +71,11 @@ html {
   margin: 20px auto !important;
   display: block !important;
 }
-
+  //Global margin classes
 .margin-field {
   margin: 30px 0 1em !important;
 }
-
+  //Global Full width class
 .full-width {
   width: 100% !important;
   border-bottom: 4px solid !important;
@@ -87,22 +87,40 @@ html {
     text-align: center;
   }
 }
-
+  //Global no-border class
 .no-border {
   border: none !important;
 }
-
+  //Global no-margin class
 .no-margin {
   margin: 0 !important;
 }
+  //Global Container margin class
+.container {
+  margin-top: 60px;
+}
 
+  //Gloal Floats
+.float-left {
+  float:left;
+}
+.float-right {
+  float:right;;
+}
+  //Global margins
+.margin-top {
+  margin-top: 1px !important;
+}
+
+.margin-right {
+  margin-right: 10px !important;
+}
+
+
+  //index view h1's
 .big-header {
   font-weight: 400 !important;
   font-size: 2.0571429em !important;
-}
-
-.container {
-  margin-top: 60px;
 }
 
 //Special formatting for admin_landing cards
@@ -165,7 +183,7 @@ html {
   }
 }
 
-// # buttons match
+//Match buttons
 .matchbtn {
   background: $soft-green !important;
   color: $white !important;
@@ -180,12 +198,12 @@ html {
   background: darken($soft-green, 6) !important;
   color: $white !important;
 }
-
+//Match count circle base
 .circle-base {
   border-radius: 50%;
   behavior: url(PIE.htc);
 }
-
+//Match count front
 .circle-front {
   width: 23px;
   height: 23px;
@@ -265,22 +283,6 @@ html {
 
 
 }
-
-.float-left {
-    float:left;
-}
-.float-right {
-  float:right;;
-}
-
-.margin-top {
-  margin-top: 1px !important;
-}
-
-.margin-right {
-  margin-right: 10px !important;
-}
-
 input[disabled] {
   color: black !important;
   opacity: 1 !important;
@@ -375,7 +377,7 @@ input[disabled] {
 .ranges{
   padding-right: 6px;
 }
-      //buttons
+      //Buttons
 .applyBtn{
   width:49%;
   background: $lightsteel;
@@ -406,6 +408,9 @@ input[disabled] {
   text-align: center;
 }
 
+
+
+// TODO not used?
 .fixed-bottom {
   position: fixed;
   bottom: 0;
