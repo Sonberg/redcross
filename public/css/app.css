@@ -119,6 +119,9 @@ html body table.rate td.interest {
   box-shadow: none !important;
   border-radius: 0 !important;
   margin-top: 3em !important; }
+  .full-width .header {
+    font-size: medium;
+    font-weight: bold; }
 
 .no-border {
   border: none !important; }
@@ -222,14 +225,10 @@ html body table.rate td.interest {
   text-align: center;
   float: right; }
 
-.circle-forms {
-  width: 46px;
-  border-radius: 10%;
-  color: rgba(0, 0, 0, 0.6) !important;
-  background-color: #75c980;
-  opacity: 0.9;
-  float: right;
-  margin: 0 0 0 0; }
+.label-top-right {
+  color: #ffffff !important;
+  background-color: #75c980 !important;
+  font-weight: bold !important; }
 
 #matchview .ui.fluid.input {
   padding-top: 0.5em !important; }

@@ -9,7 +9,7 @@
                 <div class="ui card full-width">
                     <div class="content">
                         <div class="ui segment">
-                        <div class="header">{{trans('form.basic-title')}}<div class="circle-base circle-front circle-forms">1/4</div></div>
+                        <div class="header">{{trans('form.basic-title')}}<div class="ui top right attached label label-top-right">1/4</div></div>
                         <div class="meta">{{trans('form.basic-meta')}}</div></div>
                         <div class="description">
                             @include("components.form.basic", ['page' => 'immigrant'])
@@ -38,8 +38,9 @@
 
                 <div class="ui card full-width">
                     <div class="content">
-                        <div class="header">{{trans('form.family-title')}}</div>
-                        <div class="meta"></div>
+                        <div class="ui segment">
+                        <div class="header">{{trans('form.family-title')}}<div class="circle-base circle-front circle-forms">2/4</div></div>
+                        <div class="meta"></div></div>
                         <div class="description">
 
                             @include("components.form.family")
@@ -49,8 +50,9 @@
 
                 <div class="ui card full-width">
                     <div class="content">
-                        <div class="header">Country</div>
-                        <div class="meta"></div>
+                        <div class="ui segment">
+                        <div class="header">{{trans('form.country-title')}}<div class="circle-base circle-front circle-forms">3/4</div></div>
+                        <div class="meta"></div></div>
                         <div class="description">
 
                             @include("components.form.orgin")
@@ -61,9 +63,11 @@
 
                 <div class="ui card full-width">
                     <div class="content">
-                        <div class="header">{{trans('form.preferences-title')}}</div>
+                        <div class="ui segment">
+                        <div class="header">{{trans('form.preferences-title')}}<div class="circle-base circle-front circle-forms">4/4</div></div>
                         <div class="meta">{{trans('form.preferences-meta')}}</div>
-                        <div class="description preferences">
+                            </div>
+                        <div class="description">
 
                             @include("components.form.intrest")
 
