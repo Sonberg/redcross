@@ -45,13 +45,14 @@ return [
     'zip' => 'Zip code',
 
     /* Family */
+    'family-meta' => 'Family data helps us to match more correctly',
     'have-family-title' => 'Do you have a family?',
     'have-family-no' => 'No',
     'have-family-yes-in' =>'Yes, in Sweden',
     'have-family-yes-out' => 'Yes but not in Sweden',
 
     'family-title' => 'Your family',
-    'family-meta' => '',
+    'family-meta' => 'Select family status for correct matching process',
     'family-number' => 'Family members',
     'family-kids' => 'Age of the kids',
     'kids-placeholder' => 'Select kids range',
@@ -59,13 +60,14 @@ return [
 
     /* Native Language / Country */
     'country-title' => 'Country of orgin',
+    'country-meta' => 'Choose your country of orgin and the languages you speak',
     'country-placeholder' => 'Select your native country',
     'language-title' => 'Language (select multiple)',
     'language-placeholder' => 'Select the lanugaes you know',
 
     /* Personal Intrests */
     'intrests-title' => 'Select intrests',
-    'intrests-meta' =>  'min 1, max 5',
+    'intrests-meta' =>  'Select max 5',
     
     'intrest-meta' => 'Used for matching preferences',
     'intrest-placeholder' => 'Choose multiple (max 5)',

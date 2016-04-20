@@ -39,8 +39,8 @@
                 <div class="ui card full-width">
                     <div class="content">
                         <div class="ui segment">
-                        <div class="header">{{trans('form.family-title')}}<div class="circle-base circle-front circle-forms">2/4</div></div>
-                        <div class="meta"></div></div>
+                        <div class="header">{{trans('form.family-title')}}<div class="ui top right attached label label-top-right">2/4</div></div>
+                        <div class="meta">{{trans('form.family-meta')}}</div></div>
                         <div class="description">
 
                             @include("components.form.family")
@@ -51,8 +51,8 @@
                 <div class="ui card full-width">
                     <div class="content">
                         <div class="ui segment">
-                        <div class="header">{{trans('form.country-title')}}<div class="circle-base circle-front circle-forms">3/4</div></div>
-                        <div class="meta"></div></div>
+                        <div class="header">{{trans('form.country-title')}}<div class="ui top right attached label label-top-right">3/4</div></div>
+                        <div class="meta">{{trans('form.country-meta')}}</div></div>
                         <div class="description">
 
                             @include("components.form.orgin")
@@ -64,7 +64,7 @@
                 <div class="ui card full-width">
                     <div class="content">
                         <div class="ui segment">
-                        <div class="header">{{trans('form.preferences-title')}}<div class="circle-base circle-front circle-forms">4/4</div></div>
+                        <div class="header">{{trans('form.preferences-title')}}<div class="ui top right attached label label-top-right">4/4</div></div>
                         <div class="meta">{{trans('form.preferences-meta')}}</div>
                             </div>
                         <div class="description">
