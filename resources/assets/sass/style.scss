@@ -397,6 +397,8 @@ input[disabled] {
   background: $black-60;
   color: $white!important;
   border:0;
+
+
 }
 
 
@@ -416,9 +418,4 @@ input[disabled] {
   right: 0;
   width: 100%;
   border-radius: 0;
-}
-
-.label-margin {
-    margin: 3px 6px !important;
-    margin-left: 0 !important;
 }
