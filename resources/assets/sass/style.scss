@@ -90,10 +90,9 @@ html {
   box-shadow: none !important;
   border-radius: 0 !important;
   margin-top: 3em !important;
-  .header,
-  .meta {
-    text-align: center;
-  }
+   .meta{
+     margin: 0 0 30px 0;
+   }
 }
   //Global no-border class
 .no-border {
@@ -225,6 +224,16 @@ html {
 
 }
 
+.circle-forms{
+  width: 46px;
+  border-radius: 10%;
+  color: $black-60!important;
+  background-color: $soft-green;
+  opacity:0.9;
+  float: right;
+  margin: 0 0 0 0;
+}
+
 //Match view
 #matchview {
 
@@ -339,14 +348,23 @@ input[disabled] {
     display: block;
   }
 }
+.ui.form .field>.selection.dropdown {
+  background-color: $aliceblue;
 
+}
+
+.ui.dropdown>.default.text {
+  color:$black-60;
+}
 
 //date picker
 .dropdown-menu{
   display:none;
   border: 1px solid $lightsteel;
   box-shadow: 10px $lightsteel;
+
 }
+
 .ranges>ul>li:hover {
   background: $lightsteel;
   color: $white;

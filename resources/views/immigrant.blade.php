@@ -3,16 +3,17 @@
       @include('components.information-module', array('type' => 'immigrant'))
     <h1 class="center-text" style="margin-top: 24px; margin-bottom: 0"> {{trans('form.immigrant-title')}} </h1>
     <div class="column form-width">
-        <div class="">
+
             <form action="/immigrant" method="post" class="ui form">
                 {!! csrf_field() !!}
                 <div class="ui card full-width">
                     <div class="content">
-                        <div class="header">{{trans('form.basic-title')}}</div>
-                        <div class="meta">{{trans('form.basic-meta')}}</div>
+                        <div class="ui segment">
+                        <div class="header">{{trans('form.basic-title')}}<div class="circle-base circle-front circle-forms">1/4</div></div>
+                        <div class="meta">{{trans('form.basic-meta')}}</div></div>
                         <div class="description">
                             @include("components.form.basic", ['page' => 'immigrant'])
-
+                        </div>
                             <!-- Accommodation -->
                             <div class="field margin-field {{ $errors->has('area') ? ' has-error' : '' }}">
                               <label for="area">{{trans('form.area')}}</label>
@@ -33,7 +34,7 @@
                             </div>
                         </div>
                     </div>
-                </div>
+
 
                 <div class="ui card full-width">
                     <div class="content">
@@ -73,7 +74,7 @@
             </form>
         </div>
     </div>
-</div>
+
 <script src="/js/moment.min.js"></script>
 <script src="/js/daterangepicker.js"></script>
 @include("components.form.script")
