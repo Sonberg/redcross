@@ -4,7 +4,7 @@
     <bookmark url="file://$PROJECT_DIR$/resources/assets/sass/style.scss" line="347" mnemonic="8" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8d5c84db-da9f-4caa-9779-d4a500c3a504" name="Default" comment="small fixex + translation">
+    <list default="true" id="8d5c84db-da9f-4caa-9779-d4a500c3a504" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="redcross-ddi.iws" />
@@ -730,7 +730,7 @@
       <workItem from="1460644820597" duration="2814000" />
       <workItem from="1460964717569" duration="12123000" />
       <workItem from="1461050903937" duration="8385000" />
-      <workItem from="1461135419948" duration="3857000" />
+      <workItem from="1461135419948" duration="3864000" />
     </task>
     <task id="LOCAL-00001" summary="Merge branch 'master' of https://git.heroku.com/redcross-ddi-v2&#10;&#10;# Conflicts:&#10;#&#9;public/css/app.css.map&#10;">
       <created>1461058911226</created>
@@ -781,11 +781,18 @@
       <option name="project" value="LOCAL" />
       <updated>1461139588114</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="css">
+      <created>1461139650594</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1461139650594</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="66318000" />
+    <option name="totallyTimeSpent" value="66325000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -837,7 +844,8 @@
     <MESSAGE value="Merge branch 'master' of https://git.heroku.com/redcross-ddi-v2&#10;&#10;# Conflicts:&#10;#&#9;public/css/app.css.map&#10;" />
     <MESSAGE value="fallback fonts added" />
     <MESSAGE value="small fixex + translation" />
-    <option name="LAST_COMMIT_MESSAGE" value="small fixex + translation" />
+    <MESSAGE value="css" />
+    <option name="LAST_COMMIT_MESSAGE" value="css" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
