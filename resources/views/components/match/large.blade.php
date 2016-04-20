@@ -55,7 +55,7 @@
               </div>
 
               @foreach($master->intrests as $i)
-                <div class="ui large label <?php if($master["result"] != null) {if(in_array($i, $master['result']['matches'])) {echo 'interest';}} else {echo 'interest';} ?> center-text">
+                <div class="ui large label cap <?php if($master["result"] != null) {if(in_array($i, $master['result']['matches'])) {echo 'interest';}} else {echo 'interest';} ?> center-text">
                   {{$i}}
                 </div>
                 @endforeach
@@ -68,7 +68,7 @@
               </div>
 
               @foreach($master->language as $l)
-                <div class="ui large label <?php if($master["result"] != null) { if(in_array($l, $master['result']['matches'])) {echo 'interest';}} else {echo 'interest';} ?> center-text">
+                <div class="ui large label cap <?php if($master["result"] != null) { if(in_array($l, $master['result']['matches'])) {echo 'interest';}} else {echo 'interest';} ?> center-text">
                   {{$l}}
                 </div>
                 @endforeach

@@ -1,7 +1,7 @@
 @extends('app') @section('content') @include('dashboard.navbar')
 <div class="container">
 @include('components.match.large', ['master' => $master, 'class' => 'paddingcols center' ])
-<div class="ui horizontal divider">
+<div class="ui horizontal divider margin-top-large">
     <button class="ui button matchbtn">Matcha</button>
   </div>
 
