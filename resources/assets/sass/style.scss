@@ -90,7 +90,13 @@ html {
   box-shadow: none !important;
   border-radius: 0 !important;
   margin-top: 3em !important;
+    .header{
+     font-size: medium;
+     font-weight: bold;
+    }
+    .meta{
 
+    }
 }
   //Global no-border class
 .no-border {
@@ -222,14 +228,10 @@ html {
 
 }
 
-.circle-forms{
-  width: 46px;
-  border-radius: 10%;
-  color: $black-60!important;
-  background-color: $soft-green;
-  opacity:0.9;
-  float: right;
-  margin: 0 0 0 0;
+.label-top-right{
+  color: $white!important;
+  background-color: $soft-green!important;
+  font-weight: bold!important;
 }
 
 //Match view

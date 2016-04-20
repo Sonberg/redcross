@@ -1,5 +1,5 @@
 <div class="field margin-field {{ $errors->has('intrest') ? ' has-error error' : '' }}">
-  <div class="ui fluid selection dropdown multiple search intrest">
+  <div class="ui fluid selection dropdown multiple search">
       <input type="hidden" name="intrest" value="{{ old('intrest') }}">
       <i class="dropdown icon"></i>
       <span class="default text">{{trans('form.intrest-placeholder')}}</span>
