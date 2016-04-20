@@ -2,7 +2,7 @@
 <div class="ui container immigration transition hidden">
       @include('components.information-module', array('type' => 'friend'))
     <h1 class="center-text">{{trans('form.friend-title')}}</h1>
-    <div class="column">
+    <div class="column form-width">
         <div class="">
             <form action="/friend" method="post" class="ui form">
                 {!! csrf_field() !!}

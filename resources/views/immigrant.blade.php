@@ -2,7 +2,7 @@
 <div class="ui container immigration transition hidden">
       @include('components.information-module', array('type' => 'immigrant'))
     <h1 class="center-text" style="margin-top: 24px; margin-bottom: 0"> {{trans('form.immigrant-title')}} </h1>
-    <div class="column">
+    <div class="column form-width">
         <div class="">
             <form action="/immigrant" method="post" class="ui form">
                 {!! csrf_field() !!}

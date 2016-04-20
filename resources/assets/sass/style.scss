@@ -42,7 +42,15 @@ html {
     }
   }
 }
+
+
 //Immigration form
+
+.form-width{
+  max-width: 500px!important;
+  margin: 0 auto!important;
+}
+
 .immigration {
   .preferences {
     padding: 0 20px;
@@ -424,3 +432,4 @@ hr{
   opacity: 0.3;
   width: 50%;
 }
+
