@@ -24,6 +24,7 @@ class MatchviewController extends Controller
       return view("dashboard.pages.matchview", [
         'master' => Parent::printable($m),
         'second' => $sm,
+        'i' => 0,
         'count' => $s["count"]]);
     }
 }

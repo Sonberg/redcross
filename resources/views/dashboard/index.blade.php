@@ -38,69 +38,38 @@
     </div>
 
     <div class="row center">
+      <div class="ui buttons center flip-button">
+        <button class="ui button active">Nyanlända</button>
+        <button class="ui button friend-btn">Etablerade</button>
+      </div>
+      <script type="text/javascript">
+      var delay = 270;
 
+        $(document).on('click', '.buttons.flip-button button', function() {
+          $('.buttons.flip-button button').removeClass('active');
+          $(this).addClass('active');
+          if ($(this).hasClass('friend-btn')) {
+            $('.immigrant').transition('scale');
+            setTimeout(function() {
+              $('.friend').transition('scale');
+            }, delay);
+          } else {
+            $('.friend').transition('scale');
+            $('.friend').height(0);
+            setTimeout(function() {
+              $('.immigrant').transition('scale');
+            }, delay);
+          }
+        });
+      </script>
 
-       {{--   <div class="ui link cards">
-                @foreach($immigrant as $i)
-                <div class="ui card">
-                    <div class="content">
-                       <div class="ui top right attached label">{{$i->match}} %</div>
-                        <div class="header">{{$i->first_name}} {{$i->last_name}}</div>
-                        <div class="meta">{{$i->email}}</div>
-                        <div class="description">
-                            <p>{{$i->result}}</p>
-                        </div>
-                    </div>
-                </div>
-                @endforeach @foreach($friend as $f)
-                <div class="ui card">
-                    <div class="content">
-                        <div class="header">{{$friend->first_name}} {{$friend->last_name}}</div>
-                        <div class="meta">{{$friend->email}}</div>
-                        <div class="description">
-                            <p>{{$friend->language}}</p>
-                            <p>{{$friend->intrests}}</p>
-                        </div>
+      <div class="immigrant">
+        @include('components.index-detail')
+      </div>
 
-                    </div>
-                </div>
-                <!-- @endforeach -->--}}
-
-        <div class="col-xs-12 col-sm-12 col-md-6 paddingcols">
-            <div class="column padding-reset">
-                <div class="card">
-                    <div class="content">
-                        <div class="description">
-
-                            <div class="ui horizontal segments">
-                                <div class="ui segment">
-                                <p>Namn Namnsson</p>
-                            </div>
-                            <div class="ui segment">
-                                <p>Kon</p>
-                            </div>
-                            <div class="ui segment">
-                                <p>Land</p>
-                            </div>
-                            <div class="ui segment">
-                                <p>dagar</p>
-                            </div>
-                        </div>
-                    </div>
-
-
-                </div>
-
-                <div class="ui buttons bottom attached button">
-                    <button class="ui button matchbtn"><div>Matcha nu<div class="circle-base circle-front">7</div></div></button>
-                    <button class="ui button">Mer info</button>
-                </div>
-            </div>
-        </div>
-
-
-    </div>
-
+      <div class="friend transition hidden">
+        @include('components.index-detail')
+      </div>
 </div>
 
 

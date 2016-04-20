@@ -11,7 +11,7 @@ use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 class Controller extends BaseController
 {
     use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
-    public $maxMatches = 5;
+    public $maxMatches = 10;
     public $lowestProcentage = 10;
 
     // Return list of languages

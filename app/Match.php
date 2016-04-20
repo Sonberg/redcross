@@ -6,7 +6,7 @@ use App\Formatter;
 
 class Match {
 
-    public static function procent($main, $second, $length, $procent) {
+    public static function procent($main, $second, $length, $maxProcent) {
         for($i=0;$i<count($second);$i++) {
             $gender = Match::matchGender($main, $second[$i]);
             $intrest = Match::matchIntrest($main->intrests, $second[$i]->intrests);
@@ -44,7 +44,7 @@ class Match {
             );
           }
 
-        $return["result"] = Formatter::filter($second, $length, $procent);
+        $return["result"] = Formatter::filter($second, $length, $maxProcent);
         $return["count"] = count($return["result"]);
         return $return;
     }
@@ -103,7 +103,7 @@ class Match {
         if(count($matches) > 0) {
           return array("procent" => 100, "matches" => $matches);
         } else {
-          return array("procent" => 40, "matches" => $matches);
+          return array("procent" => 0, "matches" => $matches);
         }
     }
 

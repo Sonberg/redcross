@@ -73,6 +73,12 @@ html {
 .center-text {
   text-align: center;
 }
+.left-text {
+  text-align: left;
+}
+.right-text {
+  text-align: right;
+}
 
 .center {
   text-align: center !important;
@@ -122,6 +128,10 @@ html {
 
 .margin-right {
   margin-right: 10px !important;
+}
+
+.no-margin-bottom {
+  margin-bottom: 0 !important;
 }
 
 
@@ -251,6 +261,15 @@ html {
     margin-right: 1%;
     text-transform: capitalize;
     color: white;
+  }
+
+  .pig-pink {
+    background-color: $pig-pink;
+    color: white;
+  }
+
+  .cap {
+    text-transform: capitalize;
   }
 
   .interest > input {
@@ -433,3 +452,13 @@ hr{
   width: 50%;
 }
 
+.meet_pref {
+  margin-top: 1% !important;
+}
+
+.flip-button {
+  .active {
+    background-color: $pig-pink !important;
+    color: white !important;
+  }
+}
