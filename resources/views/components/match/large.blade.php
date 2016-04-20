@@ -50,7 +50,7 @@
 
         <div class="event">
             <div class="content">
-              <div class="ui right pointing large label float-left visible-lg-*" style="">
+              <div class="ui right pointing large label float-left visible-lg-block" style="">
                 Intressen
               </div>
 
@@ -63,7 +63,7 @@
         </div>
         <div class="event">
             <div class="content">
-              <div class="ui right pointing large label float-left visible-lg-*" style="">
+              <div class="ui right pointing large label float-left visible-lg-block" style="">
                 Språk
               </div>
 
@@ -78,11 +78,11 @@
         <div class="ui divider"></div>
         @if($master->result)
           @if($master->meet_gender == $second->gender && $master->gender != '0' && $second->gender != '0' )
-          <div class="ui label">Jag vill möte en {{$master->meet_gender == 'kvinna' ? "kvinna" : "man"}} </div>
+          <div class="ui label meet_pref">Jag vill möte en {{$master->meet_gender == 'kvinna' ? "kvinna" : "man"}} </div>
           @endif
 
           @if($master->meet_family > count($second->family_members))
-          <div class="ui label">  Jag vill möte en familj </div>
+          <div class="ui label meet_pref">  Jag vill möte en familj </div>
           @endif
 
           @if($master->meet_profession == 1 && $master->profession == $second->profession)
@@ -90,15 +90,15 @@
           @endif
         @else
           @if($master->meet_gender)
-          <div class="ui label">Jag vill möte en {{$master->meet_gender}}</div>
+          <div class="ui label meet_pref">Jag vill möte en {{$master->meet_gender}}</div>
           @endif
 
           @if($master->meet_family != 0)
-          <div class="ui label">  Jag vill möte en familj </div>
+          <div class="ui label meet_pref">  Jag vill möte en familj </div>
           @endif
 
           @if($master->meet_profession)
-          <div class="ui label">Jag vill möte någon i samma branch</div>
+          <div class="ui label meet_pref">Jag vill möte någon i samma branch</div>
           @endif
         @endif
         </div>
