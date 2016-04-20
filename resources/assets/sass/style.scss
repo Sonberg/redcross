@@ -91,12 +91,14 @@ html {
   border-bottom: 4px solid !important;
   box-shadow: none !important;
   border-radius: 0 !important;
-  margin-top: 3em !important;
+  margin-top: 1em !important;
+  padding-bottom: 1em !important;
     .header{
-     font-size: medium;
+     font-size: large;
      font-weight: bold;
     }
     .meta{
+      color:$black-60!important;
 
     }
 }
@@ -232,8 +234,9 @@ html {
 
 .label-top-right{
   color: $white!important;
-  background-color: $soft-green!important;
+  background-color: $pig-pink!important;
   font-weight: bold!important;
+  border-radius: 0.2em!important;
 }
 
 //Match view
@@ -461,3 +464,9 @@ hr{
   text-transform: capitalize !important;
 }
 
+.ui.segment{
+  box-shadow: 0 0px 0px 0 rgba(34,36,38,.15);
+  margin: 1em 0 2em 0;
+  padding: 0em;
+  border: 0px solid rgba(34,36,38,.15);
+}

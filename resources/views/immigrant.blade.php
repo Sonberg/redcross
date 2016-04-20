@@ -9,7 +9,7 @@
                 <div class="ui card full-width">
                     <div class="content">
                         <div class="ui segment">
-                        <div class="header">{{trans('form.basic-title')}}<div class="ui top right attached label label-top-right">1/4</div></div>
+                        <div class="header">{{trans('form.basic-title')}}<div class="ui top right attached label label-top-right">{{trans('form.steps')}}1/4</div></div>
                         <div class="meta">{{trans('form.basic-meta')}}</div></div>
                         <div class="description">
                             @include("components.form.basic", ['page' => 'immigrant'])
@@ -39,7 +39,7 @@
                 <div class="ui card full-width">
                     <div class="content">
                         <div class="ui segment">
-                        <div class="header">{{trans('form.family-title')}}<div class="ui top right attached label label-top-right">2/4</div></div>
+                        <div class="header">{{trans('form.family-title')}}<div class="ui top right attached label label-top-right">{{trans('form.steps')}}2/4</div></div>
                         <div class="meta">{{trans('form.family-meta')}}</div></div>
                         <div class="description">
 
@@ -51,7 +51,7 @@
                 <div class="ui card full-width">
                     <div class="content">
                         <div class="ui segment">
-                        <div class="header">{{trans('form.country-title')}}<div class="ui top right attached label label-top-right">3/4</div></div>
+                        <div class="header">{{trans('form.country-title')}}<div class="ui top right attached label label-top-right">{{trans('form.steps')}}3/4</div></div>
                         <div class="meta">{{trans('form.country-meta')}}</div></div>
                         <div class="description">
 
@@ -64,7 +64,7 @@
                 <div class="ui card full-width">
                     <div class="content">
                         <div class="ui segment">
-                        <div class="header">{{trans('form.preferences-title')}}<div class="ui top right attached label label-top-right">4/4</div></div>
+                        <div class="header">{{trans('form.preferences-title')}}<div class="ui top right attached label label-top-right">{{trans('form.steps')}}4/4</div></div>
                         <div class="meta">{{trans('form.preferences-meta')}}</div>
                             </div>
                         <div class="description">

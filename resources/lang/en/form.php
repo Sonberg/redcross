@@ -9,10 +9,11 @@ return [
     */
     'immigrant-title' => 'Application for immigrants',
     'friend-title' => 'Application for language friends',
+    'steps' => "Step: ",
 
     /* Basic Information */
     'basic-title' => 'Basic information',
-    'basic-meta' => 'Your basic information is used for matching and contacting purposes',
+    'basic-meta' => 'Basic information is used for matching and contacting purposes',
     'first-name' => 'First Name',
     'last-name' => 'Last Name',
 
@@ -21,7 +22,7 @@ return [
     'gender-placeholder' => 'Select your gender',
     'man' => 'Man',
     'woman' => 'Woman',
-    'unknown' => 'Prefer to not answer',
+    'unknown' => 'Other',
 
     'phone-number' => 'Phone Number',
     'email' => 'Email',
@@ -59,7 +60,7 @@ return [
     'no-kids' => 'No kids',
 
     /* Native Language / Country */
-    'country-title' => 'Country of orgin',
+    'country-title' => 'Country of origin',
     'country-meta' => 'Choose your country of orgin and the languages you speak',
     'country-placeholder' => 'Select your native country',
     'language-title' => 'Language (select multiple)',
@@ -76,7 +77,7 @@ return [
     'preferences-title' => 'Personal preferences & Interests',
     'preferences-meta' => 'What are you interested in? (Choose max 5 interests)',
     'meet-yes' => 'Yes',
-    'meet-no' => 'Do not matters',
+    'meet-no' => "Doesen't matter",
     'meet-family-title' => 'I would like to meet someone with a family:',
     'meet-gender-title' => 'I would like to meet a:',
     'meet-gender-man' => 'Man',
