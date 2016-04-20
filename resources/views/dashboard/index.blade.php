@@ -38,7 +38,7 @@
     </div>
 
     <div class="row center">
-      <div class="ui buttons center flip-button">
+      <div class="ui buttons center flip-button margin-bottom-large">
         <button class="ui button active">Nyanlända</button>
         <button class="ui button friend-btn">Etablerade</button>
       </div>
