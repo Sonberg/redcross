@@ -5,7 +5,7 @@
 
 
         <!-- New in Sweden -->
-        <div class="columns col-lg-6 col-sm-6 float-left">
+        <div class="columns col-lg-6 col-sm-6">
 
           <div class="content">
             <h1 class="header big-header center-text aligned">{{trans('basic.immigant-title')}}</h1>
@@ -15,14 +15,14 @@
           </div>
 
            <!-- Button -->
-          <a href="{{ LaravelLocalization::getCurrentLocale() }}/immigrant/" class="ui icon big center basic black button">
-            I'm new in Sweden
+          <a href="{{ LaravelLocalization::getCurrentLocale() }}/immigrant/" class="ui icon big center grey button">
+            {{trans('basic.immigant-button')}}
           </a>
 
         </div>
 
         <!-- Language Friend -->
-        <div class="columns col-lg-6 col-sm-6 float-right">
+        <div class="columns col-lg-6 col-sm-6">
           <div class="content">
             <h1 class="header big-header center-text aligned">{{trans('basic.established-title')}}</h1>
             <div class="description center-text aligned">
@@ -31,8 +31,8 @@
           </div>
 
           <!-- Button -->
-          <a href=" {{ LaravelLocalization::getCurrentLocale() }}/friend/ " class="ui icon center big basic black button">
-            Become a language friend
+          <a href=" {{ LaravelLocalization::getCurrentLocale() }}/friend/ " class="ui icon center big grey button">
+            {{trans('basic.established-button')}}
           </a>
 
         </div>

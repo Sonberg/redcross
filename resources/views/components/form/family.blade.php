@@ -1,3 +1,22 @@
+
+<div class="grouped fields margin-field preferences">
+    <div class="field">
+        <label>{{trans('form.meet-family-title')}}</label>
+    </div>
+    <div class="field">
+        <div class="ui radio checkbox">
+            <input type="radio" value="1" name="meet_family" id="meet_family" class="hidden" tabindex="0">
+            <label>{{trans('form.meet-yes')}}</label>
+        </div>
+    </div>
+    <div class="field">
+        <div class="ui radio checkbox">
+            <input type="radio" name="meet_family" value="0" class="hidden" checked="checked" tabindex="0">
+            <label>{{trans('form.meet-no')}}</label>
+        </div>
+    </div>
+</div>
+<hr>
 <div class="grouped fields margin-field preferences">
     <div class="field">
         <label>{{trans('form.have-family-title')}}</label>
@@ -43,22 +62,4 @@
         <option value="20" <?php if(old( 'age_kids')=="20" ) { echo 'selected="selected"'; } ?>>20+</option>
     </select>
     @if ($errors->has('age_kids'))<span class="help-block ui pointing red basic label"><strong>{{ $errors->first('age_kids') }}</strong></span> @endif
-</div>
-
-<div class="grouped fields margin-field preferences">
-    <div class="field">
-        <label>{{trans('form.meet-family-title')}}</label>
-    </div>
-    <div class="field">
-        <div class="ui radio checkbox">
-            <input type="radio" value="1" name="meet_family" id="meet_family" class="hidden" tabindex="0">
-            <label>{{trans('form.meet-yes')}}</label>
-        </div>
-    </div>
-    <div class="field">
-        <div class="ui radio checkbox">
-            <input type="radio" name="meet_family" value="0" class="hidden" checked="checked" tabindex="0">
-            <label>{{trans('form.meet-no')}}</label>
-        </div>
-    </div>
 </div>

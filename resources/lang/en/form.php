@@ -12,16 +12,16 @@ return [
 
     /* Basic Information */
     'basic-title' => 'Basic information',
-    'basic-meta' => 'Your basic information is used for matching and contacting',
+    'basic-meta' => 'Your basic information is used for matching and contacting purposes',
     'first-name' => 'First Name',
     'last-name' => 'Last Name',
 
 
-    'gender' => 'Gender',
+    'gender' => 'Sex',
     'gender-placeholder' => 'Select your gender',
     'man' => 'Man',
     'woman' => 'Woman',
-    'unknown' => 'Prefer not to answer',
+    'unknown' => 'Prefer to not answer',
 
     'phone-number' => 'Phone Number',
     'email' => 'Email',
@@ -71,15 +71,15 @@ return [
     'intrest-placeholder' => 'Choose multiple (max 5)',
 
     /* Match Preferences */
-    'preferences-title' => 'Personal preferences',
-    'preferences-meta' => 'Who do you want to meet?',
+    'preferences-title' => 'Personal preferences & Interests',
+    'preferences-meta' => 'What are you interested in? (Choose max 5 interests)',
     'meet-yes' => 'Yes',
     'meet-no' => 'Do not matters',
-    'meet-family-title' => 'I want to meet someone with a family:',
-    'meet-gender-title' => 'I want to meet a:',
+    'meet-family-title' => 'I would like to meet someone with a family:',
+    'meet-gender-title' => 'I would like to meet a:',
     'meet-gender-man' => 'Man',
     'meet-gender-woman' => 'Woman',
-    'meet-profession-title' => 'I want to someone connected to my profession:',
+    'meet-profession-title' => 'I would like to meet to someone connected to my profession:',
 
 
     'apply-button' => 'Send application',

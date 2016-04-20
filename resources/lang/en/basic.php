@@ -12,12 +12,12 @@ return [
     'close' => 'Close',
 
     /* LANDING PAGE */
-    'immigant-title' => "I'm new in Sweden",
-    'immigant-body' => "I'm new in Sweden and i would like to meet a language friend",
+    'immigant-title' => "I'm new in Sweden, looking forward to learn Swedish",
+    'immigant-body' => "",
     'immigant-button' => "Start application",
 
-    'established-title' => 'I would like to become a language friend',
-    'established-body' => "I'm established in Sweden and want to become a language friend",
+    'established-title' => 'I would like to become a language friend and learn Swedish to others',
+    'established-body' => "",
     'established-button' => 'Start application as a language friend',
 
     /* NAVBAR */

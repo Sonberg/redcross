@@ -76,6 +76,25 @@
 
 
 <!-- Profession -->
+<div class="grouped fields margin-field preferences">
+    <div class="field">
+        <label>{{trans('form.meet-profession-title')}}</label>
+    </div>
+    <div class="field">
+        <div class="ui radio checkbox">
+            <input type="radio" value="1" name="meet_profession" id="meet_profession" class="hidden" tabindex="0">
+            <label>{{trans('form.meet-yes')}}</label>
+        </div>
+    </div>
+    <div class="field">
+        <div class="ui radio checkbox">
+            <input type="radio" name="meet_profession" value="0" class="hidden" checked="checked" tabindex="0">
+            <label>{{trans('form.meet-no')}}</label>
+        </div>
+    </div>
+</div>
+
+
 <div class="field margin-field {{ $errors->has('profession') ? ' has-error' : '' }}">
     <label for="profession">{{trans('form.profession')}}</label>
     <div class="ui fluid selection dropdown search">
@@ -96,20 +115,3 @@
     @if ($errors->has('profession'))<span class="help-block ui pointing red basic label"><strong>{{ $errors->first('profession') }}</strong></span> @endif
 </div>
 
-<div class="grouped fields margin-field preferences">
-    <div class="field">
-        <label>{{trans('form.meet-profession-title')}}</label>
-    </div>
-    <div class="field">
-        <div class="ui radio checkbox">
-            <input type="radio" value="1" name="meet_profession" id="meet_profession" class="hidden" tabindex="0">
-            <label>{{trans('form.meet-yes')}}</label>
-        </div>
-    </div>
-    <div class="field">
-        <div class="ui radio checkbox">
-            <input type="radio" name="meet_profession" value="0" class="hidden" checked="checked" tabindex="0">
-            <label>{{trans('form.meet-no')}}</label>
-        </div>
-    </div>
-</div>
