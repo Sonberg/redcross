@@ -81,5 +81,11 @@
 
 <script src="/js/moment.min.js"></script>
 <script src="/js/daterangepicker.js"></script>
+<script>
+    $('.segment')
+            .transition('swing down', '1s')
+
+    ;
+</script>
 @include("components.form.script")
 @endsection
