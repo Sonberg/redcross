@@ -1,6 +1,6 @@
 @extends('app') @section('content') @include('dashboard.navbar')
 
-<div class="ui page grid main" id="listview">
+<div class="ui page grid main container" id="listview">
 
     <div class="row center">
 

@@ -82,24 +82,31 @@ html {
 
 .center {
   text-align: center !important;
-  margin: 20px auto !important;
+  margin: 0px auto !important;
   display: block !important;
 }
   //Global margin classes
 .margin-field {
   margin: 30px 0 1em !important;
 }
+
+.margin-top-large { margin-top: 30px !important; }
   //Global Full width class
 .full-width {
   width: 100% !important;
   border-bottom: 4px solid !important;
   box-shadow: none !important;
   border-radius: 0 !important;
-  margin-top: 3em !important;
-  .header,
-  .meta {
-    text-align: center;
-  }
+  margin-top: 1em !important;
+  padding-bottom: 1em !important;
+    .header{
+     font-size: large;
+     font-weight: bold;
+    }
+    .meta{
+      color:$black-60!important;
+
+    }
 }
   //Global no-border class
 .no-border {
@@ -235,6 +242,13 @@ html {
 
 }
 
+.label-top-right{
+  color: $white!important;
+  background-color: $pig-pink!important;
+  font-weight: bold!important;
+  border-radius: 0.2em!important;
+}
+
 //Match view
 #matchview {
 
@@ -358,14 +372,23 @@ input[disabled] {
     display: block;
   }
 }
+.ui.form .field>.selection.dropdown {
+  background-color: $aliceblue;
 
+}
+
+.ui.dropdown>.default.text {
+  color:$black-60;
+}
 
 //date picker
 .dropdown-menu{
   display:none;
   border: 1px solid $lightsteel;
   box-shadow: 10px $lightsteel;
+
 }
+
 .ranges>ul>li:hover {
   background: $lightsteel;
   color: $white;
@@ -461,4 +484,15 @@ hr{
     background-color: $pig-pink !important;
     color: white !important;
   }
+}
+
+.cap {
+  text-transform: capitalize !important;
+}
+
+.ui.segment{
+  box-shadow: 0 0px 0px 0 rgba(34,36,38,.15);
+  margin: 1em 0 2em 0;
+  padding: 0em;
+  border: 0px solid rgba(34,36,38,.15);
 }

@@ -1,4 +1,4 @@
-<div class="ui grid">
+<div class="ui grid" style="padding-bottom: 20px">
     <div class="computer tablet only row">
        <!-- grid -->
         <div class="ui fixed menu navbar page">

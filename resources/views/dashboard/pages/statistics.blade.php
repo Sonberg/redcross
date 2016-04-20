@@ -1,6 +1,6 @@
 @extends('app') @section('content') @include('dashboard.navbar')
 
-<div class="ui page grid main" id="dashboard">
+<div class="ui page grid main container" id="dashboard">
 
     <div class="ui statistics center">
         <div class="statistic">
