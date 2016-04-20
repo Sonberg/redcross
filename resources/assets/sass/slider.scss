@@ -29,6 +29,9 @@
   .slick-arrow:before {
     color: grey !important;
     font-size: 40px;
+    height: 40px;
+    width: 40px;
+    z-index: 100000;
   }
 
   .slick-prev {
