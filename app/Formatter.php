@@ -48,7 +48,11 @@ class Formatter {
       foreach ($obj as $o) { array_push($arr, $o); }
 
       $sort = usort($arr, function($a, $b) {
-            return strcmp($a->match, $b->match);
+            if($a->match < $b->match) {
+              return true;
+            } else {
+              return false;
+            }
         });
         return $arr;
     };
@@ -62,7 +66,7 @@ class Formatter {
 
     // Remove 0% from array
     $filter = function ($obj) {
-        for($i=0;$i<count($obj);$i++) {
+        for($i=(count($obj)-1);$i>0;$i--) {
           if ($obj[$i]["match"] == 0) {
             unset($obj[$i]);
             $i = 0;
@@ -71,7 +75,15 @@ class Formatter {
         return $obj;
     };
 
-    return $filter($count($order($obj),$length));
+    $tooSmall = function($obj, $procent) {
+      for($i=(count($obj)-1);$i>0;$i--) {
+        if ($obj[$i]["match"] < $procent) {
+          unset($obj[$i]);
+        }
+      }
+      return $obj;
+    };
+    return $tooSmall($filter($count($order($obj),$length)), $procent);
   }
 
   // Sort functions

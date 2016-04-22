@@ -8,6 +8,7 @@
 <div class="slider col-lg-10 col-lg-offset-1">
   @foreach($second as $s)
     <div class="slider-card">@include('components.match.large', ['master' => $s, 'second' => $master, 'class' => 'slider-card'])</div>
+    <?php $i++; ?>
   @endforeach
 </div>
 

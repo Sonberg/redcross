@@ -105,6 +105,12 @@ html body table.rate td.interest {
 .center-text {
   text-align: center; }
 
+.left-text {
+  text-align: left; }
+
+.right-text {
+  text-align: right; }
+
 .center {
   text-align: center !important;
   margin: 0px auto !important;
@@ -115,6 +121,9 @@ html body table.rate td.interest {
 
 .margin-top-large {
   margin-top: 30px !important; }
+
+.margin-bottom-large {
+  margin-bottom: 30px !important; }
 
 .full-width {
   width: 100% !important;
@@ -149,6 +158,9 @@ html body table.rate td.interest {
 
 .margin-right {
   margin-right: 10px !important; }
+
+.no-margin-bottom {
+  margin-bottom: 0 !important; }
 
 .big-header {
   font-weight: 400 !important;
@@ -259,6 +271,13 @@ html body table.rate td.interest {
   margin-right: 1%;
   text-transform: capitalize;
   color: white; }
+
+#matchview .pig-pink {
+  background-color: #e87476;
+  color: white; }
+
+#matchview .cap {
+  text-transform: capitalize; }
 
 #matchview .interest > input {
   text-align: center;
@@ -399,6 +418,10 @@ hr {
 
 .meet_pref {
   margin-top: 1% !important; }
+
+.flip-button .active {
+  background-color: #e87476 !important;
+  color: white !important; }
 
 .cap {
   text-transform: capitalize !important; }
