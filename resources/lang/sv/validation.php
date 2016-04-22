@@ -61,7 +61,7 @@ return [
     'numeric'              => ':attribute must be a number.',
     'present'              => ':attribute field must be present.',
     'regex'                => ':attribute format is invalid.',
-    'required'             => ':attribute field is required.',
+    'required'             => ':attribute är obligatoriskt.',
     'required_if'          => ':attribute field is required when :other is :value.',
     'required_unless'      => ':attribute field is required unless :other is in :values.',
     'required_with'        => ':attribute field is required when :values is present.',

@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8d5c84db-da9f-4caa-9779-d4a500c3a504" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/lang/sv/validation.php" afterPath="$PROJECT_DIR$/resources/lang/sv/validation.php" />
     </list>
     <ignored path="redcross-ddi.iws" />
@@ -54,8 +55,8 @@
       <file leaf-file-name="validation.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/lang/sv/validation.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-155">
-              <caret line="50" column="66" selection-start-line="50" selection-start-column="66" selection-end-line="50" selection-end-column="66" />
+            <state relative-caret-position="176">
+              <caret line="63" column="58" selection-start-line="63" selection-start-column="58" selection-end-line="63" selection-end-column="58" />
               <folding />
             </state>
           </provider>
@@ -434,7 +435,7 @@
       <workItem from="1460964717569" duration="12123000" />
       <workItem from="1461050903937" duration="8385000" />
       <workItem from="1461135419948" duration="15414000" />
-      <workItem from="1461224961060" duration="1905000" />
+      <workItem from="1461224961060" duration="1986000" />
     </task>
     <task id="LOCAL-00001" summary="Merge branch 'master' of https://git.heroku.com/redcross-ddi-v2&#10;&#10;# Conflicts:&#10;#&#9;public/css/app.css.map&#10;">
       <created>1461058911226</created>
@@ -503,7 +504,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="79780000" />
+    <option name="totallyTimeSpent" value="79861000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -930,8 +931,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/lang/sv/validation.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-155">
-          <caret line="50" column="66" selection-start-line="50" selection-start-column="66" selection-end-line="50" selection-end-column="66" />
+        <state relative-caret-position="176">
+          <caret line="63" column="58" selection-start-line="63" selection-start-column="58" selection-end-line="63" selection-end-column="58" />
           <folding />
         </state>
       </provider>
