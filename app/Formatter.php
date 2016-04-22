@@ -65,13 +65,15 @@ class Formatter {
     };
 
     // Remove 0% from array
-    $filter = function ($obj) {
-        for($i=(count($obj)-1);$i>0;$i--) {
-          if ($obj[$i]["match"] == 0) {
-            unset($obj[$i]);
-            $i = 0;
+    $filter = function ($obj, $procent) {
+        if($procent != 0) {
+          for($i=(count($obj)-1);$i>0;$i--) {
+            if ($obj[$i]["match"] == 0) {
+              unset($obj[$i]);
+              $i = 0;
+            }
           }
-        }
+      }
         return $obj;
     };
 
@@ -83,7 +85,7 @@ class Formatter {
       }
       return $obj;
     };
-    return $tooSmall($filter($count($order($obj),$length)), $procent);
+    return $tooSmall($filter($count($order($obj),$length), $procent), $procent);
   }
 
   // Sort functions

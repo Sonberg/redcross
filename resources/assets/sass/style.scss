@@ -378,7 +378,7 @@ input[disabled] {
   background-color: $aliceblue;
 
 }
-
+ 
 .ui.dropdown>.default.text {
   color:$black-60;
 }
@@ -389,6 +389,11 @@ input[disabled] {
   border: 1px solid $lightsteel;
   box-shadow: 10px $lightsteel;
 
+}
+
+.ui.dropdown.large {
+  border-bottom: 2px solid;
+  font-size: 18px;
 }
 
 .ranges>ul>li:hover {

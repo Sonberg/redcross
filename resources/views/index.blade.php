@@ -2,13 +2,6 @@
 <div style="padding-top: 160px;" class="ui container">
   <div class="row">
     <div class="columns col-lg-12">
-      <div class="container center">
-        @include('components.language-change-index')
-      </div>
-    </div>
-    </div>
-  <div class="row">
-    <div class="columns col-lg-12">
         <!-- New in Sweden -->
         <div class="columns col-lg-6 col-sm-6">
 
@@ -41,6 +34,9 @@
           </a>
 
         </div>
+    </div>
+    <div class="center">
+      @include('components.language-change-index', ["class" => "large"])
     </div>
 </div>
 <script src="/js/fullBackground.js"></script>
