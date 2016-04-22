@@ -7,82 +7,85 @@ return [
     | Language Lines
     |--------------------------------------------------------------------------
     */
-    'immigrant-title' => 'Application for immigrants',
-    'friend-title' => 'Application for language friends',
+    'immigrant-title' => 'Ansökan för nyanlända',
+    'friend-title' => 'Ansökan för etablerade',
+    'steps' => "Steg: ",
 
     /* Basic Information */
-    'basic-title' => 'Basic information',
-    'basic-meta' => 'Your basic information is used for matching and contacting purposes',
-    'first-name' => 'First Name',
-    'last-name' => 'Last Name',
+    'basic-title' => 'Grundläggande information',
+    'basic-meta' => 'Informationen används för kontakt och i matchningsprocessen',
+    'first-name' => 'Förnamn',
+    'last-name' => 'Efternamn',
 
 
-    'gender' => 'Sex',
-    'gender-placeholder' => 'Select your gender',
+    'gender' => 'Kön',
+    'gender-placeholder' => 'Välj kön',
     'man' => 'Man',
-    'woman' => 'Woman',
-    'unknown' => 'Prefer to not answer',
+    'woman' => 'Kvinna',
+    'unknown' => 'Annat',
 
-    'phone-number' => 'Phone Number',
+    'phone-number' => 'Telefonnummer',
     'email' => 'Email',
-    'age' => 'Age',
-    'age-placeholder' => 'Select age',
+    'age' => 'Ålder',
+    'age-placeholder' => 'Välj ålder',
 
-    'have-car' => 'Do you have a car?',
-    'radie-title' => 'I want to meet someone within:',
-    'radie-placeholder' => 'Select radius',
-    'radie-over' => 'Over',
+    'have-car' => 'Har du bil?',
+    'radie-title' => 'Jag vill träffa någon inom:',
+    'radie-placeholder' => 'Välj radie',
+    'radie-over' => 'Över',
     'radie-under' => 'Under',
 
     /* Profession & Accommodation */
-    'profession' => 'Profession',
-    'profession-placeholder' => 'Select your professions sector',
-    'area' => 'In which area of Halmstad are you living',
-    'area-placeholder' => 'Select your region',
+    'profession' => 'Yrke',
+    'profession-placeholder' => 'Välj en yrkesgrupp.',
+    'area' => 'I vilken del av Halmstad bor du?',
+    'area-placeholder' => 'Välj område',
 
-    'adress' => 'Street Adress',
-    'city' => 'City',
-    'zip' => 'Zip code',
+    'adress' => 'Adress',
+    'city' => 'Stad',
+    'zip' => 'Postnummer',
 
     /* Family */
-    'have-family-title' => 'Do you have a family?',
-    'have-family-no' => 'No',
-    'have-family-yes-in' =>'Yes, in Sweden',
-    'have-family-yes-out' => 'Yes but not in Sweden',
+    'family-meta' => 'Familjeinformation hjälper matchningen att blir korrekt',
+    'have-family-title' => 'Har du barn under 18?',
+    'have-family-no' => 'Nej',
+    'have-family-yes-in' =>'Ja, i Sverige',
+    'have-family-yes-out' => 'Ja, men inte i Sverige',
 
-    'family-title' => 'Your family',
-    'family-meta' => '',
-    'family-number' => 'Family members',
-    'family-kids' => 'Age of the kids',
-    'kids-placeholder' => 'Select kids range',
-    'no-kids' => 'No kids',
+    'family-title' => 'Din familj',
+    'family-meta' => 'Välj familjestatus för korrekt matchning',
+    'family-number' => 'Familjemedlemmar',
+    'family-kids' => 'Ålder på barnen',
+    'kids-placeholder' => 'Välj åldersspann',
+    'no-kids' => 'Inga barn',
 
     /* Native Language / Country */
-    'country-title' => 'Country of orgin',
-    'country-placeholder' => 'Select your native country',
-    'language-title' => 'Language (select multiple)',
-    'language-placeholder' => 'Select the lanugaes you know',
+    'country-title' => 'Ursprungsland',
+    'country-meta' => 'Välj ditt ursprungsland och vilka språk du behärskar',
+    'country-placeholder' => 'Välj ditt ursprungsland',
+    'language-title' => 'Språk (välj flera)',
+    'language-placeholder' => 'Välj de språk du behärskar',
 
     /* Personal Intrests */
-    'intrests-title' => 'Select intrests',
-    'intrests-meta' =>  'min 1, max 5',
+    'intrests-title' => 'Välj intressen',
+    'intrests-meta' =>  'Max 5',
     
-    'intrest-meta' => 'Used for matching preferences',
-    'intrest-placeholder' => 'Choose multiple (max 5)',
+    'intrest-meta' => 'Används för bättre matchning',
+    'intrest-placeholder' => 'Välj flera (max 5)',
 
     /* Match Preferences */
-    'preferences-title' => 'Personal preferences & Interests',
-    'preferences-meta' => 'What are you interested in? (Choose max 5 interests)',
-    'meet-yes' => 'Yes',
-    'meet-no' => 'Do not matters',
-    'meet-family-title' => 'I would like to meet someone with a family:',
-    'meet-gender-title' => 'I would like to meet a:',
+    'preferences-title' => 'Personliga preferenser och intressen',
+    'preferences-meta' => 'Vad är du intresserad av? (Välj max 5 intressen)',
+    'meet-yes' => 'Ja',
+    'meet-no' => "Spelar ingen roll",
+    'meet-family-title' => 'Jag vill träffa någon med familj:',
+    'meet-gender-title' => 'Jag vill träffa en :',
     'meet-gender-man' => 'Man',
-    'meet-gender-woman' => 'Woman',
-    'meet-profession-title' => 'I would like to meet to someone connected to my profession:',
+    'meet-gender-woman' => 'Kvinna',
+    'meet-profession-title' => 'Jag vill träffa någon inom samma yrkesgrupp som mig',
 
 
-    'apply-button' => 'Send application',
+    'apply-button' => 'Skicka ansökan',
 
     /* Information popup */
     'friend-popup-title' => 'Welcome to the immigrant appilcation form',

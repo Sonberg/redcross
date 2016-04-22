@@ -8,16 +8,20 @@ return [
     |--------------------------------------------------------------------------
     */
 
-     /* LANDING PAGE */
-    'immigant-title' => "Jag är ny i Sverige",
-    'immigant-body' => "",
-    'immigant-button' => "Hitta språkvän",
+    /* GLOBAL TRANSLATE */
+    'close' => 'Stäng',
 
-    'established-title' => 'Jag vill bli språkvän',
+    /* LANDING PAGE */
+    'immigant-title' => "Jag är ny i Sverige och vill lära mig Svenska.",
+    'immigant-body' => "",
+    'immigant-button' => "Starta ansökan som nyanländ",
+
+    'established-title' => 'Jag är etablerad i Sverige och vill hjälpa andra med Svenska språket.',
     'established-body' => "",
-    'established-button' => 'Jag vill bli språkvän',
+    'established-button' => 'Starta ansökan som etablerad',
 
     /* NAVBAR */
     'language-drop' => 'Språk',
+
 
 ];
