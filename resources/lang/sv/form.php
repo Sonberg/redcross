@@ -29,7 +29,7 @@ return [
     'age' => 'Ålder',
     'age-placeholder' => 'Välj ålder',
 
-    'have-car' => 'Har du bil??',
+    'have-car' => 'Har du bil?',
     'radie-title' => 'Jag vill träffa någon inom:',
     'radie-placeholder' => 'Välj radie',
     'radie-over' => 'Över',
