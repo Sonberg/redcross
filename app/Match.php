@@ -51,8 +51,14 @@ class Match {
 
     /* Match intrest -> % */
     public static function matchIntrest($main, $second) {
-        $main = explode(",", $main);
-        $second = explode(",", $second);
+        if (gettype($main) == 'string') {
+          $main = explode(",", $main);
+        }
+
+        if (gettype($second) == 'string') {
+          $second = explode(",", $second);
+        }
+
         $items = count($main);
         $matches = array();
 
@@ -90,8 +96,14 @@ class Match {
 
     /* Match known languages -> % */
     public static function matchLanguage($main, $second) {
+      if (gettype($main) == 'string') {
         $main = explode(",", $main);
+      }
+
+      if (gettype($second) == 'string') {
         $second = explode(",", $second);
+      }
+
         $matches = array();
 
         foreach($main as $lang) {
@@ -103,7 +115,7 @@ class Match {
         if(count($matches) > 0) {
           return array("procent" => 100, "matches" => $matches);
         } else {
-          return array("procent" => 0, "matches" => $matches);
+          return array("procent" => -50, "matches" => $matches);
         }
     }
 

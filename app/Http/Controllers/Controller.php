@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Carbon\Carbon;
 use App\Profession;
 use Illuminate\Foundation\Bus\DispatchesJobs;
 use Illuminate\Routing\Controller as BaseController;
@@ -12,7 +13,7 @@ class Controller extends BaseController
 {
     use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
     public $maxMatches = 10;
-    public $lowestProcentage = 10;
+    public $lowestProcentage = 60;
 
     // Return list of languages
     public function languagesList() {
@@ -58,6 +59,8 @@ class Controller extends BaseController
       $master->profession = Profession::find($master->profession)->title;
       $master->intrests = explode(",", $master->intrests);
       $master->language =  explode(",", $master->language);
+      $dt = new \DateTime($master->created_at);
+      $master->human = Carbon::instance($dt)->diffForHumans();
       return $master;
     }
 

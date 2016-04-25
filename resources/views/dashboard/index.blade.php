@@ -38,7 +38,7 @@
     </div>
 
     <div class="row center">
-      <div class="ui buttons center flip-button margin-bottom-large">
+      <div class="ui buttons center flip-button">
         <button class="ui button active">Nyanlända</button>
         <button class="ui button friend-btn">Etablerade</button>
       </div>
@@ -62,13 +62,33 @@
           }
         });
       </script>
+      <div class="col-lg-7 col-lg-offset-2 container left-text">
+        <b>
+        <div class="col-lg-5" style="padding-left: 60px;">
+          Namn
+        </div>
+        <div class="col-lg-3">
+            Kön
+        </div>
 
+        <div class="col-lg-3">
+          Land
+        </div>
+        <div class="col-lg-1">
+          Registrerads
+        </div>
+      </b>
+      </div>
       <div class="immigrant">
-        @include('components.index-detail')
+        @foreach($immigrant as $i)
+          @include('components.index-detail', ['master' => $i])
+        @endforeach
       </div>
 
       <div class="friend transition hidden">
-        @include('components.index-detail')
+        @foreach($friend as $f)
+          @include('components.index-detail', ['master' => $f])
+        @endforeach
       </div>
 </div>
 

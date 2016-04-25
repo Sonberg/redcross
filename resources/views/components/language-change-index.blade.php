@@ -1,11 +1,7 @@
-<div class="ui iteem dropdown language">
-    <input type="hidden" name="site-lang" class="site-lang">
-    {{trans('basic.language-drop')}} <i class="dropdown icon"></i>
-    <div class="menu">
-        @foreach(LaravelLocalization::getSupportedLocales() as $localeCode => $properties)
-            <div class="item" data-value="{{LaravelLocalization::getLocalizedURL($localeCode) }}"  hreflang="{{$localeCode}}"><i class="@if($localeCode == 'sv') se @elseif($localeCode == 'en') us @elseif($localeCode == 'ar') iq  @endif flag"></i>{{{ $properties['native'] }}}</div>
-        @endforeach
-    </div>
+<div class="ui icon buttons" style="margin-top: 100px;">
+@foreach(LaravelLocalization::getSupportedLocales() as $localeCode => $properties)
+  <a href="{{LaravelLocalization::getLocalizedURL($localeCode) }}" class="ui button"><i class="@if($localeCode == 'sv') se @elseif($localeCode == 'en') us @elseif($localeCode == 'ar') iq  @endif flag"></i></a>
+@endforeach
 </div>
 
 <script>

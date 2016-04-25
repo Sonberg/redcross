@@ -347,6 +347,10 @@ input[disabled] {
   border: 1px solid #dedede;
   box-shadow: 10px #dedede; }
 
+.ui.dropdown.large {
+  border-bottom: 2px solid;
+  font-size: 18px; }
+
 .ranges > ul > li:hover {
   background: #dedede;
   color: #ffffff;

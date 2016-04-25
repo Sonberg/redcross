@@ -1,4 +1,4 @@
-<div class="ui item dropdown language">
+<div class="ui item dropdown language {{$class}}">
   <input type="hidden" name="site-lang" class="site-lang">
   {{trans('basic.language-drop')}} <i class="dropdown icon"></i>
     <div class="menu">
