@@ -2,10 +2,10 @@
     <div class="computer tablet only row">
        <!-- grid -->
         <div class="ui fixed menu navbar page">
-            <a href="" class="brand item"><img src="/img/logo.png" alt="" class="logo-nav"></a>
-            <a href="" class="active item">Startsidan</a>
-            <a href="" class="item">Matchade</a>
-            <a href="" class="item">Statistik</a>
+            <a href="/dashboard" class="brand item"><img src="/img/logo.png" alt="" class="logo-nav"></a>
+            <a href="/dashboard" class="{{ Ekko::isActiveURL('/dashboard') }} item">Startsidan</a>
+            <a href="/dashboard/matched" class="{{ Ekko::isActiveURL('/dashboard/matched') }} item">Matchade</a>
+            <a href="/dashboard/statistic" class="{{ Ekko::isActiveURL('/dashboard/statistic') }} item">Statistik</a>
             <div class="right menu">
                 <a href="" class="item">Fixed top</a>
             </div>
