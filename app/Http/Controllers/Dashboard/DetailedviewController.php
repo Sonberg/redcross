@@ -4,7 +4,7 @@ namespace App\Http\Controllers\Dashboard;
 
 use Auth;
 use Input;
-use App\Match;
+use App\MatchAlgoritm;
 use App\Friend;
 use App\Immigrant;
 use App\Profession;
@@ -23,7 +23,7 @@ class DetailedviewController extends Controller {
         $s = Immigrant::all();
       }
 
-        $s = Match::procent($m, $s, $this->maxMatches, $this->lowestProcentage);
+        $s = MatchAlgoritm::procent($m, $s, $this->maxMatches, $this->lowestProcentage);
         return view("dashboard.pages.detailedview", ['master' => Parent::printable($m), 'count' => $s["count"]]);
     }
 

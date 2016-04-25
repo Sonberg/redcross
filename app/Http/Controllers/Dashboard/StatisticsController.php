@@ -3,7 +3,7 @@
 namespace App\Http\Controllers\Dashboard;
 
 use Auth;
-use App\Match;
+use App\MatchAlgoritm;
 use App\Friend;
 use App\Immigrant;
 use App\Http\Requests;
@@ -16,4 +16,3 @@ class StatisticsController extends Controller
         return view("dashboard.pages.statistics");
     }
 }
-

@@ -1,18 +1,25 @@
 @extends('app') @section('content') @include('dashboard.navbar')
 <div class="container">
-@include('components.match.large', ['master' => $master, 'class' => 'paddingcols center' ])
-<div class="ui horizontal divider margin-top-large">
-    <button class="ui button matchbtn">Matcha</button>
-  </div>
+  <form class="" action="index.html" method="post">
+
+    @include('components.match.large', ['master' => $master, 'class' => 'paddingcols center' ])
+    <div class="ui horizontal divider margin-top-large">
+        <button type="submit" class="ui button matchbtn">Matcha</button>
+    </div>
+    <input type="hidden" name="master-type" value="{{$master->type}}">
+    <input type="hidden" name="master" value="{{$master->id}}">
+    <input type="hidden" id="second-id" name="second" value="">
+  </form>
 
 <div class="slider col-lg-10 col-lg-offset-1">
   @foreach($second as $s)
-    <div class="slider-card">@include('components.match.large', ['master' => $s, 'second' => $master, 'class' => 'slider-card'])</div>
+    <div class="slider-card" id ="{{$s->id}}">@include('components.match.large', ['master' => $s, 'second' => $master, 'class' => 'slider-card'])</div>
     <?php $i++; ?>
   @endforeach
 </div>
 
 <script type="text/javascript">
+$(document).ready(function() {
   $('.slider').slick({
     centerMode: true,
     centerPadding: '150px',
@@ -40,6 +47,15 @@
       }
     ]
   });
+  function setSecond() {
+    $('#second-id').val($('.slick-current').attr('id'));
+  }
+
+  setSecond();
+  $(document).on('click', '.slider-card, .slider', function() {
+    setSecond();
+  });
+});
 </script>
 </div>
 @endsection

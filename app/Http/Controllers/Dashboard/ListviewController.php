@@ -3,7 +3,7 @@
 namespace App\Http\Controllers\Dashboard;
 
 use Auth;
-use App\Match;
+use App\MatchAlgoritm;
 use App\Friend;
 use Carbon\Carbon;
 use App\Immigrant;

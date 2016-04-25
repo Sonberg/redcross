@@ -3,7 +3,7 @@
 namespace App\Http\Controllers\Dashboard;
 
 use Auth;
-use App\Match;
+use App\MatchAlgoritm;
 use App\Friend;
 use App\Immigrant;
 use App\Http\Requests;
@@ -20,7 +20,7 @@ class MatchviewController extends Controller
         $m = Friend::find($id);
         $s = Immigrant::all();
       }
-      $s = Match::procent($m, $s, $this->maxMatches, $this->lowestProcentage);
+      $s = MatchAlgoritm::procent($m, $s, $this->maxMatches, $this->lowestProcentage);
       $sm = $s["result"];
 
       for($i=0; $i<count($sm);$i++) {

@@ -1,7 +1,7 @@
 <?php
 namespace App\Http\Controllers;
 
-use App\Match;
+use App\MatchAlgoritm;
 use App\Friend;
 use App\immigrant;
 use App\Http\Requests;
@@ -12,7 +12,7 @@ class PlaygroundController extends Controller {
     public function getIndex() {
       $i = immigrant::all()->first();
       $f = Friend::all();
-      $match = Match::procent($i, $f, $this->maxMatches, $this->lowestProcentage);
+      $match = MatchAlgoritm::procent($i, $f, $this->maxMatches, $this->lowestProcentage);
       return $match;
       return view('playground', [
         'immigrants' => $i,
