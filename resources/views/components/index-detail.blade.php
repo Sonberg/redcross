@@ -26,8 +26,8 @@
         </div>
 
         <div class="ui buttons bottom attached button">
-            <button class="ui button matchbtn"><div>Matcha nu<div class="circle-base circle-front">{{$master->count}}</div></div></button>
-            <button class="ui button">Mer info</button>
+            <a href="/dashboard/match/{{$master->type}}/{{$master->id}}" class="ui button matchbtn"><div>Matcha nu<div class="circle-base circle-front">{{$master->count}}</div></div></a>
+            <a href="/dashboard/detail/{{$master->type}}/{{$master->id}}" class="ui button">Mer info</a>
         </div>
     </div>
   </div>

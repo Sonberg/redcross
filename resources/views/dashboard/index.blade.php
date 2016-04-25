@@ -39,46 +39,34 @@
 
     <div class="row center">
       <div class="ui buttons center flip-button">
-        <button class="ui button active">Nyanlända</button>
+        <button class="ui button immigrant-btn active">Nyanlända</button>
         <button class="ui button friend-btn">Etablerade</button>
       </div>
       <script type="text/javascript">
       var delay = 270;
 
         $(document).on('click', '.buttons.flip-button button', function() {
+          if ($(this).hasClass('friend-btn')) {
+            if(!$('.active').hasClass('friend-btn')) {
+              $('.immigrant').transition('scale');
+              setTimeout(function() {
+                $('.friend').transition('scale');
+              }, delay);
+            }
+          } else {
+            if(!$('.active').hasClass('immigrant-btn')) {
+              $('.friend').transition('scale');
+              $('.friend').height(0);
+              setTimeout(function() {
+                $('.immigrant').transition('scale');
+              }, delay);
+            }
+          }
           $('.buttons.flip-button button').removeClass('active');
           $(this).addClass('active');
-          if ($(this).hasClass('friend-btn')) {
-            $('.immigrant').transition('scale');
-            setTimeout(function() {
-              $('.friend').transition('scale');
-            }, delay);
-          } else {
-            $('.friend').transition('scale');
-            $('.friend').height(0);
-            setTimeout(function() {
-              $('.immigrant').transition('scale');
-            }, delay);
-          }
         });
       </script>
-      <div class="col-lg-7 col-lg-offset-2 container left-text">
-        <b>
-        <div class="col-lg-5" style="padding-left: 60px;">
-          Namn
-        </div>
-        <div class="col-lg-3">
-            Kön
-        </div>
-
-        <div class="col-lg-3">
-          Land
-        </div>
-        <div class="col-lg-1">
-          Registrerads
-        </div>
-      </b>
-      </div>
+  
       <div class="immigrant">
         @foreach($immigrant as $i)
           @include('components.index-detail', ['master' => $i])

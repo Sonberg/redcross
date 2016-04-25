@@ -95,7 +95,7 @@ html body table.rate td.interest {
     margin: 0 auto; }
 
 .immigration .button.huge {
-  margin-bottom: 30px; }
+  margin-bottom: 30px !important; }
 
 .immigration .ui.green {
   border-top: 2px solid #21BA45;
@@ -433,7 +433,7 @@ hr {
 .ui.segment {
   box-shadow: 0 0px 0px 0 rgba(34, 36, 38, 0.15);
   margin: 1em 0 2em 0;
-  padding: 0em;
+  padding: 2px;
   border: 0px solid rgba(34, 36, 38, 0.15); }
 
 .slider {

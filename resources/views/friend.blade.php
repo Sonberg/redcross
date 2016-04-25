@@ -103,7 +103,7 @@
                     </div>
                 </div>
 
-                <button type="submit" class="ui matchbtn center button huge">{{trans('form.apply-button')}}</button>
+                <button type="submit" class="ui matchbtn center margin-bottom button huge">{{trans('form.apply-button')}}</button>
             </form>
         </div>
     </div>

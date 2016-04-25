@@ -59,6 +59,11 @@ class Controller extends BaseController
       $master->profession = Profession::find($master->profession)->title;
       $master->intrests = explode(",", $master->intrests);
       $master->language =  explode(",", $master->language);
+      if($master->adress != null) {
+        $master->type = "friend";
+      } else {
+        $master->type = "immigrant";
+      }
       $dt = new \DateTime($master->created_at);
       $master->human = Carbon::instance($dt)->diffForHumans();
       return $master;

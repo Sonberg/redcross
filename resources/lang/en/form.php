@@ -36,8 +36,8 @@ return [
     'radie-under' => 'Under',
 
     /* Profession & Accommodation */
-    'profession' => 'Profession',
-    'profession-placeholder' => 'Select your professions sector',
+    'profession' => 'Work',
+    'profession-placeholder' => 'Select your works sector',
     'area' => 'In which area of Halmstad are you living',
     'area-placeholder' => 'Select your region',
 
@@ -69,7 +69,7 @@ return [
     /* Personal Intrests */
     'intrests-title' => 'Select intrests',
     'intrests-meta' =>  'Select max 5',
-    
+
     'intrest-meta' => 'Used for matching preferences',
     'intrest-placeholder' => 'Choose multiple (max 5)',
 

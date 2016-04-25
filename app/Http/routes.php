@@ -36,11 +36,11 @@ Route::group(['prefix' => LaravelLocalization::setLocale(), 'middleware' => [ 'a
     Route::get('/dashboard/listview', 'Dashboard\ListviewController@getIndex');
 
     //Detailed view
-    Route::get('/dashboard/detailedview', 'Dashboard\DetailedviewController@getIndex');
-    Route::post('/dashboard/detailedview', 'Dashboard\DetailedviewController@postNote');
+    Route::get('/dashboard/detail/{type}/{id}', 'Dashboard\DetailedviewController@getIndex');
+    Route::post('/dashboard/detail/{type}/{id}', 'Dashboard\DetailedviewController@postNote');
 
     //Match view
-    Route::get('/dashboard/matchview', 'Dashboard\MatchviewController@getIndex');
+    Route::get('/dashboard/match/{type}/{id}', 'Dashboard\MatchviewController@getIndex');
 
     // Statistics View
     Route::get('/dashboard/statistics', 'Dashboard\StatisticsController@getIndex');

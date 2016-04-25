@@ -67,9 +67,9 @@
     <label for="age">{{trans('form.age')}}</label>
     <select name="age" id="age" class="age dropdown">
         <option value="" disabled <?php if(old( 'age')=="" ) { echo 'selected="selected"'; } ?>>{{trans('form.age-placeholder')}}</option>
-        <option value="16-20" <?php if(old( 'age')=="18-24" ) { echo 'selected="selected"'; } ?>>18-24</option>
-        <option value="26-35" <?php if(old( 'age')=="25-35" ) { echo 'selected="selected"'; } ?>>25-35</option>
-        <option value="36-" <?php if(old( 'age')=="36-" ) { echo 'selected="selected"'; } ?>>36-</option>
+        <option value="16-20" <?php if(old( 'age')=="18-24" ) { echo 'selected="selected"'; } ?>>18-24 years old</option>
+        <option value="26-35" <?php if(old( 'age')=="25-35" ) { echo 'selected="selected"'; } ?>>25-35 years old</option>
+        <option value="36-" <?php if(old( 'age')=="36-" ) { echo 'selected="selected"'; } ?>> Older than 36</option>
     </select>
     @if ($errors->has('age'))<span class="help-block ui pointing red basic label center">{{ $errors->first('age') }}</span> @endif
 </div>

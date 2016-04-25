@@ -148,6 +148,7 @@ return [
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
         Mcamara\LaravelLocalization\LaravelLocalizationServiceProvider::class,
+        'Laravelista\Ekko\EkkoServiceProvider',
 
         /*
          * Application Service Providers...
@@ -156,7 +157,7 @@ return [
         App\Providers\AuthServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
-        
+
         Collective\Html\HtmlServiceProvider::class,
         Themsaid\Langman\LangmanServiceProvider::class
 
@@ -208,7 +209,8 @@ return [
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
         'Input' => Illuminate\Support\Facades\Input::class,
-        'LaravelLocalization'   => Mcamara\LaravelLocalization\Facades\LaravelLocalization::class
+        'LaravelLocalization'   => Mcamara\LaravelLocalization\Facades\LaravelLocalization::class,
+        'Ekko' => 'Laravelista\Ekko\Facades\Ekko'
 
     ],
 

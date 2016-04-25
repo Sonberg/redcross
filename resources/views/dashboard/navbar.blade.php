@@ -3,20 +3,9 @@
        <!-- grid -->
         <div class="ui fixed menu navbar page">
             <a href="" class="brand item"><img src="/img/logo.png" alt="" class="logo-nav"></a>
-            <a href="" class="active item">Home</a>
-            <a href="" class="item">About</a>
-            <a href="" class="item">Contact</a>
-            <a class="ui dropdown item">Dropdown
-        <i class="dropdown icon"></i>
-        <div class="menu">
-          <div class="item">Action</div>
-          <div class="item">Another action</div>
-          <div class="item">Something else here</div>
-          <div class="ui divider"></div>
-          <div class="item">Seperated link</div>
-          <div class="item">One more seperated link</div>
-        </div>
-      </a>
+            <a href="" class="active item">Startsidan</a>
+            <a href="" class="item">Matchade</a>
+            <a href="" class="item">Statistik</a>
             <div class="right menu">
                 <a href="" class="item">Fixed top</a>
             </div>
@@ -32,25 +21,9 @@
             </div>
         </div>
         <div class="ui vertical navbar menu">
-            <a href="" class="active item">Home</a>
-            <a href="" class="item">About</a>
-            <a href="" class="item">Contact</a>
-            <div class="ui item">
-                <div class="text">Dropdown</div>
-                <div class="menu">
-                    <a class="item">Action</a>
-                    <a class="item">Another action</a>
-                    <a class="item">Something else here</a>
-                    <a class="ui aider"></a>
-                    <a class="item">Seperated link</a>
-                    <a class="item">One more seperated link</a>
-                </div>
-            </div>
-            <div class="menu">
-                <a href="" class="active item">Default</a>
-                <a href="" class="item">Static top</a>
-                <a href="" class="item">Fixed top</a>
-            </div>
+            <a href="" class="active item">Startsidan</a>
+            <a href="" class="item">Matchade</a>
+            <a href="" class="item">Statistik</a>
         </div>
     </div>
 </div>

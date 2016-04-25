@@ -12,9 +12,14 @@ use App\Http\Controllers\Controller;
 
 class MatchviewController extends Controller
 {
-    public function getindex(){
-      $m = Friend::all()->first();
-      $s = Immigrant::all();
+    public function getindex($type, $id){
+      if($type == 'immigrant') {
+        $m = Immigrant::find($id);
+        $s = Friend::all();
+      } else {
+        $m = Friend::find($id);
+        $s = Immigrant::all();
+      }
       $s = Match::procent($m, $s, $this->maxMatches, $this->lowestProcentage);
       $sm = $s["result"];
 

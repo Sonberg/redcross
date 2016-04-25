@@ -74,7 +74,7 @@
                         </div>
                     </div>
                 </div>
-                <button type="submit" class="ui matchbtn center button huge">Send application</button>
+                <button type="submit" class="ui matchbtn center margin-bottom button huge">Send application</button>
             </form>
         </div>
     </div>
