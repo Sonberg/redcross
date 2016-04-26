@@ -6,14 +6,11 @@
             <a href="/dashboard" class="{{ Ekko::isActiveURL('/dashboard') }} item">Startsidan</a>
             <a href="/dashboard/matched" class="{{ Ekko::isActiveURL('/dashboard/matched') }} item">Matchade</a>
             <a href="/dashboard/statistic" class="{{ Ekko::isActiveURL('/dashboard/statistic') }} item">Statistik</a>
-            <div class="right menu">
-                <a href="" class="item">Fixed top</a>
-            </div>
         </div>
     </div>
     <div class="mobile only row">
         <div class="ui fixed navbar menu">
-            <a href="" class="brand item">Project Name</a>
+            <a href="" class="brand item">Röda korset</a>
             <div class="right menu open">
                 <a href="" class="menu item">
                     <i class="content icon"></i>

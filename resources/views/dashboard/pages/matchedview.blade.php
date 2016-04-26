@@ -1,8 +1,10 @@
 @extends('app') @section('content') @include('dashboard.navbar')
   <div class="container">
     @foreach($matches as $m)
-      {{$m}}
+      @include('components.matched', ['master' => $m])
     @endforeach
-    {!! $matches->render() !!}
+    <div class="center-table">
+      {!! $matches->render() !!}
+    </div>
   </div>
 @endsection

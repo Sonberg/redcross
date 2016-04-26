@@ -116,6 +116,11 @@ html body table.rate td.interest {
   margin: 0px auto !important;
   display: block !important; }
 
+.center-table {
+  text-align: center !important;
+  margin: 40px auto !important;
+  display: table !important; }
+
 .margin-field {
   margin: 30px 0 1em !important; }
 

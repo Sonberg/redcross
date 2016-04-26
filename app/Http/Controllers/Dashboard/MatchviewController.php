@@ -61,6 +61,8 @@ class MatchviewController extends Controller
 
           $match->friend_match = array_get($input, 'second');
           $match->immigrant_match = array_get($input, 'master');
+          $match->parameters = array_get($input, 'parameters');
+          $match->procent = array_get($input, 'procent');
           break;
 
         default:
