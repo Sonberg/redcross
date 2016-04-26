@@ -52,8 +52,14 @@
                       </div>
 
                     </div>
-                    <div class="divider"></div>
-                    
+                    <div class="ui divider float-left"></div>
+                    <div class="col-lg-12">
+                      @foreach($master->parameters as $p)
+                        <div class="ui large label cap interest center-text">
+                          {{$p}}
+                        </div>
+                      @endforeach
+                    </div>
                   </div>
               </div>
           </div>
