@@ -13,8 +13,8 @@ use App\Http\Controllers\Controller;
 class DashboardController extends Controller {
 
     public function getIndex() {
-        $im = Immigrant::orderBy('created_at')->get();
-        $f = Friend::orderBy('created_at')->get();
+        $im = Immigrant::orderBy('created_at')->limit(20)->get();
+        $f = Friend::orderBy('created_at')->limit(20)->get();
 
         for($i = 0;$i<count($f); $i++) {
           $temp = MatchAlgoritm::procent($f[$i], $im, $this->maxMatches, $this->lowestProcentage);
@@ -32,6 +32,7 @@ class DashboardController extends Controller {
            'user' => Auth::user(),
             'immigrant' => $im,
             'friend' => $f,
+            'statistic' => Parent::statistic(),
         ]);
     }
 

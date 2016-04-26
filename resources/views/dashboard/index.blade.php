@@ -5,39 +5,39 @@
     <div class="ui statistics center">
         <div class="statistic">
             <div class="value">
-                22
+                {{$statistic["today"]}}
             </div>
             <div class="label">
-                Faves
+                Nya idag
             </div>
         </div>
         <div class="statistic">
             <div class="value">
-                31,200
+                {{$statistic["matchMonth"]}}
             </div>
             <div class="label">
-                Views
+                Matchade denna månaden
             </div>
         </div>
         <div class="statistic">
             <div class="value">
-                22
+                {{$statistic["immigrants"]}}
             </div>
             <div class="label">
-                Members
+                Nyanlända
             </div>
         </div>
         <div class="statistic">
             <div class="value">
-                22
+                {{$statistic["friends"]}}
             </div>
             <div class="label">
-                Members
+                Etablerade
             </div>
         </div>
     </div>
 
-    <div class="row center">
+    <div class="row center transition hidden" id="toAnimate">
       <div class="ui buttons center flip-button">
         <button class="ui button immigrant-btn active">Nyanlända</button>
         <button class="ui button friend-btn">Etablerade</button>
@@ -66,7 +66,7 @@
           $(this).addClass('active');
         });
       </script>
-  
+
       <div class="immigrant">
         @foreach($immigrant as $i)
           @include('components.index-detail', ['master' => $i])

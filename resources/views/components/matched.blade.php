@@ -1,5 +1,5 @@
-<div class="margin-top-large">
-  <div class="ui page grid main" id="matchview">
+<div class="margin-top-large col-lg-6 col-sm-12">
+  <div class="ui page main" id="matchview">
 
       <div class="ui card center">
       <div class="content">
@@ -64,10 +64,16 @@
               </div>
           </div>
           </div>
-          <div class="ui bottom attached button">
-            <i class="remove circle icon"></i>
-            Remove match
-          </div>
+          <form class="" action="" method="post">
+            {!! csrf_field() !!}
+            <input type="hidden" name="friend" value="{{$master['friend']['id']}}">
+            <input type="hidden" name="immigrant" value="{{$master['immigrant']['id']}}">
+            <input type="hidden" name="id" value="{{$master['id']}}">
+            <button type="submit" class="ui bottom attached button">
+              <i class="remove circle icon"></i>
+              Ta bort matchning
+            </button>
+          </form>
       </div>
   </div>
 </div>

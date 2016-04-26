@@ -113,4 +113,27 @@ class Controller extends BaseController
       }
       return $c;
     }
+
+
+    public function statistic() {
+      $day = Carbon::now()->format('y-m-d');
+      return array("today" => $this->countToday($day), "matchMonth" => $this->matchMonth($day), "immigrants" => immigrant::count(), "friends" => Friend::count());
+    }
+
+    public function countToday($today) {
+      $start = $today . ' 00:00:00';
+      $end = $today . ' 23:59:59';
+
+      $iToday = Immigrant::whereBetween('created_at', array($start, $end))->count();
+      $fToday = Friend::whereBetween('created_at', array($start, $end))->count();
+
+      return $iToday + $fToday;
+    }
+
+    public function matchMonth($today) {
+      $end = $today . ' 23:59:59';
+      $start = Carbon::parse()->addMonth(-1)->format('y-m-d');
+      $start = $start . ' 23:59:59';
+      return Match::whereBetween('created_at', array($start, $end))->count();
+    }
   }

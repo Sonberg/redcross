@@ -7,9 +7,4 @@
       {!! $matches->render() !!}
     </div>
   </div>
-  <script type="text/javascript">
-    $(document).ready(function() {
-      $('#toAnimate').transition('fade left');
-    });
-  </script>
 @endsection

@@ -49,6 +49,7 @@ Route::group(['prefix' => LaravelLocalization::setLocale(), 'middleware' => [ 'a
 
     // Matched view
     Route::get('/dashboard/matched', 'Dashboard\MatchedController@getIndex');
+    Route::post('/dashboard/matched', 'Dashboard\MatchedController@postRemove');
 
     // Statistics View
     Route::get('/dashboard/statistics', 'Dashboard\StatisticsController@getIndex');

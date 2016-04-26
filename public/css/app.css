@@ -241,8 +241,8 @@ html body table.rate td.interest {
 .circle-front {
   width: 23px;
   height: 23px;
-  background-color: #2e5033;
-  opacity: 0.19;
+  background-color: rgba(46, 80, 51, 0.46);
+  opacity: 1;
   border: 0px solid rgba(0, 0, 0, 0.6);
   line-height: 23px;
   text-align: center;
@@ -443,6 +443,9 @@ hr {
 
 .help-block {
   margin-top: 15px !important; }
+
+.ui.attached.bottom.button {
+  width: 100%; }
 
 .slider {
   margin-top: 0px;

@@ -23,8 +23,11 @@
    <script type="text/javascript" src="//cdn.jsdelivr.net/jquery.slick/1.5.9/slick.min.js"></script>
 
     @yield('content')
+    <script type="text/javascript">
+      $(document).ready(function() {
+        $('#toAnimate').transition('fade left');
+      });
+    </script>
 </body>
 
 </html>
-
-

@@ -240,8 +240,8 @@ html {
 .circle-front {
   width: 23px;
   height: 23px;
-  background-color: $pine;
-  opacity: 0.19;
+  background-color: rgba(46, 80, 51, 0.46);
+  opacity: 1;
   border: 0px solid $black-60;
   line-height: 23px;
   text-align: center;
@@ -511,4 +511,8 @@ hr {
 }
 .help-block {
       margin-top: 15px !important;
+}
+
+.ui.attached.bottom.button {
+    width: 100%;
 }

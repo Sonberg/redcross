@@ -1,5 +1,5 @@
 @extends('app') @section('content') @include('dashboard.navbar')
-<div class="container">
+<div class="container transition hidden" id="toAnimate">
   <div class="paddingcols center">
 
   <div class="row" id="view">
