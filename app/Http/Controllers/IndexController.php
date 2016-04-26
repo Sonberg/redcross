@@ -4,9 +4,9 @@ namespace App\Http\Controllers;
 
 use App;
 use Validator;
-use Input; 
-use Redirect; 
-use Session; 
+use Input;
+use Redirect;
+use Session;
 use App\Form;
 use LaravelLocalization;
 use App\Http\Requests;
@@ -16,5 +16,9 @@ class IndexController extends Controller
 {
     public function getIndex() {
         return view('index', []);
+    }
+
+    public function getConfirm($type) {
+      return view('confirm', []);
     }
 }

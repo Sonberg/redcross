@@ -24,6 +24,8 @@ Route::group(['prefix' => LaravelLocalization::setLocale(), 'middleware' => [ 'l
     Route::get('/friend', 'Forms\FriendController@getIndex');
     Route::post('/friend', 'Forms\FriendController@postIndex');
 
+    Route::get('confirm/{type}', 'IndexController@getConfirm');
+
     Route::get('/inactive', 'Dashboard\DashboardController@getInactive');
 
 });

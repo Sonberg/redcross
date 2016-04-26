@@ -42,3 +42,9 @@
     right: -35px;
   }
 }
+
+.absolut-center {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}

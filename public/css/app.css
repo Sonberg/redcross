@@ -473,6 +473,12 @@ hr {
   .slider .slick-next {
     right: -35px; }
 
+.absolut-center {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%); }
+
 .clearfix:before,
 .clearfix:after {
   content: " ";

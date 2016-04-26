@@ -92,6 +92,6 @@ class FriendController extends Controller
         $f->intrests = $intrest;
         $f->save();
 
-        return redirect("/");
+        return redirect("/confirm/friend");
     }
 }

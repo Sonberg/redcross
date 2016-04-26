@@ -73,7 +73,7 @@ class ImmigrantController extends Controller
         $i->meet_profession = $meet_profession;
         $i->save();
 
-        return redirect("/");
+        return redirect("/confirm/immigrant");
     }
 
 }
