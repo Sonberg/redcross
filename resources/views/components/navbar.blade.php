@@ -2,7 +2,7 @@
     <div class="computer tablet only row">
        <!-- grid -->
         <div class="ui fixed menu navbar page">
-            <a href="" class="brand item"><img src="/img/logo.png" alt="" class="logo-nav"></a>
+            <a href="/" class="brand item"><img src="/img/logo.png" alt="" class="logo-nav"></a>
             <div class="right menu">
               @include('components.language-select', ["class" => ""])
             </div>

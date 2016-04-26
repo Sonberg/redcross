@@ -24,4 +24,9 @@ return [
     'language-drop' => 'Språk',
 
 
+    /* CONFIRM PAGE */
+    'confirm-title' => 'Tack för din ansökan',
+    'confirm-subtitle' => 'Vi återkommer så snart vi kan',
+
+
 ];
