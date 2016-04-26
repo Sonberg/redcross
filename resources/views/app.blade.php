@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width">
-    <title>Laravel</title>
+    <title>Röda Korset's Språkvänsprojekt</title>
     <link rel="stylesheet" href="//cdn.jsdelivr.net/jquery.slick/1.5.9/slick.css" media="screen" charset="utf-8">
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.5.9/slick-theme.css"/>
     <link href="//fonts.googleapis.com/css?family=Lato:100" rel="stylesheet" type="text/css">
