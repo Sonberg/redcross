@@ -34,7 +34,6 @@ class ImmigrantRequest extends Request
             'area' => 'required',
             'profession' => 'required',
             'number_members' => 'required',
-            'age_kids' => 'required',
         ];
     }
 }
