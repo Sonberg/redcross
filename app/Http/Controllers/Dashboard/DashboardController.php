@@ -34,4 +34,8 @@ class DashboardController extends Controller {
             'friend' => $f,
         ]);
     }
+
+    public function getInactive() {
+      return view('dashboard.pages.inactive');
+    }
 }

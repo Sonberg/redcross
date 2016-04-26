@@ -1,7 +1,8 @@
 @extends('app') @section('content') @include('dashboard.navbar')
 <div class="container">
-  <form class="" action="index.html" method="post">
-
+  <form class="" action="" method="post">
+    {!! csrf_field() !!}
+    
     @include('components.match.large', ['master' => $master, 'class' => 'paddingcols center' ])
     <div class="ui horizontal divider margin-top-large">
         <button type="submit" class="ui button matchbtn">Matcha</button>

@@ -2,7 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Match;
+use App\Friend;
 use Carbon\Carbon;
+use App\Immigrant;
 use App\Profession;
 use Illuminate\Foundation\Bus\DispatchesJobs;
 use Illuminate\Routing\Controller as BaseController;
@@ -81,4 +84,33 @@ class Controller extends BaseController
 
         return array($lat, $lng);
     }
-}
+
+    public function friends ($limit) {
+
+    }
+
+    public function immigrants ($limit) {
+      if(gettype($limit) == "integer") {
+        $i = Immigrant::limit($limit)->orderBy('created_at')->get();
+      } else {
+        $i = Immigrant::orderBy('created_at')->get();
+      }
+
+      $new = $i->filter(function($m) {
+        $c = Match::where('immigrant_match', '=', $m->id)->count();
+        if($c == 0) {
+          return true;
+        } else {
+          return false;
+        }
+      });
+      return($new);
+    }
+
+    public function subObject($c) {
+      for($i=0;$i<count($c);$i++) {
+        $c[$i] = (object) $c[$i];
+      }
+      return $c;
+    }
+  }

@@ -24,10 +24,12 @@ Route::group(['prefix' => LaravelLocalization::setLocale(), 'middleware' => [ 'l
     Route::get('/friend', 'Forms\FriendController@getIndex');
     Route::post('/friend', 'Forms\FriendController@postIndex');
 
+    Route::get('/inactive', 'Dashboard\DashboardController@getInactive');
+
 });
 
 Route::auth();
-Route::group(['prefix' => LaravelLocalization::setLocale(), 'middleware' => [ 'auth', 'localize', 'web' ]], function() {
+Route::group(['prefix' => LaravelLocalization::setLocale(), 'middleware' => [ 'auth', 'localize', 'web', 'activated' ]], function() {
 
     // Index
     Route::get('/dashboard', 'Dashboard\DashboardController@getIndex');
@@ -41,6 +43,10 @@ Route::group(['prefix' => LaravelLocalization::setLocale(), 'middleware' => [ 'a
 
     //Match view
     Route::get('/dashboard/match/{type}/{id}', 'Dashboard\MatchviewController@getIndex');
+    Route::post('/dashboard/match/{type}/{id}', 'Dashboard\MatchviewController@postIndex');
+
+    // Matched view
+    Route::get('/dashboard/matched', 'Dashboard\MatchedController@getIndex');
 
     // Statistics View
     Route::get('/dashboard/statistics', 'Dashboard\StatisticsController@getIndex');

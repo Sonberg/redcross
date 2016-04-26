@@ -3,11 +3,13 @@
 namespace App\Http\Controllers\Dashboard;
 
 use Auth;
-use App\MatchAlgoritm;
+use App\Match;
 use App\Friend;
 use App\Immigrant;
 use App\Http\Requests;
+use App\MatchAlgoritm;
 use App\Http\Controllers\Controller;
+use App\Http\Requests\CreateMatchRequest;
 
 
 class MatchviewController extends Controller
@@ -31,5 +33,40 @@ class MatchviewController extends Controller
         'second' => $sm,
         'i' => 0,
         'count' => $s["count"]]);
+    }
+
+    public function postIndex(CreateMatchRequest $request) {
+      $input = $request->all();
+      $type = array_get($input, 'master-type');
+      $match = new Match;
+
+      switch ($type) {
+        case 'friend':
+          $f = Friend::find(array_get($input, 'master'));
+          $f->delete();
+
+          $i = Immigrant::find(array_get($input, 'second'));
+          $i->delete();
+
+          $match->friend_match = array_get($input, 'master');
+          $match->immigrant_match = array_get($input, 'second');
+          break;
+
+        case 'immigrant':
+          $f = Friend::find(array_get($input, 'second'));
+          $f->delete();
+
+          $i = Immigrant::find(array_get($input, 'master'));
+          $i->delete();
+
+          $match->friend_match = array_get($input, 'second');
+          $match->immigrant_match = array_get($input, 'master');
+          break;
+
+        default:
+          break;
+      }
+      $match->save();
+      return redirect('/dashboard');
     }
 }

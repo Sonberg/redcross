@@ -50,5 +50,6 @@ class Kernel extends HttpKernel
         'guest' => \App\Http\Middleware\RedirectIfAuthenticated::class,
         'throttle' => \Illuminate\Routing\Middleware\ThrottleRequests::class,
         'localize' => 'Mcamara\LaravelLocalization\Middleware\LaravelLocalizationRoutes',
+        'activated' => \App\Http\Middleware\Activated::class,
     ];
 }
