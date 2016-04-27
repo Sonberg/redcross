@@ -3,7 +3,7 @@
   <div class="row">
     <div class="columns col-lg-12">
         <!-- New in Sweden -->
-        <div class="columns col-lg-6 col-sm-6">
+        <div class="columns col-lg-6 col-sm-6 margin-top-bottom">
 
           <div class="content">
             <h1 class="header big-header center-text aligned">{{trans('basic.immigant-title')}}</h1>
@@ -20,7 +20,7 @@
         </div>
 
         <!-- Language Friend -->
-        <div class="columns col-lg-6 col-sm-6">
+        <div class="columns col-lg-6 col-sm-6 margin-top-bottom">
           <div class="content">
             <h1 class="header big-header center-text aligned">{{trans('basic.established-title')}}</h1>
             <div class="description center-text aligned">

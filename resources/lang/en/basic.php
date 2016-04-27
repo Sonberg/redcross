@@ -16,8 +16,8 @@ return [
     'immigant-body' => "Looking forward to learn Swedish",
     'immigant-button' => "Start application",
 
-    'established-title' => 'I would like to become a language friend...',
-    'established-body' => "...and learn Swedish to others",
+    'established-title' => 'I would like to become a language friend',
+    'established-body' => "And meet a new friend",
     'established-button' => 'Start application as a language friend',
 
     /* NAVBAR */
