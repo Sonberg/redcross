@@ -451,6 +451,17 @@ hr {
   margin: 40px 0;
   padding-bottom: 20px; }
 
+.ui.fixed.menu, .ui[class*="top fixed"].menu {
+  box-shadow: none !important; }
+
+.rc-red {
+  background-color: #ED1B2E !important;
+  color: white !important;
+  transition: all 1s; }
+  .rc-red:hover {
+    background-color: white !important;
+    color: #ED1B2E !important; }
+
 .slider {
   margin-top: 0px;
   outline: none !important;

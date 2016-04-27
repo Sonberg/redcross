@@ -13,11 +13,11 @@ return [
 
     /* LANDING PAGE */
     'immigant-title' => "I'm new in Sweden",
-    'immigant-body' => "Looking forward to learn Swedish",
+    'immigant-body' => "",
     'immigant-button' => "Start application",
 
     'established-title' => 'I would like to become a language friend',
-    'established-body' => "And meet a new friend",
+    'established-body' => "",
     'established-button' => 'Start application as a language friend',
 
     /* NAVBAR */

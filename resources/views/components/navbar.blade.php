@@ -5,6 +5,9 @@
             <a href="/" class="brand item"><img src="/img/logo.png" alt="" class="logo-nav"></a>
             <div class="right menu">
               @include('components.language-select', ["class" => ""])
+              <a href="/login" class=" item rc-red">
+              Log in
+              </a>
             </div>
         </div>
     </div>
