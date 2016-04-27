@@ -7,7 +7,7 @@
           <div class="ui page grid main">
               <div class="two ui buttons center btn-max-width">
                   <a href="/dashboard" class="ui button left">Stäng</a>
-                  <a href="/match/{{ $master->adress ? 'friend' : 'immigrant' }}/{{$master->id}}" class="ui button right matchbtn">Matcha nu</button>
+                  <a href="/match/{{ $master->adress ? 'friend' : 'immigrant' }}/{{$master->id}}" class="ui button right matchbtn">Matcha nu</a>
                   </div>
               </div>
           </div>
