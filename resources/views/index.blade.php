@@ -2,7 +2,7 @@
 <div style="padding-top: 160px;" class="ui container">
   <div class="row">
     <div class="columns col-lg-12">
-      <img src="/img/flag.png" class="center" alt="" />
+      <img src="/img/flag.png" class="center" alt="" style=" width: 250px;  margin-bottom: 26px !important;" />
 
         <!-- New in Sweden -->
         <div class="columns col-lg-6 col-sm-6 margin-top-bottom">
