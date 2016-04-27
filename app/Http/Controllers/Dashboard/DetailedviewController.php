@@ -34,7 +34,7 @@ class DetailedviewController extends Controller {
           $person = Friend::find(array_get($input, "person"));
         break;
         case "immigrant":
-          $person = immigration::find(array_get($input, "person"));
+          $person = Immigrant::find(array_get($input, "person"));
         break;
         default:
           return "";

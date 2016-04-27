@@ -6,8 +6,8 @@
       <div class="col-xs-12 col-sm-12 col-md-12">
           <div class="ui page grid main">
               <div class="two ui buttons center btn-max-width">
-                  <button class="ui button left">Stäng</button>
-                  <button class="ui button right matchbtn">Matcha nu</button>
+                  <a href="/dashboard" class="ui button left">Stäng</a>
+                  <a href="/match/{{ $master->adress ? 'friend' : 'immigrant' }}/{{$master->id}}" class="ui button right matchbtn">Matcha nu</button>
                   </div>
               </div>
           </div>
