@@ -12,7 +12,6 @@
             <div class="country left-text">{{$master["immigrant"]["country"]}} & {{$master["friend"]["country"]}}</div>
       </div>
       <div class="content">
-          <h4 class="ui sub header">   </h4>
           <div class="ui small feed">
               <div class="event visible-lg-*">
                   <div class="content row">
@@ -63,6 +62,10 @@
                   </div>
               </div>
           </div>
+          </div>
+          <div class="extra content">
+            <i class="checkmark icon"></i>
+            Matched {{$master["created_at"]}}
           </div>
           <form class="" action="" method="post">
             {!! csrf_field() !!}
