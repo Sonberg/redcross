@@ -116,15 +116,15 @@
                           <div class="ui divider"></div>
 
                           @if($master->meet_gender)
-                          <div class="ui label">Jag vill möte en {{$master->meet_gender}}</div>
+                          <div class="ui label">Jag vill möta en {{$master->meet_gender == 'woman' ? "kvinna" : "man"}}</div>
                           @endif
 
                           @if($master->meet_family != 0)
-                          <div class="ui label">  Jag vill möte en familj </div>
+                          <div class="ui label">  Jag vill möta en familj </div>
                           @endif
 
                           @if($master->meet_profession)
-                          <div class="ui label">Jag vill möte någon i samma branch</div>
+                          <div class="ui label">Jag vill möta någon i samma branch</div>
                           @endif
                       </div>
                   </div>

@@ -19,7 +19,7 @@
       </div>
         @if(!$master->match)
         <div class="ui label float-right pig-pink margin-right">
-          Etablerad
+          {{$master->zip != null  ? 'Etablerad' : 'Nyanländ'}}
         </div>
         @endif
         <div class="header margin-top left-text" >{{$master->first_name}} {{$master->last_name}}</div>
@@ -90,27 +90,27 @@
         <div class="ui divider no-margin-bottom"></div>
         @if($master->result)
           @if($master->meet_gender == $second->gender && $master->gender != '0' && $second->gender != '0' )
-          <div class="ui label meet_pref">Jag vill möte en {{$master->meet_gender == 'kvinna' ? "kvinna" : "man"}} </div>
+          <div class="ui label meet_pref">Jag vill möta en {{$master->meet_gender == 'kvinna' ? "kvinna" : "man"}} </div>
           @endif
 
           @if($master->meet_family > count($second->family_members))
-          <div class="ui label meet_pref">  Jag vill möte en familj </div>
+          <div class="ui label meet_pref">  Jag vill möta en familj </div>
           @endif
 
           @if($master->meet_profession == 1 && $master->profession == $second->profession)
-          <div class="ui label meet_pref">Jag vill möte någon i samma branch</div>
+          <div class="ui label meet_pref">Jag vill möta någon i samma branch</div>
           @endif
         @else
           @if($master->meet_gender)
-          <div class="ui label meet_pref">Jag vill möte en {{$master->meet_gender}}</div>
+          <div class="ui label meet_pref">Jag vill möta en {{$master->meet_gender == 'woman' ? "kvinna" : "man"}}</div>
           @endif
 
           @if($master->meet_family != 0)
-          <div class="ui label meet_pref">  Jag vill möte en familj </div>
+          <div class="ui label meet_pref">  Jag vill möta en familj </div>
           @endif
 
           @if($master->meet_profession)
-          <div class="ui label meet_pref">Jag vill möte någon i samma branch</div>
+          <div class="ui label meet_pref">Jag vill möta någon i samma branch</div>
           @endif
         @endif
         </div>
